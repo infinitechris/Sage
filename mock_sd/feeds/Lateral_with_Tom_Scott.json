@@ -1,0 +1,112 @@
+{
+  "feed_title": "Lateral with Tom Scott",
+  "slug": "Lateral_with_Tom_Scott",
+  "feed_url": "https://feeds.megaphone.fm/lateralcast",
+  "active": true,
+  "priority": false,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "Lateral_with_Tom_Scott.jpg",
+  "episodes": [
+    {
+      "title": "204: An insane village",
+      "published": "Fri, 04 Sep 2026 04:00:00 -0000",
+      "pub_timestamp": 1788494400,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/PAD1636382362.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "203: Looking for a hot rod",
+      "published": "Fri, 28 Aug 2026 04:00:00 -0000",
+      "pub_timestamp": 1787889600,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/PAD3167474808.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "202: A sudden square",
+      "published": "Fri, 21 Aug 2026 04:00:00 -0000",
+      "pub_timestamp": 1787284800,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/PAD9525945936.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "201: Vegan art",
+      "published": "Fri, 14 Aug 2026 04:00:00 -0000",
+      "pub_timestamp": 1786680000,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/PAD2769870171.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "200: The pink hat",
+      "published": "Fri, 07 Aug 2026 04:00:00 -0000",
+      "pub_timestamp": 1786075200,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/PAD7561833154.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "199: Unburned gasoline",
+      "published": "Fri, 31 Jul 2026 04:00:00 -0000",
+      "pub_timestamp": 1785470400,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/PAD7278551656.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "198: The impossible photograph",
+      "published": "Fri, 24 Jul 2026 04:00:00 -0000",
+      "pub_timestamp": 1784865600,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/PAD7221332702.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "197: Jumping in the fountain",
+      "published": "Fri, 17 Jul 2026 04:00:00 -0000",
+      "pub_timestamp": 1784260800,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/PAD4822206174.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "196: A tiny umbrella",
+      "published": "Fri, 10 Jul 2026 04:00:00 -0000",
+      "pub_timestamp": 1783656000,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/PAD4881191879.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "195: Dumped pizza",
+      "published": "Fri, 03 Jul 2026 04:00:00 -0000",
+      "pub_timestamp": 1783051200,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/PAD8350981916.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "feed_title": "Hyperfixed",
+  "slug": "Hyperfixed",
+  "feed_url": "https://feed.hyperfixedpod.com/",
+  "active": true,
+  "priority": false,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "Hyperfixed.jpg",
+  "episodes": [
+    {
+      "title": "Captive Audience",
+      "published": "Thu, 27 Aug 2026 05:00:00 -0000",
+      "pub_timestamp": 1787806800,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/pdrl.fm/6745cb/dovetail.prxu.org/8013/f30cdeb4-5c0c-42af-bc89-21cafe15f2ef/Hyperfixed_20260824_Ep95_CaptiveAudience_v7.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "ReTell All",
+      "published": "Thu, 13 Aug 2026 05:00:00 -0000",
+      "pub_timestamp": 1786597200,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/pdrl.fm/6745cb/dovetail.prxu.org/8013/2c9032bd-efaf-4c1a-8b70-3de2a7dd097a/Hyperfixed_20260813_Ep93_ReTellAll_v10_TW.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "The Master of Mazes vs The Big Green Monster",
+      "published": "Thu, 30 Jul 2026 05:00:00 -0000",
+      "pub_timestamp": 1785387600,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/pdrl.fm/6745cb/dovetail.prxu.org/8013/29644d70-099f-40b7-9b5a-9b9ff2ce3ec6/Hyperfixed_20260730_HedgeMaze_v8_TW.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Presenting: Panic World - The Disturbing World of Cute Cat AI with Panic World",
+      "published": "Thu, 16 Jul 2026 05:00:00 -0000",
+      "pub_timestamp": 1784178000,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/pdrl.fm/6745cb/dovetail.prxu.org/8013/70d44bd7-42ce-4b59-9c6c-8edb03b92214/Hyperfixed_20260708_PanicWorldFeedDrop_v1.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "A Story About a Mouse That\u2019s Actually About Everything",
+      "published": "Thu, 02 Jul 2026 05:00:00 -0000",
+      "pub_timestamp": 1782968400,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/pdrl.fm/6745cb/dovetail.prxu.org/8013/c875760b-6d3a-4c67-a738-79545e169570/Hyperfixed_20260701_LogitechMouse_v4_TW.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "Samurai Gone Girl",
+      "published": "Thu, 18 Jun 2026 05:30:00 -0000",
+      "pub_timestamp": 1781760600,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/pdrl.fm/6745cb/dovetail.prxu.org/8013/d2107a53-e83d-4efc-b065-614645b32cf9/Hyperfixed_20260617_Ep85_SamuraiGoneGirl_v7_TW.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "PREMIUM UNLOCKED: The Fraud Hunter",
+      "published": "Thu, 04 Jun 2026 05:00:00 -0000",
+      "pub_timestamp": 1780549200,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/pdrl.fm/6745cb/dovetail.prxu.org/8013/62744ec2-d3f0-4f69-b2e4-600fcebc1009/Hyperfixed_20260603_CraigSilvermanMAINFEED_v5_TW.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "Rooting Out Racists",
+      "published": "Thu, 21 May 2026 08:00:00 -0000",
+      "pub_timestamp": 1779350400,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/pdrl.fm/6745cb/dovetail.prxu.org/8013/a444e3d9-97ac-459d-a6f5-813f2064e55d/Hyperfixed_20260521_Ep81_MarthaRoot_v8_TW.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "Pretzels to the People",
+      "published": "Thu, 07 May 2026 05:00:00 -0000",
+      "pub_timestamp": 1778130000,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/pdrl.fm/6745cb/dovetail.prxu.org/8013/1af280c4-2251-4413-bbf6-00386df5d5d3/Hyperfixed_20260506_Ep79_PretzelsforthePeople_v8_TW.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "PRESENTING: Smart Girl, Dumb Questions",
+      "published": "Thu, 23 Apr 2026 05:40:00 -0000",
+      "pub_timestamp": 1776922800,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/pdrl.fm/6745cb/dovetail.prxu.org/8013/570d218b-767b-4cb3-89a1-6f4341165e9f/SGDQ.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    }
+  ]
+}

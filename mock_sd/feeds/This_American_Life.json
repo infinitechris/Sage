@@ -1,0 +1,112 @@
+{
+  "feed_title": "This American Life",
+  "slug": "This_American_Life",
+  "feed_url": "https://www.thisamericanlife.org/podcast/rss.xml",
+  "active": true,
+  "priority": false,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "This_American_Life.jpg",
+  "episodes": [
+    {
+      "title": "449: Middle School",
+      "published": "Sun, 06 Sep 2026 20:00:00 -0400",
+      "pub_timestamp": 1788739200,
+      "priority": false,
+      "audio_url": "https://pfx.vpixl.com/6qj4J/dts.podtrac.com/redirect.mp/pdst.fm/e/prefix.up.audio/s/npr.simplecastaudio.com/d3081dd9-fcaf-445a-977c-4f56c28f5a6e/episodes/a631bda2-b83f-4e2c-99c5-8344e637a322/audio/128/default.mp3?awCollectionId=d3081dd9-fcaf-445a-977c-4f56c28f5a6e&awEpisodeId=a631bda2-b83f-4e2c-99c5-8344e637a322&nocache",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "896: I Know What You Need",
+      "published": "Sun, 30 Aug 2026 20:00:00 -0400",
+      "pub_timestamp": 1788134400,
+      "priority": false,
+      "audio_url": "https://pfx.vpixl.com/6qj4J/dts.podtrac.com/redirect.mp/pdst.fm/e/prefix.up.audio/s/npr.simplecastaudio.com/d3081dd9-fcaf-445a-977c-4f56c28f5a6e/episodes/caceec36-6b90-47bf-82f3-0913de8f51ee/audio/128/default.mp3?awCollectionId=d3081dd9-fcaf-445a-977c-4f56c28f5a6e&awEpisodeId=caceec36-6b90-47bf-82f3-0913de8f51ee&nocache",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "206: Somewhere in the Arabian Sea",
+      "published": "Sun, 23 Aug 2026 20:00:00 -0400",
+      "pub_timestamp": 1787529600,
+      "priority": false,
+      "audio_url": "https://pfx.vpixl.com/6qj4J/dts.podtrac.com/redirect.mp/pdst.fm/e/prefix.up.audio/s/npr.simplecastaudio.com/d3081dd9-fcaf-445a-977c-4f56c28f5a6e/episodes/dcc04146-548e-4a57-826b-d653088ec4e2/audio/128/default.mp3?awCollectionId=d3081dd9-fcaf-445a-977c-4f56c28f5a6e&awEpisodeId=dcc04146-548e-4a57-826b-d653088ec4e2&nocache",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "895: Label Maker!",
+      "published": "Sun, 16 Aug 2026 20:00:00 -0400",
+      "pub_timestamp": 1786924800,
+      "priority": false,
+      "audio_url": "https://pfx.vpixl.com/6qj4J/dts.podtrac.com/redirect.mp/pdst.fm/e/prefix.up.audio/s/npr.simplecastaudio.com/d3081dd9-fcaf-445a-977c-4f56c28f5a6e/episodes/15103000-90c9-465f-8a0d-0dff5fb2f403/audio/128/default.mp3?awCollectionId=d3081dd9-fcaf-445a-977c-4f56c28f5a6e&awEpisodeId=15103000-90c9-465f-8a0d-0dff5fb2f403&nocache",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "894: I Couldn't Help but Notice",
+      "published": "Sun, 02 Aug 2026 20:00:00 -0400",
+      "pub_timestamp": 1785715200,
+      "priority": false,
+      "audio_url": "https://pfx.vpixl.com/6qj4J/dts.podtrac.com/redirect.mp/pdst.fm/e/prefix.up.audio/s/npr.simplecastaudio.com/d3081dd9-fcaf-445a-977c-4f56c28f5a6e/episodes/0e3cd2c7-87b9-4122-a3fd-38d95bfda0e9/audio/128/default.mp3?awCollectionId=d3081dd9-fcaf-445a-977c-4f56c28f5a6e&awEpisodeId=0e3cd2c7-87b9-4122-a3fd-38d95bfda0e9&nocache",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "893: Testosterone",
+      "published": "Sun, 26 Jul 2026 20:00:00 -0400",
+      "pub_timestamp": 1785110400,
+      "priority": false,
+      "audio_url": "https://pfx.vpixl.com/6qj4J/dts.podtrac.com/redirect.mp/pdst.fm/e/prefix.up.audio/s/npr.simplecastaudio.com/d3081dd9-fcaf-445a-977c-4f56c28f5a6e/episodes/2e938939-638b-4300-8602-68b010d9b98f/audio/128/default.mp3?awCollectionId=d3081dd9-fcaf-445a-977c-4f56c28f5a6e&awEpisodeId=2e938939-638b-4300-8602-68b010d9b98f&nocache",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "892: Trapped on a Bus",
+      "published": "Sun, 19 Jul 2026 20:00:00 -0400",
+      "pub_timestamp": 1784505600,
+      "priority": false,
+      "audio_url": "https://pfx.vpixl.com/6qj4J/dts.podtrac.com/redirect.mp/pdst.fm/e/prefix.up.audio/s/npr.simplecastaudio.com/d3081dd9-fcaf-445a-977c-4f56c28f5a6e/episodes/8e5b0ae5-8cc7-4178-a41a-46b344dc784e/audio/128/default.mp3?awCollectionId=d3081dd9-fcaf-445a-977c-4f56c28f5a6e&awEpisodeId=8e5b0ae5-8cc7-4178-a41a-46b344dc784e&nocache",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "891: The Test Case",
+      "published": "Sun, 12 Jul 2026 20:00:00 -0400",
+      "pub_timestamp": 1783900800,
+      "priority": false,
+      "audio_url": "https://pfx.vpixl.com/6qj4J/dts.podtrac.com/redirect.mp/pdst.fm/e/prefix.up.audio/s/npr.simplecastaudio.com/d3081dd9-fcaf-445a-977c-4f56c28f5a6e/episodes/54b46113-a17b-4f3e-ac3f-d525e0106fab/audio/128/default.mp3?awCollectionId=d3081dd9-fcaf-445a-977c-4f56c28f5a6e&awEpisodeId=54b46113-a17b-4f3e-ac3f-d525e0106fab&nocache",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "890: Maximal Americanness",
+      "published": "Sun, 05 Jul 2026 20:00:00 -0400",
+      "pub_timestamp": 1783296000,
+      "priority": false,
+      "audio_url": "https://pfx.vpixl.com/6qj4J/dts.podtrac.com/redirect.mp/pdst.fm/e/prefix.up.audio/s/npr.simplecastaudio.com/d3081dd9-fcaf-445a-977c-4f56c28f5a6e/episodes/5066d1f0-f8af-484d-a5a6-aea3a4966cf8/audio/128/default.mp3?awCollectionId=d3081dd9-fcaf-445a-977c-4f56c28f5a6e&awEpisodeId=5066d1f0-f8af-484d-a5a6-aea3a4966cf8&nocache",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "889: There\u2019s Something About Hail Mary",
+      "published": "Sun, 21 Jun 2026 20:00:00 -0400",
+      "pub_timestamp": 1782086400,
+      "priority": false,
+      "audio_url": "https://pfx.vpixl.com/6qj4J/dts.podtrac.com/redirect.mp/pdst.fm/e/prefix.up.audio/s/npr.simplecastaudio.com/d3081dd9-fcaf-445a-977c-4f56c28f5a6e/episodes/916a35c5-69f5-47e6-aaf4-e803336ec197/audio/128/default.mp3?awCollectionId=d3081dd9-fcaf-445a-977c-4f56c28f5a6e&awEpisodeId=916a35c5-69f5-47e6-aaf4-e803336ec197&nocache",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    }
+  ]
+}

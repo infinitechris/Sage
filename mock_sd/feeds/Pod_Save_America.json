@@ -1,0 +1,112 @@
+{
+  "feed_title": "Pod Save America",
+  "slug": "Pod_Save_America",
+  "feed_url": "https://audioboom.com/channels/5166624.rss",
+  "active": true,
+  "priority": false,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "Pod_Save_America.jpg",
+  "episodes": [
+    {
+      "title": "Will Trump's Postal Service Seize This Mail Bag?",
+      "published": "Tue, 08 Sep 2026 09:01:00 +0000",
+      "pub_timestamp": 1788858060,
+      "priority": false,
+      "audio_url": "https://clrtpod.com/m/pscrb.fm/rss/p/prfx.byspotify.com/e/arttrk.com/p/CRMDA/mgln.ai/e/284/dts.podtrac.com/redirect.mp3/audioboom.com/posts/8949154.mp3?modified=1788876473&sid=5166624&source=rss",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "Poll Me Twice, Shame On Me",
+      "published": "Sun, 06 Sep 2026 09:01:00 +0000",
+      "pub_timestamp": 1788685260,
+      "priority": false,
+      "audio_url": "https://clrtpod.com/m/pscrb.fm/rss/p/prfx.byspotify.com/e/arttrk.com/p/CRMDA/mgln.ai/e/284/dts.podtrac.com/redirect.mp3/audioboom.com/posts/8949192.mp3?modified=1788573654&sid=5166624&source=rss",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "Republicans Suddenly Have Plans Next Week",
+      "published": "Fri, 04 Sep 2026 09:55:00 +0000",
+      "pub_timestamp": 1788515700,
+      "priority": false,
+      "audio_url": "https://clrtpod.com/m/pscrb.fm/rss/p/prfx.byspotify.com/e/arttrk.com/p/CRMDA/mgln.ai/e/284/dts.podtrac.com/redirect.mp3/audioboom.com/posts/8948797.mp3?modified=1788495701&sid=5166624&source=rss",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Is Trump Trying to Lose the Midterms?",
+      "published": "Tue, 01 Sep 2026 09:55:00 +0000",
+      "pub_timestamp": 1788256500,
+      "priority": false,
+      "audio_url": "https://clrtpod.com/m/pscrb.fm/rss/p/prfx.byspotify.com/e/arttrk.com/p/CRMDA/mgln.ai/e/284/dts.podtrac.com/redirect.mp3/audioboom.com/posts/8947437.mp3?modified=1788232409&sid=5166624&source=rss",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Obama's Campaign Manager's 2028 Scouting Report",
+      "published": "Sun, 30 Aug 2026 09:55:00 +0000",
+      "pub_timestamp": 1788083700,
+      "priority": false,
+      "audio_url": "https://clrtpod.com/m/pscrb.fm/rss/p/prfx.byspotify.com/e/arttrk.com/p/CRMDA/mgln.ai/e/284/dts.podtrac.com/redirect.mp3/audioboom.com/posts/8946649.mp3?modified=1787950570&sid=5166624&source=rss",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Lake America Great Again",
+      "published": "Fri, 28 Aug 2026 09:55:00 +0000",
+      "pub_timestamp": 1787910900,
+      "priority": false,
+      "audio_url": "https://clrtpod.com/m/pscrb.fm/rss/p/prfx.byspotify.com/e/arttrk.com/p/CRMDA/mgln.ai/e/284/dts.podtrac.com/redirect.mp3/audioboom.com/posts/8946310.mp3?modified=1787883692&sid=5166624&source=rss",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Donald J. Plump",
+      "published": "Tue, 25 Aug 2026 09:55:00 +0000",
+      "pub_timestamp": 1787651700,
+      "priority": false,
+      "audio_url": "https://clrtpod.com/m/pscrb.fm/rss/p/prfx.byspotify.com/e/arttrk.com/p/CRMDA/mgln.ai/e/284/dts.podtrac.com/redirect.mp3/audioboom.com/posts/8944946.mp3?modified=1787625266&sid=5166624&source=rss",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "How to Reach the Unreachable Voter",
+      "published": "Sun, 23 Aug 2026 09:55:00 +0000",
+      "pub_timestamp": 1787478900,
+      "priority": false,
+      "audio_url": "https://clrtpod.com/m/pscrb.fm/rss/p/prfx.byspotify.com/e/arttrk.com/p/CRMDA/mgln.ai/e/284/dts.podtrac.com/redirect.mp3/audioboom.com/posts/8944135.mp3?modified=1787365026&sid=5166624&source=rss",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Total Eclipse of the Harp",
+      "published": "Fri, 21 Aug 2026 09:55:00 +0000",
+      "pub_timestamp": 1787306100,
+      "priority": false,
+      "audio_url": "https://clrtpod.com/m/pscrb.fm/rss/p/prfx.byspotify.com/e/arttrk.com/p/CRMDA/mgln.ai/e/284/dts.podtrac.com/redirect.mp3/audioboom.com/posts/8943727.mp3?modified=1787279569&sid=5166624&source=rss",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Printer? I Hardly Know Her!",
+      "published": "Tue, 18 Aug 2026 09:55:00 +0000",
+      "pub_timestamp": 1787046900,
+      "priority": false,
+      "audio_url": "https://clrtpod.com/m/pscrb.fm/rss/p/prfx.byspotify.com/e/arttrk.com/p/CRMDA/mgln.ai/e/284/dts.podtrac.com/redirect.mp3/audioboom.com/posts/8942389.mp3?modified=1787021221&sid=5166624&source=rss",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    }
+  ]
+}

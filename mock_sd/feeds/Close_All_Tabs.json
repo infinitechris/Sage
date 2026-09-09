@@ -1,0 +1,112 @@
+{
+  "feed_title": "Close All Tabs",
+  "slug": "Close_All_Tabs",
+  "feed_url": "https://feeds.megaphone.fm/KQINC6993880386",
+  "active": true,
+  "priority": false,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "Close_All_Tabs.jpg",
+  "episodes": [
+    {
+      "title": "What Happened to the Quantified Self Movement?",
+      "published": "Wed, 02 Sep 2026 10:00:00 -0000",
+      "pub_timestamp": 1788343200,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/KQINC7979965838.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Going Down the AI Music Slop Chute with Camilo Landau | Dream Machines",
+      "published": "Mon, 31 Aug 2026 10:00:00 -0000",
+      "pub_timestamp": 1788170400,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/KQINC1092204215.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "AI Agents Are Turning Marxist Under Stress",
+      "published": "Wed, 26 Aug 2026 10:00:00 -0000",
+      "pub_timestamp": 1787738400,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/KQINC6898043299.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Could AI Transform How Science Gets Done? with Jungwon Byun | Dream Machines",
+      "published": "Mon, 24 Aug 2026 10:00:00 -0000",
+      "pub_timestamp": 1787565600,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/KQINC4628100240.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "The Emily Hart Saga, Part 2: The AI Thirst Trap Grift",
+      "published": "Wed, 19 Aug 2026 10:00:00 -0000",
+      "pub_timestamp": 1787133600,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/KQINC2485498705.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "AI Will Create Enormous Wealth \u2014 But Who Benefits? with Erik Brynjolfsson | Dream Machines",
+      "published": "Mon, 17 Aug 2026 10:00:00 -0000",
+      "pub_timestamp": 1786960800,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/KQINC9885901896.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "The Emily Hart Saga, Part 1: MAGA\u2019s AI Dream Girl",
+      "published": "Wed, 12 Aug 2026 10:00:00 -0000",
+      "pub_timestamp": 1786528800,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/KQINC8396912565.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Language, Landscapes and Robot Minds with Annalee Newitz | Dream Machines",
+      "published": "Mon, 10 Aug 2026 10:00:00 -0000",
+      "pub_timestamp": 1786356000,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/KQINC9454042908.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Why The Ethan Klein Fair Use Lawsuits Are Way More Than Internet Beef",
+      "published": "Wed, 05 Aug 2026 10:00:00 -0000",
+      "pub_timestamp": 1785924000,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/KQINC5056668526.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Introducing: Dream Machines from KQED",
+      "published": "Mon, 03 Aug 2026 10:00:00 -0000",
+      "pub_timestamp": 1785751200,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/KQINC5958380550.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    }
+  ]
+}

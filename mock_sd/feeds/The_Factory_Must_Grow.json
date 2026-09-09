@@ -1,0 +1,112 @@
+{
+  "feed_title": "The Factory Must Grow",
+  "slug": "The_Factory_Must_Grow",
+  "feed_url": "https://anchor.fm/s/f3b1729c/podcast/rss",
+  "active": true,
+  "priority": true,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "The_Factory_Must_Grow.jpg",
+  "episodes": [
+    {
+      "title": "53 - Factorio 2.1 Patch Notes Discussion & Modding Implications!",
+      "published": "Tue, 30 Jun 2026 15:26:37 GMT",
+      "pub_timestamp": 1782833197,
+      "priority": true,
+      "audio_url": "https://anchor.fm/s/f3b1729c/podcast/play/122201402/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-5-30%2F24a1679c-3485-b145-468f-895a6e6792b7.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "52 - (Finale) The Human Must Grow",
+      "published": "Tue, 07 Apr 2026 12:00:00 GMT",
+      "pub_timestamp": 1775563200,
+      "priority": true,
+      "audio_url": "https://anchor.fm/s/f3b1729c/podcast/play/118044242/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-6%2Fdc635106-21b6-574b-5ab6-908b3ee12bc2.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "51 - Conceits of Games",
+      "published": "Tue, 17 Mar 2026 12:00:00 GMT",
+      "pub_timestamp": 1773748800,
+      "priority": true,
+      "audio_url": "https://anchor.fm/s/f3b1729c/podcast/play/117015442/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-16%2F95f64378-fb37-89c9-ed8f-90169cafde50.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "50 - Netflix And Drill: Desktop Factory Game Design With Jack Of Boxes",
+      "published": "Tue, 03 Mar 2026 13:00:00 GMT",
+      "pub_timestamp": 1772542800,
+      "priority": true,
+      "audio_url": "https://anchor.fm/s/f3b1729c/podcast/play/116286410/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-2%2F4f78fd00-3ced-ce98-d5f7-373800f67c7f.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "49 - GoatsWithPants On Organic Factorio Building",
+      "published": "Mon, 16 Feb 2026 13:00:00 GMT",
+      "pub_timestamp": 1771246800,
+      "priority": true,
+      "audio_url": "https://anchor.fm/s/f3b1729c/podcast/play/115552294/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-15%2F0f7fbc14-2b9b-b78c-964d-bc7f1dc4c5cb.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "48 - The Metacognition Must Grow",
+      "published": "Tue, 03 Feb 2026 13:00:00 GMT",
+      "pub_timestamp": 1770123600,
+      "priority": true,
+      "audio_url": "https://anchor.fm/s/f3b1729c/podcast/play/114926773/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-2%2F804c9852-c97b-2579-813e-3d820bb84a9a.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "47 - Protocol_1903 On Mods & Modding",
+      "published": "Mon, 05 Jan 2026 13:00:00 GMT",
+      "pub_timestamp": 1767618000,
+      "priority": true,
+      "audio_url": "https://anchor.fm/s/f3b1729c/podcast/play/113487438/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-4%2Fffc36748-284e-52d9-aee4-333333c72211.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "46 - Gaming Year In Review",
+      "published": "Tue, 16 Dec 2025 13:00:00 GMT",
+      "pub_timestamp": 1765890000,
+      "priority": true,
+      "audio_url": "https://anchor.fm/s/f3b1729c/podcast/play/112678723/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-15%2Fd5f914a7-ce0a-27b9-197a-6e6f6bf26312.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "45 - Our Factorio Stories",
+      "published": "Tue, 02 Dec 2025 13:00:00 GMT",
+      "pub_timestamp": 1764680400,
+      "priority": true,
+      "audio_url": "https://anchor.fm/s/f3b1729c/podcast/play/111982107/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-1%2Fb097e0c7-64dc-a912-d1d2-641fa9da62f3.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "44 - What It's Like To Mod Factorio",
+      "published": "Tue, 18 Nov 2025 13:00:00 GMT",
+      "pub_timestamp": 1763470800,
+      "priority": true,
+      "audio_url": "https://anchor.fm/s/f3b1729c/podcast/play/111334997/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-10-18%2F4509339b-1473-ae65-6358-4aa49c6e3363.mp3",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    }
+  ]
+}

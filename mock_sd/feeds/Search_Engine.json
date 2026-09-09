@@ -1,0 +1,112 @@
+{
+  "feed_title": "Search Engine",
+  "slug": "Search_Engine",
+  "feed_url": "https://rss.amperwave.net/v2/feed/audacynetwork/search-engine",
+  "active": true,
+  "priority": false,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "Search_Engine.jpg",
+  "episodes": [
+    {
+      "title": "The Killing of the Gaza Chef",
+      "published": "Fri, 28 Aug 2026 09:00:00 +0000",
+      "pub_timestamp": 1787907600,
+      "priority": false,
+      "audio_url": "https://pdst.fm/e/tracking.swap.fm/track/v9Uiw3bGr54f6BVZKSyc/pscrb.fm/rss/p/serve.castfire.com/audio/8238827/8238827_2026-04-14-013527.192.mp3?rssID=6042",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "The Chosen One",
+      "published": "Fri, 21 Aug 2026 13:15:00 +0000",
+      "pub_timestamp": 1787318100,
+      "priority": false,
+      "audio_url": "https://pdst.fm/e/tracking.swap.fm/track/v9Uiw3bGr54f6BVZKSyc/pscrb.fm/rss/p/serve.castfire.com/audio/8238828/8238828_2026-04-14-013728.192.mp3?rssID=6042",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "A road trip through the data center debate",
+      "published": "Tue, 11 Aug 2026 17:00:00 +0000",
+      "pub_timestamp": 1786467600,
+      "priority": false,
+      "audio_url": "https://pdst.fm/e/tracking.swap.fm/track/v9Uiw3bGr54f6BVZKSyc/pscrb.fm/rss/p/serve.castfire.com/audio/8583392/8583392_2026-08-10-143832.192.mp3?rssID=6042",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "The machines are learning\u2026 to do crimes?",
+      "published": "Thu, 06 Aug 2026 23:05:00 +0000",
+      "pub_timestamp": 1786057500,
+      "priority": false,
+      "audio_url": "https://pdst.fm/e/tracking.swap.fm/track/v9Uiw3bGr54f6BVZKSyc/pscrb.fm/rss/p/serve.castfire.com/audio/8238829/8238829_2026-04-14-013729.192.mp3?rssID=6042",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "What\u2019s in your cocaine and the questions Search Engine CAN\u2019T answer",
+      "published": "Fri, 24 Jul 2026 09:00:00 +0000",
+      "pub_timestamp": 1784883600,
+      "priority": false,
+      "audio_url": "https://pdst.fm/e/tracking.swap.fm/track/v9Uiw3bGr54f6BVZKSyc/pscrb.fm/rss/p/serve.castfire.com/audio/8238830/8238830_2026-04-14-013930.192.mp3?rssID=6042",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "How to pursue excellence \u2026 in noodles (unlocked bonus)",
+      "published": "Fri, 17 Jul 2026 09:00:00 +0000",
+      "pub_timestamp": 1784278800,
+      "priority": false,
+      "audio_url": "https://pdst.fm/e/tracking.swap.fm/track/v9Uiw3bGr54f6BVZKSyc/pscrb.fm/rss/p/serve.castfire.com/audio/8238834/8238834_2026-04-14-014034.192.mp3?rssID=6042",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Why didn\u2019t Chris and Dan get into Berghain? Pt. 2 (classic)",
+      "published": "Fri, 10 Jul 2026 09:00:00 +0000",
+      "pub_timestamp": 1783674000,
+      "priority": false,
+      "audio_url": "https://pdst.fm/e/tracking.swap.fm/track/v9Uiw3bGr54f6BVZKSyc/pscrb.fm/rss/p/serve.castfire.com/audio/8238835/8238835_2026-04-14-014035.192.mp3?rssID=6042",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Why didn\u2019t Chris and Dan get into Berghain? Pt. 1 (classic)",
+      "published": "Fri, 03 Jul 2026 09:00:00 +0000",
+      "pub_timestamp": 1783069200,
+      "priority": false,
+      "audio_url": "https://pdst.fm/e/tracking.swap.fm/track/v9Uiw3bGr54f6BVZKSyc/pscrb.fm/rss/p/serve.castfire.com/audio/8238836/8238836_2026-04-14-014036.192.mp3?rssID=6042",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "A Strange Voyage",
+      "published": "Thu, 25 Jun 2026 21:10:00 +0000",
+      "pub_timestamp": 1782421800,
+      "priority": false,
+      "audio_url": "https://pdst.fm/e/tracking.swap.fm/track/v9Uiw3bGr54f6BVZKSyc/pscrb.fm/rss/p/serve.castfire.com/audio/8238838/8238838_2026-04-14-014138.192.mp3?rssID=6042",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Why doesn\u2019t anybody come to my parties?",
+      "published": "Mon, 15 Jun 2026 22:15:00 +0000",
+      "pub_timestamp": 1781561700,
+      "priority": false,
+      "audio_url": "https://pdst.fm/e/tracking.swap.fm/track/v9Uiw3bGr54f6BVZKSyc/pscrb.fm/rss/p/serve.castfire.com/audio/8238839/8238839_2026-04-14-014139.192.mp3?rssID=6042",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    }
+  ]
+}

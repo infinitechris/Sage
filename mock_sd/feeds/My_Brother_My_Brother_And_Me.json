@@ -1,0 +1,49 @@
+{
+  "feed_title": "My Brother, My Brother And Me",
+  "slug": "My_Brother_My_Brother_And_Me",
+  "feed_url": "https://feeds.simplecast.com/wjQvYtdl",
+  "active": false,
+  "image_file": "My_Brother_My_Brother_And_Me.jpg",
+  "episodes": [
+    {
+      "title": "MBMBaM 828: *Unless I\u2019m Pissin\u2019 Pants",
+      "published": "Mon, 24 Aug 2026 16:00:00 +0000",
+      "audio_url": "https://claritaspod.com/measure/prfx.byspotify.com/e/pscrb.fm/rss/p/mgln.ai/e/31/afp-9384.calisto.simplecastaudio.com/dbf86dbd-6a9d-4db2-a354-45de08471376/episodes/c1cafd1d-6501-4a3d-b5b9-dc416e6606c4/audio/128/default.mp3?aid=rss_feed&awCollectionId=dbf86dbd-6a9d-4db2-a354-45de08471376&awEpisodeId=c1cafd1d-6501-4a3d-b5b9-dc416e6606c4&feed=wjQvYtdl",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "MBMBaM 827: Advanced Jesus Studies for Men",
+      "published": "Mon, 17 Aug 2026 16:00:00 +0000",
+      "audio_url": "https://claritaspod.com/measure/prfx.byspotify.com/e/pscrb.fm/rss/p/mgln.ai/e/31/afp-9384.calisto.simplecastaudio.com/dbf86dbd-6a9d-4db2-a354-45de08471376/episodes/0130ff7f-0a6c-483f-8556-860018634581/audio/128/default.mp3?aid=rss_feed&awCollectionId=dbf86dbd-6a9d-4db2-a354-45de08471376&awEpisodeId=0130ff7f-0a6c-483f-8556-860018634581&feed=wjQvYtdl",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "MBMBaM 826: Right to the Couch Hole",
+      "published": "Mon, 10 Aug 2026 16:00:00 +0000",
+      "audio_url": "https://claritaspod.com/measure/prfx.byspotify.com/e/pscrb.fm/rss/p/mgln.ai/e/31/afp-9384.calisto.simplecastaudio.com/dbf86dbd-6a9d-4db2-a354-45de08471376/episodes/67eef75f-a964-41e3-ae2c-a25d54e08a6e/audio/128/default.mp3?aid=rss_feed&awCollectionId=dbf86dbd-6a9d-4db2-a354-45de08471376&awEpisodeId=67eef75f-a964-41e3-ae2c-a25d54e08a6e&feed=wjQvYtdl",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "MBMBaM 825: I Ain\u2019t \u2019Fredo No Toast",
+      "published": "Tue, 4 Aug 2026 14:00:00 +0000",
+      "audio_url": "https://claritaspod.com/measure/prfx.byspotify.com/e/pscrb.fm/rss/p/mgln.ai/e/31/afp-9384.calisto.simplecastaudio.com/dbf86dbd-6a9d-4db2-a354-45de08471376/episodes/912f7fc0-4f0e-4dde-9e0e-194c8cbfa856/audio/128/default.mp3?aid=rss_feed&awCollectionId=dbf86dbd-6a9d-4db2-a354-45de08471376&awEpisodeId=912f7fc0-4f0e-4dde-9e0e-194c8cbfa856&feed=wjQvYtdl",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "MBMBaM 824: Chaddy, Not Daddy",
+      "published": "Mon, 27 Jul 2026 16:00:00 +0000",
+      "audio_url": "https://claritaspod.com/measure/prfx.byspotify.com/e/pscrb.fm/rss/p/mgln.ai/e/31/afp-9384.calisto.simplecastaudio.com/dbf86dbd-6a9d-4db2-a354-45de08471376/episodes/33230041-8bcc-4945-beb7-6d3d9476abb4/audio/128/default.mp3?aid=rss_feed&awCollectionId=dbf86dbd-6a9d-4db2-a354-45de08471376&awEpisodeId=33230041-8bcc-4945-beb7-6d3d9476abb4&feed=wjQvYtdl",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    }
+  ]
+}

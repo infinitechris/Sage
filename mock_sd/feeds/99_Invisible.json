@@ -1,0 +1,112 @@
+{
+  "feed_title": "99% Invisible",
+  "slug": "99_Invisible",
+  "feed_url": "https://feeds.simplecast.com/BqbsxVfO",
+  "active": true,
+  "priority": false,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "99_Invisible.jpg",
+  "episodes": [
+    {
+      "title": "Kobuk the Destroyer",
+      "published": "Tue, 8 Sep 2026 08:00:00 +0000",
+      "pub_timestamp": 1788854400,
+      "priority": false,
+      "audio_url": "https://mgln.ai/e/2/dts.podtrac.com/redirect.mp3/stitcher.simplecastaudio.com/3bb687b0-04af-4257-90f1-39eef4e631b6/episodes/92600b48-e7e9-4d96-828a-32d95f38e9dd/audio/128/default.mp3?aid=rss_feed&awCollectionId=3bb687b0-04af-4257-90f1-39eef4e631b6&awEpisodeId=92600b48-e7e9-4d96-828a-32d95f38e9dd&feed=BqbsxVfO",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "100 Objects #16: Wheel of Fortune Dalmatian",
+      "published": "Fri, 4 Sep 2026 07:00:00 +0000",
+      "pub_timestamp": 1788505200,
+      "priority": false,
+      "audio_url": "https://mgln.ai/e/2/dts.podtrac.com/redirect.mp3/stitcher.simplecastaudio.com/3bb687b0-04af-4257-90f1-39eef4e631b6/episodes/d17e1bb5-0ce6-4a8a-98eb-4a0c54000f8a/audio/128/default.mp3?aid=rss_feed&awCollectionId=3bb687b0-04af-4257-90f1-39eef4e631b6&awEpisodeId=d17e1bb5-0ce6-4a8a-98eb-4a0c54000f8a&feed=BqbsxVfO",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "1-800-PODCAST",
+      "published": "Tue, 1 Sep 2026 08:00:00 +0000",
+      "pub_timestamp": 1788249600,
+      "priority": false,
+      "audio_url": "https://mgln.ai/e/2/dts.podtrac.com/redirect.mp3/stitcher.simplecastaudio.com/3bb687b0-04af-4257-90f1-39eef4e631b6/episodes/f9b1bd8c-b177-43c4-a328-56e8fb16507f/audio/128/default.mp3?aid=rss_feed&awCollectionId=3bb687b0-04af-4257-90f1-39eef4e631b6&awEpisodeId=f9b1bd8c-b177-43c4-a328-56e8fb16507f&feed=BqbsxVfO",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "100 Objects #15: Bundy Clock",
+      "published": "Fri, 28 Aug 2026 07:00:00 +0000",
+      "pub_timestamp": 1787900400,
+      "priority": false,
+      "audio_url": "https://mgln.ai/e/2/dts.podtrac.com/redirect.mp3/stitcher.simplecastaudio.com/3bb687b0-04af-4257-90f1-39eef4e631b6/episodes/aeaca5a2-999e-4a20-b91f-9897233d3ac8/audio/128/default.mp3?aid=rss_feed&awCollectionId=3bb687b0-04af-4257-90f1-39eef4e631b6&awEpisodeId=aeaca5a2-999e-4a20-b91f-9897233d3ac8&feed=BqbsxVfO",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Spolia",
+      "published": "Tue, 25 Aug 2026 08:00:00 +0000",
+      "pub_timestamp": 1787644800,
+      "priority": false,
+      "audio_url": "https://mgln.ai/e/2/dts.podtrac.com/redirect.mp3/stitcher.simplecastaudio.com/3bb687b0-04af-4257-90f1-39eef4e631b6/episodes/0b3dcdc2-6507-4329-a9d0-cf14b133f6cc/audio/128/default.mp3?aid=rss_feed&awCollectionId=3bb687b0-04af-4257-90f1-39eef4e631b6&awEpisodeId=0b3dcdc2-6507-4329-a9d0-cf14b133f6cc&feed=BqbsxVfO",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "100 Objects #14: Basketball Sleeve",
+      "published": "Fri, 21 Aug 2026 07:00:00 +0000",
+      "pub_timestamp": 1787295600,
+      "priority": false,
+      "audio_url": "https://mgln.ai/e/2/dts.podtrac.com/redirect.mp3/stitcher.simplecastaudio.com/3bb687b0-04af-4257-90f1-39eef4e631b6/episodes/2e45e5a7-6467-4cc5-b09c-7f0a83b62450/audio/128/default.mp3?aid=rss_feed&awCollectionId=3bb687b0-04af-4257-90f1-39eef4e631b6&awEpisodeId=2e45e5a7-6467-4cc5-b09c-7f0a83b62450&feed=BqbsxVfO",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "The Bone Wars",
+      "published": "Tue, 18 Aug 2026 08:00:00 +0000",
+      "pub_timestamp": 1787040000,
+      "priority": false,
+      "audio_url": "https://mgln.ai/e/2/dts.podtrac.com/redirect.mp3/stitcher.simplecastaudio.com/3bb687b0-04af-4257-90f1-39eef4e631b6/episodes/c211385c-1bad-4e1f-a209-803237860b76/audio/128/default.mp3?aid=rss_feed&awCollectionId=3bb687b0-04af-4257-90f1-39eef4e631b6&awEpisodeId=c211385c-1bad-4e1f-a209-803237860b76&feed=BqbsxVfO",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "100 Objects #13: The Sand Letters",
+      "published": "Fri, 14 Aug 2026 07:00:00 +0000",
+      "pub_timestamp": 1786690800,
+      "priority": false,
+      "audio_url": "https://mgln.ai/e/2/dts.podtrac.com/redirect.mp3/stitcher.simplecastaudio.com/3bb687b0-04af-4257-90f1-39eef4e631b6/episodes/cd2d774c-2500-42df-b68b-d97db82d622e/audio/128/default.mp3?aid=rss_feed&awCollectionId=3bb687b0-04af-4257-90f1-39eef4e631b6&awEpisodeId=cd2d774c-2500-42df-b68b-d97db82d622e&feed=BqbsxVfO",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Bamboo Is Innocent",
+      "published": "Tue, 11 Aug 2026 08:00:00 +0000",
+      "pub_timestamp": 1786435200,
+      "priority": false,
+      "audio_url": "https://mgln.ai/e/2/dts.podtrac.com/redirect.mp3/stitcher.simplecastaudio.com/3bb687b0-04af-4257-90f1-39eef4e631b6/episodes/1911b2b6-5d79-4ceb-87a3-2445cc696d36/audio/128/default.mp3?aid=rss_feed&awCollectionId=3bb687b0-04af-4257-90f1-39eef4e631b6&awEpisodeId=1911b2b6-5d79-4ceb-87a3-2445cc696d36&feed=BqbsxVfO",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "100 Objects #12: \"Negro Cloth\"",
+      "published": "Fri, 7 Aug 2026 07:00:00 +0000",
+      "pub_timestamp": 1786086000,
+      "priority": false,
+      "audio_url": "https://mgln.ai/e/2/dts.podtrac.com/redirect.mp3/stitcher.simplecastaudio.com/3bb687b0-04af-4257-90f1-39eef4e631b6/episodes/32d7222e-3686-4a0b-a3d2-83ab8c232c82/audio/128/default.mp3?aid=rss_feed&awCollectionId=3bb687b0-04af-4257-90f1-39eef4e631b6&awEpisodeId=32d7222e-3686-4a0b-a3d2-83ab8c232c82&feed=BqbsxVfO",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    }
+  ]
+}

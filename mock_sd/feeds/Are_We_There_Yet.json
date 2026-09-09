@@ -1,0 +1,112 @@
+{
+  "feed_title": "Are We There Yet?",
+  "slug": "Are_We_There_Yet",
+  "feed_url": "https://www.cfpublic.org/podcast/are-we-there-yet/rss.xml",
+  "active": true,
+  "priority": false,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "Are_We_There_Yet.jpg",
+  "episodes": [
+    {
+      "title": "Summer space news roundup",
+      "published": "Tue, 08 Sep 2026 18:00:00 -0400",
+      "pub_timestamp": 1788904800,
+      "priority": false,
+      "audio_url": "https://wmfe-od.streamguys1.com/awty/awty543.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "SpaceX\u2019s expands to Louisiana and NASA tests next moon-suits",
+      "published": "Wed, 02 Sep 2026 07:46:45 -0400",
+      "pub_timestamp": 1788349605,
+      "priority": false,
+      "audio_url": "https://wmfe-od.streamguys1.com/awty/awty542.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Astronaut Mike Fincke retires. Space healthcare readies for next big mission",
+      "published": "Tue, 25 Aug 2026 18:09:46 -0400",
+      "pub_timestamp": 1787695786,
+      "priority": false,
+      "audio_url": "https://wmfe-od.streamguys1.com/awty/awty541.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "A Martian rover\u2019s \u2018land-a-versary\u2019 and the ethics of human space exploration",
+      "published": "Tue, 18 Aug 2026 19:23:38 -0400",
+      "pub_timestamp": 1787095418,
+      "priority": false,
+      "audio_url": "https://wmfe-od.streamguys1.com/awty/awty540.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "What\u2019s happening in our skies and how NASA will study space mysteries with a new telescope",
+      "published": "Tue, 11 Aug 2026 18:36:33 -0400",
+      "pub_timestamp": 1786487793,
+      "priority": false,
+      "audio_url": "https://wmfe-od.streamguys1.com/awty/awty539.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Rescuing a rescue mission",
+      "published": "Tue, 04 Aug 2026 18:30:00 -0400",
+      "pub_timestamp": 1785882600,
+      "priority": false,
+      "audio_url": "https://wmfe-od.streamguys1.com/awty/awty538.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Designing the next moon suit and controversy over SpaceX land",
+      "published": "Tue, 28 Jul 2026 18:11:53 -0400",
+      "pub_timestamp": 1785276713,
+      "priority": false,
+      "audio_url": "https://wmfe-od.streamguys1.com/awty/awty537.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "NASA chief\u2019s pledge to STEM education and how VR is bringing people to the cosmos",
+      "published": "Tue, 21 Jul 2026 17:25:23 -0400",
+      "pub_timestamp": 1784669123,
+      "priority": false,
+      "audio_url": "https://wmfe-od.streamguys1.com/awty/awty536.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Life on Mars and the final Space Shuttle mission",
+      "published": "Tue, 14 Jul 2026 19:55:25 -0400",
+      "pub_timestamp": 1784073325,
+      "priority": false,
+      "audio_url": "https://wmfe-od.streamguys1.com/awty/awty535.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Starliner\u2019s delay and Rocket Lab\u2019s big buy. The latest on commercial space.",
+      "published": "Tue, 07 Jul 2026 18:29:44 -0400",
+      "pub_timestamp": 1783463384,
+      "priority": false,
+      "audio_url": "https://wmfe-od.streamguys1.com/awty/awty534.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    }
+  ]
+}

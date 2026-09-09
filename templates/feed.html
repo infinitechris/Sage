@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ feed.feed_title }}</title>
+    <style>
+        body { background-color: #121212; color: #e0e0e0; font-family: sans-serif; margin: 0; padding: 20px; }
+        .header { font-size: 1.2rem; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; }
+        .back-link { color: #0066cc; text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { text-decoration: underline; }
+        .card { background: #1e1e1e; padding: 20px; border-radius: 8px; border: 1px solid #333; max-width: 800px; margin: 0 auto; }
+        .card h2 { margin-top: 0; font-size: 1.2rem; border-bottom: 1px solid #333; padding-bottom: 10px; display: flex; align-items: center; gap: 12px; }
+        .feed-art { width: 50px; height: 50px; border-radius: 4px; object-fit: cover; background: #333; }
+        .episode-item { padding: 12px 0; border-bottom: 1px solid #2a2a2a; display: flex; justify-content: space-between; align-items: center; }
+        .episode-item:last-child { border-bottom: none; }
+        .episode-title { font-weight: bold; font-size: 0.95rem; color: #fff; margin-bottom: 4px; }
+        .episode-date { font-size: 0.8rem; color: #888; }
+        .badge { font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; background: #333; color: #aaa; }
+        .badge.downloaded { background: #1b4d3e; color: #2ecc71; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header" style="margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+    <a href="{{ url_for('index') }}" class="back-link">&larr; Back to Dashboard</a>
+    
+    <div style="display: flex; gap: 10px; align-items: center;">
+        <a href="{{ url_for('toggle_autodownload', feed_name=feed_name) }}" 
+           class="btn-secondary" 
+           style="text-decoration: none; padding: 6px 12px; border-radius: 4px; font-size: 0.85rem; background: {{ '#1b4d3e' if feed.auto_download else '#333' }}; color: {{ '#2ecc71' if feed.auto_download else '#aaa' }};">
+            Auto-Download: {{ 'On' if feed.auto_download else 'Off' }}
+        </a>
+
+        <a href="{{ url_for('toggle_priority', feed_name=feed_name) }}" 
+           class="btn-secondary" 
+           style="text-decoration: none; padding: 6px 12px; border-radius: 4px; font-size: 0.85rem; background: {{ '#4d3b1b' if feed.priority else '#333' }}; color: {{ '#f1c40f' if feed.priority else '#aaa' }};">
+            Priority: {{ 'On' if feed.priority else 'Off' }}
+        </a>
+
+        <a href="{{ url_for('remove_feed', feed_name=feed_name) }}" 
+           class="btn-secondary" 
+           style="text-decoration: none; padding: 6px 12px; border-radius: 4px; font-size: 0.85rem; background: #4d1b1b; color: #e74c3c;"
+           onclick="return confirm('Are you sure you want to remove this podcast? Your played and archived history will be preserved if you re-add it later.');">
+            Remove Podcast
+        </a>
+    </div>
+</div>
+        
+<div style="margin: 20px 0; background: #181818; padding: 15px; border-radius: 6px; border: 1px solid #333;">
+    <h3 style="font-size: 0.95rem; color: #aaa; margin-top: 0; margin-bottom: 8px;">Skip/Archive Keywords</h3>
+    <form action="{{ url_for('update_filters', feed_name=feed_name) }}" method="POST" style="display: flex; gap: 8px;">
+        <input type="text" name="filter_string" placeholder="e.g. Bonus, Recap, Live" value="{{ feed.filter_string or '' }}" 
+               style="flex: 1; background: #222; border: 1px solid #444; color: #fff; padding: 6px 10px; border-radius: 4px; font-size: 0.85rem;">
+        <button type="submit" class="btn-secondary" style="padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; background: #333; color: #fff; border: none; cursor: pointer;">Save Filters</button>
+    </form>
+    <div style="font-size: 0.75rem; color: #777; margin-top: 6px;">Episodes containing these comma-separated strings will be auto-archived and skipped.</div>
+</div>
+
+        <h2>
+            {% if feed.image_file %}
+                <img src="{{ url_for('serve_asset', filename=feed.image_file) }}" alt="" class="feed-art">
+            {% endif %}
+            <span>{{ feed.feed_title }}</span>
+        </h2>
+
+        <div style="margin-top: 20px;">
+            <h3 style="font-size: 1rem; color: #aaa; margin-bottom: 10px;">Available Episodes</h3>
+            {% for ep in feed.episodes %}
+    <div class="episode-item">
+        <div>
+            <div class="episode-title" style="color: {{ '#777' if ep.archived or ep.played else '#fff' }};">
+                {{ ep.title }}
+            </div>
+            <div class="episode-date">{{ ep.published }}</div>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+                {% if ep.downloaded %}
+                    <span class="btn-secondary" style="text-decoration: none; padding: 6px 10px; border-radius: 4px; font-size: 0.8rem; background: #1b4d3e; color: #2ecc71; opacity: 0.8; cursor: default;">
+                        Downloaded
+                    </span>
+                {% else %}
+                    <a href="{{ url_for('download_episode', feed_name=feed_name, ep_index=loop.index0) }}" 
+                       class="btn-secondary" style="text-decoration: none; padding: 6px 10px; border-radius: 4px; font-size: 0.8rem; background: #333; color: #aaa;">
+                        Download
+                    </a>
+                {% endif %}
+                
+                <a href="{{ url_for('toggle_episode', feed_name=feed_name, ep_index=loop.index0, action='played') }}" 
+                   class="btn-secondary" style="text-decoration: none; padding: 6px 10px; border-radius: 4px; font-size: 0.8rem; background: {{ '#1b4d3e' if ep.played else '#333' }}; color: {{ '#2ecc71' if ep.played else '#aaa' }};">
+                    {{ 'Played' if ep.played else 'Mark Played' }}
+                </a>
+
+                <a href="{{ url_for('toggle_episode', feed_name=feed_name, ep_index=loop.index0, action='archived') }}" 
+                   class="btn-secondary" style="text-decoration: none; padding: 6px 10px; border-radius: 4px; font-size: 0.8rem; background: {{ '#4d1b1b' if ep.archived else '#333' }}; color: {{ '#e74c3c' if ep.archived else '#aaa' }};">
+                    {{ 'Archived' if ep.archived else 'Archive' }}
+                </a>
+            </div>
+    </div>
+        {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

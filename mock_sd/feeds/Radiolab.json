@@ -1,0 +1,112 @@
+{
+  "feed_title": "Radiolab",
+  "slug": "Radiolab",
+  "feed_url": "https://feeds.simplecast.com/EmVW7VGp",
+  "active": true,
+  "priority": false,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "Radiolab.jpg",
+  "episodes": [
+    {
+      "title": "60 Words",
+      "published": "Fri, 4 Sep 2026 14:00:00 +0000",
+      "pub_timestamp": 1788530400,
+      "priority": false,
+      "audio_url": "https://pscrb.fm/rss/p/mgln.ai/e/14/prfx.byspotify.com/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/758af4c0-a2c3-47ec-a2d8-05f41bfbde51/episodes/f5705470-6555-481d-b592-928ac9e5a48b/audio/128/default.mp3?aid=rss_feed&awCollectionId=758af4c0-a2c3-47ec-a2d8-05f41bfbde51&awEpisodeId=f5705470-6555-481d-b592-928ac9e5a48b&feed=EmVW7VGp",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Dolly Parton's America: Sad Ass Songs",
+      "published": "Fri, 28 Aug 2026 14:00:00 +0000",
+      "pub_timestamp": 1787925600,
+      "priority": false,
+      "audio_url": "https://pscrb.fm/rss/p/mgln.ai/e/14/prfx.byspotify.com/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/758af4c0-a2c3-47ec-a2d8-05f41bfbde51/episodes/3d739fac-22c2-44fa-b2d6-054c8db3cfb7/audio/128/default.mp3?aid=rss_feed&awCollectionId=758af4c0-a2c3-47ec-a2d8-05f41bfbde51&awEpisodeId=3d739fac-22c2-44fa-b2d6-054c8db3cfb7&feed=EmVW7VGp",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Patient Zero",
+      "published": "Fri, 21 Aug 2026 14:00:00 +0000",
+      "pub_timestamp": 1787320800,
+      "priority": false,
+      "audio_url": "https://pscrb.fm/rss/p/mgln.ai/e/14/prfx.byspotify.com/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/758af4c0-a2c3-47ec-a2d8-05f41bfbde51/episodes/f646657e-9e57-49d9-b83e-825f0a3e8ebf/audio/128/default.mp3?aid=rss_feed&awCollectionId=758af4c0-a2c3-47ec-a2d8-05f41bfbde51&awEpisodeId=f646657e-9e57-49d9-b83e-825f0a3e8ebf&feed=EmVW7VGp",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Nigel and the Real Gannet",
+      "published": "Fri, 14 Aug 2026 14:00:00 +0000",
+      "pub_timestamp": 1786716000,
+      "priority": false,
+      "audio_url": "https://pscrb.fm/rss/p/mgln.ai/e/14/prfx.byspotify.com/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/758af4c0-a2c3-47ec-a2d8-05f41bfbde51/episodes/0ccc6b22-d811-4685-bc09-7d2b45e3127d/audio/128/default.mp3?aid=rss_feed&awCollectionId=758af4c0-a2c3-47ec-a2d8-05f41bfbde51&awEpisodeId=0ccc6b22-d811-4685-bc09-7d2b45e3127d&feed=EmVW7VGp",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Red Herring",
+      "published": "Fri, 7 Aug 2026 14:00:00 +0000",
+      "pub_timestamp": 1786111200,
+      "priority": false,
+      "audio_url": "https://pscrb.fm/rss/p/mgln.ai/e/14/prfx.byspotify.com/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/758af4c0-a2c3-47ec-a2d8-05f41bfbde51/episodes/ccf08317-1655-47d2-9cfa-f0e375a466fb/audio/128/default.mp3?aid=rss_feed&awCollectionId=758af4c0-a2c3-47ec-a2d8-05f41bfbde51&awEpisodeId=ccf08317-1655-47d2-9cfa-f0e375a466fb&feed=EmVW7VGp",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "The Shoe Thrower",
+      "published": "Fri, 31 Jul 2026 14:00:00 +0000",
+      "pub_timestamp": 1785506400,
+      "priority": false,
+      "audio_url": "https://pscrb.fm/rss/p/mgln.ai/e/14/prfx.byspotify.com/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/758af4c0-a2c3-47ec-a2d8-05f41bfbde51/episodes/4e8d47c7-d565-49ea-9ec2-dae68c3b9656/audio/128/default.mp3?aid=rss_feed&awCollectionId=758af4c0-a2c3-47ec-a2d8-05f41bfbde51&awEpisodeId=4e8d47c7-d565-49ea-9ec2-dae68c3b9656&feed=EmVW7VGp",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Return of Alpha Gal",
+      "published": "Fri, 24 Jul 2026 14:00:00 +0000",
+      "pub_timestamp": 1784901600,
+      "priority": false,
+      "audio_url": "https://pscrb.fm/rss/p/mgln.ai/e/14/prfx.byspotify.com/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/758af4c0-a2c3-47ec-a2d8-05f41bfbde51/episodes/8526fcd4-14e7-4d62-bb43-3c65dd3292fe/audio/128/default.mp3?aid=rss_feed&awCollectionId=758af4c0-a2c3-47ec-a2d8-05f41bfbde51&awEpisodeId=8526fcd4-14e7-4d62-bb43-3c65dd3292fe&feed=EmVW7VGp",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Neither Confirm Nor Deny",
+      "published": "Fri, 17 Jul 2026 14:00:00 +0000",
+      "pub_timestamp": 1784296800,
+      "priority": false,
+      "audio_url": "https://pscrb.fm/rss/p/mgln.ai/e/14/prfx.byspotify.com/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/758af4c0-a2c3-47ec-a2d8-05f41bfbde51/episodes/e8f788dc-5f69-4491-9107-2a733a4715e1/audio/128/default.mp3?aid=rss_feed&awCollectionId=758af4c0-a2c3-47ec-a2d8-05f41bfbde51&awEpisodeId=e8f788dc-5f69-4491-9107-2a733a4715e1&feed=EmVW7VGp",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "The Holy Shiver",
+      "published": "Fri, 10 Jul 2026 14:00:00 +0000",
+      "pub_timestamp": 1783692000,
+      "priority": false,
+      "audio_url": "https://pscrb.fm/rss/p/mgln.ai/e/14/prfx.byspotify.com/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/758af4c0-a2c3-47ec-a2d8-05f41bfbde51/episodes/449c3648-e49d-409f-a952-300e9ade0bef/audio/128/default.mp3?aid=rss_feed&awCollectionId=758af4c0-a2c3-47ec-a2d8-05f41bfbde51&awEpisodeId=449c3648-e49d-409f-a952-300e9ade0bef&feed=EmVW7VGp",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "Atomic Artifacts",
+      "published": "Fri, 3 Jul 2026 14:00:00 +0000",
+      "pub_timestamp": 1783087200,
+      "priority": false,
+      "audio_url": "https://pscrb.fm/rss/p/mgln.ai/e/14/prfx.byspotify.com/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/758af4c0-a2c3-47ec-a2d8-05f41bfbde51/episodes/ea92ade5-3fb0-47ea-ac27-6c6be521245e/audio/128/default.mp3?aid=rss_feed&awCollectionId=758af4c0-a2c3-47ec-a2d8-05f41bfbde51&awEpisodeId=ea92ade5-3fb0-47ea-ac27-6c6be521245e&feed=EmVW7VGp",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sage Dashboard</title>
+    <style>
+        body { background-color: #121212; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 24px; }
+        .header { font-size: 1.25rem; font-weight: 600; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+        .header-left { display: flex; align-items: center; gap: 10px; }
+        .status-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; padding: 4px 10px; border-radius: 12px; font-weight: normal; }
+        .status-badge.connected { background: #1b4d3e; color: #2ecc71; }
+        .status-badge.disconnected { background: #4d2a1b; color: #e67e22; }
+        .status-dot { height: 8px; width: 8px; border-radius: 50%; display: inline-block; }
+        .status-badge.connected .status-dot { background-color: #2ecc71; }
+        .status-badge.disconnected .status-dot { background-color: #e67e22; }
+        
+        /* Summary Metrics Strip */
+        .stats-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-bottom: 22px; }
+        .stat-card { background: #1a1a1a; padding: 14px 18px; border-radius: 8px; border: 1px solid #2d2d2d; }
+        .stat-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: #888; margin-bottom: 4px; }
+        .stat-value { font-size: 1.35rem; font-weight: bold; color: #fff; }
+        .stat-sub { font-size: 0.75rem; color: #aaa; margin-top: 2px; }
+
+        .dashboard-grid { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 20px; }
+        @media (max-width: 960px) { .dashboard-grid { grid-template-columns: 1fr; } }
+
+        .column { display: flex; flex-direction: column; gap: 20px; }
+        .card { background: #1e1e1e; padding: 20px; border-radius: 8px; border: 1px solid #333; }
+        .card h2 { margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #333; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+        
+        input[type="text"] { width: calc(100% - 60px); padding: 8px 10px; background: #2d2d2d; color: #fff; border: 1px solid #444; border-radius: 4px; font-size: 0.9rem; }
+        button { padding: 8px 14px; background: #0066cc; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 0.9rem; font-weight: 500; }
+        button:hover { background: #0055b3; }
+        
+        .feed-item { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid #282828; }
+        .feed-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .feed-info { display: flex; align-items: center; gap: 12px; }
+        .feed-art { width: 44px; height: 44px; border-radius: 6px; background: #333; object-fit: cover; }
+        .prio-tag { background: #4d3b1b; color: #f1c40f; font-size: 0.7rem; padding: 2px 6px; border-radius: 3px; font-weight: bold; margin-left: 6px; }
+        .btn-secondary { background: #2c2c2c; font-size: 0.8rem; color: #e0e0e0; text-decoration: none; padding: 6px 10px; border-radius: 4px; display: inline-block; }
+        .btn-secondary:hover { background: #3a3a3a; }
+        .btn-action { width: 100%; padding: 10px 14px; border-radius: 6px; font-weight: bold; cursor: pointer; border: none; font-size: 0.9rem; transition: background 0.2s; }
+
+        .error-banner { background: #4d1b1b; border: 1px solid #7a2c2c; border-radius: 8px; padding: 14px 18px; margin-bottom: 20px; }
+        .error-banner-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .error-banner-title { color: #ff6b6b; font-weight: 600; font-size: 0.9rem; }
+        .error-list { list-style: none; margin: 0; padding: 0; max-height: 160px; overflow-y: auto; }
+        .error-list li { font-size: 0.8rem; color: #f0b8b8; padding: 4px 0; border-bottom: 1px solid #5a2323; }
+        .error-list li:last-child { border-bottom: none; }
+        .error-time { color: #d98a8a; margin-right: 8px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <span>Sage Dashboard</span>
+        </div>
+        <div id="sd-header-badge" class="status-badge {{ 'connected' if status_state.sd_mounted else 'disconnected' }}">
+            <span class="status-dot"></span>
+            <span id="sd-header-text">SD Card: {{ 'Mounted' if status_state.sd_mounted else 'Disconnected' }}</span>
+        </div>
+    </div>
+
+    <div id="error-banner" class="error-banner" style="display: none;">
+        <div class="error-banner-header">
+            <span class="error-banner-title">⚠ Backend Errors</span>
+            <button id="dismiss-errors-btn" class="btn-secondary" style="font-size: 0.75rem; padding: 4px 8px;">Dismiss All</button>
+        </div>
+        <ul id="error-list" class="error-list"></ul>
+    </div>
+
+    <!-- Summary Metrics Strip -->
+    <div class="stats-bar">
+        <div class="stat-card">
+            <div class="stat-label">Subscribed Feeds</div>
+            <div class="stat-value" id="metric-feeds">{{ status_state.active_feeds }}</div>
+            <div class="stat-sub" id="metric-prio">{{ status_state.priority_feeds }} Priority Shows</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Downloaded Audio</div>
+            <div class="stat-value" id="metric-downloads">{{ status_state.downloaded_episodes }}</div>
+            <div class="stat-sub" id="metric-total-ep">{{ status_state.total_episodes }} Total Tracked</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Unplayed Queue</div>
+            <div class="stat-value" id="metric-queue">{{ status_state.unplayed_episodes }}</div>
+            <div class="stat-sub">Active Episodes</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Master Playlist</div>
+            <div class="stat-value" id="metric-playlist">{{ status_state.playlist_episodes }}</div>
+            <div class="stat-sub">Podcasts/playlist.m3u</div>
+        </div>
+    </div>
+
+    <div class="dashboard-grid">
+        <!-- Left Column: Master Playlist & History -->
+        <div class="column">
+            <div class="card">
+                <h2>
+                    <span>Master .m3u Playlist</span>
+                    <button id="rebuild-playlist-btn" class="btn-secondary" style="font-size: 0.75rem; padding: 4px 8px;">Rebuild</button>
+                </h2>
+                <p style="font-size: 0.85rem; color: #aaa; margin-top: 0;">
+                    Location: <code style="background: #252525; padding: 2px 6px; border-radius: 4px; color: #64b5f6;">Podcasts/playlist.m3u</code>
+                </p>
+                <p style="font-size: 0.8rem; color: #888;">
+                    Automatically synchronizes downloaded, active episodes ordered chronologically with priority shows first.
+                </p>
+                <div id="playlist-msg" style="font-size: 0.8rem; color: #2ecc71; display: none;"></div>
+            </div>
+
+            <div class="card">
+                <h2>History Log</h2>
+                <p style="color: #777; font-size: 0.9rem;">No playback logs synced yet.</p>
+            </div>
+        </div>
+
+        <!-- Middle Column: My Feeds -->
+        <div class="column">
+            <div class="card">
+                <h2>
+                    <span>My Subscriptions</span>
+                    <span style="font-size: 0.8rem; color: #888;">Priority Shows Top</span>
+                </h2>
+                {% for feed in feeds %}
+                <div class="feed-item">
+                    <div class="feed-info">
+                        {% if feed.image_file %}
+                            <img src="{{ url_for('serve_asset', filename=feed.image_file) }}" alt="" class="feed-art">
+                        {% else %}
+                            <div class="feed-art" style="display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: #777;">No Art</div>
+                        {% endif %}
+                        <div>
+                            <a href="{{ url_for('feed_detail', feed_name=feed.slug) }}" style="color: #fff; text-decoration: none; font-size: 0.95rem;">
+                                <strong>{{ feed.feed_title }}</strong>
+                                {% if feed.priority %}
+                                    <span class="prio-tag">★ Priority</span>
+                                {% endif %}
+                            </a>
+                            <div style="margin-top: 3px;">
+                                <small style="color: #888;">
+                                    {% set unplayed = namespace(count=0) %}
+                                    {% set downloaded = namespace(count=0) %}
+                                    {% for ep in feed.episodes %}
+                                        {% if ep.downloaded %}{% set downloaded.count = downloaded.count + 1 %}{% endif %}
+                                        {% if not ep.played and not ep.archived %}{% set unplayed.count = unplayed.count + 1 %}{% endif %}
+                                    {% endfor %}
+                                    {{ unplayed.count }} unplayed &bull; {{ downloaded.count }} downloaded
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 6px;">
+                        <a href="{{ url_for('update_feed', feed_identifier=feed.slug) }}" class="btn-secondary" title="Check this podcast for new episodes">Check</a>
+                    </div>
+                </div>
+                {% else %}
+                    <p style="color: #777; font-size: 0.9rem;">No active feed subscriptions.</p>
+                {% endfor %}
+                
+                <form action="/add_feed" method="POST" style="margin-top: 18px; display: flex; gap: 8px;">
+                    <input type="text" name="feed_url" placeholder="https://rss.feed.url" required>
+                    <button type="submit">Add Feed</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right Column: esPod Storage & Sync -->
+        <div class="column">
+            <div class="card">
+                <h2>esPod Storage Status</h2>
+                <p id="storage-status-text" style="font-size: 0.85rem; color: #e67e22; margin-bottom: 12px;">Awaiting SD Card Mount...</p>
+                <button id="refresh-btn" class="btn-action" style="background: #2c2c2c; color: #fff; margin-bottom: 8px;">
+                    Refresh Feeds &amp; Download
+                </button>
+                <p style="font-size: 0.75rem; color: #777; margin: -4px 0 10px;">Checks all feeds for new episodes and downloads any eligible ones.</p>
+                <button id="sync-btn" class="btn-action" style="background: #0066cc; color: #fff; margin-bottom: 10px;">
+                    Sync to esPod
+                </button>
+                <p style="font-size: 0.75rem; color: #777; margin: -4px 0 6px;">Copies downloaded episodes and playback state to the SD card.</p>
+                <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
+                    <span id="sync-pulse-dot" style="width: 8px; height: 8px; border-radius: 50%; background: #2ecc71; display: inline-block;"></span>
+                    <p id="sync-status-text" style="font-size: 0.85rem; color: #bbb; margin: 0;">Status: Ready</p>
+                </div>
+                <p id="sync-activity-text" style="font-size: 0.75rem; color: #777; margin-top: 4px;"></p>
+            </div>
+        </div>
+    </div>
+
+<script>
+let nextSyncTime = Date.now() + 30 * 60 * 1000;
+
+function updateStatusUI() {
+    const statusText = document.getElementById('sync-status-text');
+    const activityText = document.getElementById('sync-activity-text');
+    const storageText = document.getElementById('storage-status-text');
+    const sdHeaderBadge = document.getElementById('sd-header-badge');
+    const sdHeaderText = document.getElementById('sd-header-text');
+    const syncPulseDot = document.getElementById('sync-pulse-dot');
+    const errorBanner = document.getElementById('error-banner');
+    const errorList = document.getElementById('error-list');
+    
+    // Metrics
+    const mFeeds = document.getElementById('metric-feeds');
+    const mPrio = document.getElementById('metric-prio');
+    const mDl = document.getElementById('metric-downloads');
+    const mTotal = document.getElementById('metric-total-ep');
+    const mQueue = document.getElementById('metric-queue');
+    const mPlaylist = document.getElementById('metric-playlist');
+
+    fetch("{{ url_for('sync_status') }}")
+        .then(res => res.json())
+        .then(data => {
+            const state = data.state || {};
+            
+            if (mFeeds && state.active_feeds !== undefined) mFeeds.textContent = state.active_feeds;
+            if (mPrio && state.priority_feeds !== undefined) mPrio.textContent = `${state.priority_feeds} Priority Shows`;
+            if (mDl && state.downloaded_episodes !== undefined) mDl.textContent = state.downloaded_episodes;
+            if (mTotal && state.total_episodes !== undefined) mTotal.textContent = `${state.total_episodes} Total Tracked`;
+            if (mQueue && state.unplayed_episodes !== undefined) mQueue.textContent = state.unplayed_episodes;
+            if (mPlaylist && state.playlist_episodes !== undefined) mPlaylist.textContent = state.playlist_episodes;
+
+            // SD Mount Status
+            if (data.sd_mounted) {
+                sdHeaderBadge.className = "status-badge connected";
+                sdHeaderText.textContent = `SD Card: Mounted (${state.sd_mount_path || ''})`;
+                storageText.style.color = "#2ecc71";
+                storageText.textContent = `Connected at ${state.sd_mount_path || 'SD Mount'}`;
+            } else {
+                sdHeaderBadge.className = "status-badge disconnected";
+                sdHeaderText.textContent = "SD Card: Disconnected";
+                storageText.textContent = "Awaiting SD Card Mount (/run/media/...)";
+                storageText.style.color = "#e67e22";
+            }
+
+            // Sync Status
+            const isWorking = data.status.includes("Processing") || data.status.includes("Building") || data.status.includes("Reconciling") || data.status.includes("Cleaning") || data.status.includes("Generating") || (state.current_activity && state.current_activity !== "Idle");
+            syncPulseDot.style.background = isWorking ? "#f1c40f" : "#2ecc71";
+
+            if (data.status.includes("Idle") || data.status.includes("Ready") || data.status.includes("Complete")) {
+                const remaining = Math.max(0, Math.floor((nextSyncTime - Date.now()) / 1000));
+                const mins = Math.floor(remaining / 60);
+                const secs = remaining % 60;
+                statusText.textContent = `Status: ${data.status} (Next auto-cycle in ${mins}:${secs < 10 ? '0' : ''}${secs})`;
+                if (remaining <= 0) nextSyncTime = Date.now() + 30 * 60 * 1000;
+            } else {
+                statusText.textContent = `Status: ${data.status}`;
+            }
+
+            if (state.current_activity && state.current_activity !== "Idle") {
+                activityText.textContent = `↳ ${state.current_activity}`;
+            } else {
+                activityText.textContent = "";
+            }
+
+            // Backend errors
+            const errors = state.recent_errors || [];
+            if (errors.length > 0) {
+                errorBanner.style.display = "block";
+                errorList.innerHTML = "";
+                errors.forEach(err => {
+                    const li = document.createElement('li');
+                    const timeSpan = document.createElement('span');
+                    timeSpan.className = "error-time";
+                    timeSpan.textContent = err.time || "";
+                    li.appendChild(timeSpan);
+                    li.appendChild(document.createTextNode(err.message || ""));
+                    errorList.appendChild(li);
+                });
+            } else {
+                errorBanner.style.display = "none";
+            }
+        }).catch(() => {});
+}
+
+setInterval(updateStatusUI, 1000);
+updateStatusUI();
+
+document.getElementById('refresh-btn').addEventListener('click', function() {
+    const statusText = document.getElementById('sync-status-text');
+    statusText.textContent = "Status: Initializing...";
+    fetch("{{ url_for('refresh_feeds') }}", { method: 'POST' }).then(() => {
+        updateStatusUI();
+    });
+});
+
+document.getElementById('sync-btn').addEventListener('click', function() {
+    const statusText = document.getElementById('sync-status-text');
+    statusText.textContent = "Status: Initializing...";
+    fetch("{{ url_for('sync_card') }}", { method: 'POST' }).then(() => {
+        updateStatusUI();
+    });
+});
+
+document.getElementById('dismiss-errors-btn').addEventListener('click', function() {
+    fetch("{{ url_for('clear_errors') }}", { method: 'POST' }).then(() => {
+        updateStatusUI();
+    });
+});
+
+document.getElementById('rebuild-playlist-btn').addEventListener('click', function() {
+    const msg = document.getElementById('playlist-msg');
+    fetch("{{ url_for('generate_playlist_route') }}")
+        .then(res => res.json())
+        .then(data => {
+            msg.style.display = "block";
+            msg.textContent = `✓ Playlist regenerated with ${data.tracks} tracks.`;
+            updateStatusUI();
+            setTimeout(() => { msg.style.display = "none"; }, 4000);
+        });
+});
+</script>
+</body>
+</html>

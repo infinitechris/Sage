@@ -1,0 +1,112 @@
+{
+  "feed_title": "Up First from NPR",
+  "slug": "Up_First_from_NPR",
+  "feed_url": "https://feeds.npr.org/510318/podcast.xml",
+  "active": true,
+  "priority": true,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "Up_First_from_NPR.jpg",
+  "episodes": [
+    {
+      "title": "Canada's Retaliatory Tariffs On US, Trumpapalooza Convention, Miami Cargo Plane Crash",
+      "published": "Tue, 08 Sep 2026 09:58:14 +0000",
+      "pub_timestamp": 1788861494,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/174367cc-84a0-47de-91fc-806f29b2f692/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=174367cc-84a0-47de-91fc-806f29b2f692&feed=HMwRVgVt&t=podcast&e=nx-s1-5960993&p=510318&d=794&size=12716871",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Miami Plane Crash, Witkoff & Kushner Visit Ukraine, Far-Right AfD Wins In Germany",
+      "published": "Mon, 07 Sep 2026 09:52:20 +0000",
+      "pub_timestamp": 1788774740,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/8fbaf762-83e0-493e-8939-ea7cbc718dc0/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=8fbaf762-83e0-493e-8939-ea7cbc718dc0&feed=HMwRVgVt&t=podcast&e=nx-s1-5960265&p=510318&d=777&size=12447286",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "From SPF to skin color, sunscreen\u2019s effectiveness is complicated",
+      "published": "Sun, 06 Sep 2026 07:00:00 +0000",
+      "pub_timestamp": 1788678000,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/2f0b8bcd-5970-4911-b275-40dfd271d87a/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=2f0b8bcd-5970-4911-b275-40dfd271d87a&feed=HMwRVgVt&t=podcast&e=nx-s1-5957986&p=510318&d=1569&size=25111074",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "Negotiators to Moscow and Kyiv, Judge Issues Order on Arch, Western Wildfires",
+      "published": "Sat, 05 Sep 2026 13:10:03 +0000",
+      "pub_timestamp": 1788613803,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/4bc693bc-97df-4f53-8cdd-fdf8927f4671/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=4bc693bc-97df-4f53-8cdd-fdf8927f4671&feed=HMwRVgVt&t=podcast&e=nx-s1-5955693&p=510318&d=894&size=14320579",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "Midterm Mail-In Voting Starts, IRS Targets DEI In Schools, ICE Officer Charged",
+      "published": "Fri, 04 Sep 2026 09:46:31 +0000",
+      "pub_timestamp": 1788515191,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/74bd81aa-712d-4391-a5da-786a2be4dd83/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=74bd81aa-712d-4391-a5da-786a2be4dd83&feed=HMwRVgVt&t=podcast&e=nx-s1-5957363&p=510318&d=795&size=12734843",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "Pentagon Exodus Under Hegseth, Venezuela Oil and Democracy, Clancy Trial Deadlocked",
+      "published": "Thu, 03 Sep 2026 10:20:12 +0000",
+      "pub_timestamp": 1788430812,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/ebf6c5e2-b488-4f35-a9e5-b14fda5cc7ce/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=ebf6c5e2-b488-4f35-a9e5-b14fda5cc7ce&feed=HMwRVgVt&t=podcast&e=nx-s1-5955302&p=510318&d=820&size=13130649",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "War In Iran Ramps Up, Trump Pressured By Gas Prices, Massachusetts Primary Results",
+      "published": "Wed, 02 Sep 2026 09:47:27 +0000",
+      "pub_timestamp": 1788342447,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/32493023-bf42-4efe-90b1-985accba6ff3/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=32493023-bf42-4efe-90b1-985accba6ff3&feed=HMwRVgVt&t=podcast&e=nx-s1-5953592&p=510318&d=769&size=12311031",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "SCOTUS Allows Ballroom Construction, Army Secretary Resigns, G20 Summit in NC",
+      "published": "Tue, 01 Sep 2026 10:10:05 +0000",
+      "pub_timestamp": 1788257405,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/d0732491-8219-4c57-a125-513f47e184f9/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=d0732491-8219-4c57-a125-513f47e184f9&feed=HMwRVgVt&t=podcast&e=nx-s1-5951372&p=510318&d=772&size=12364112",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "Trump Venezuela Oil Deal, US & Iran Renew Strikes, House Back From Recess",
+      "published": "Mon, 31 Aug 2026 10:02:45 +0000",
+      "pub_timestamp": 1788170565,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/7967f661-8f7d-4b09-af4e-24986ca9ae1a/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=7967f661-8f7d-4b09-af4e-24986ca9ae1a&feed=HMwRVgVt&t=podcast&e=nx-s1-5949893&p=510318&d=796&size=12746963",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "A Wild West revenge tale and the Black roots of cowboy culture",
+      "published": "Sun, 30 Aug 2026 07:00:00 +0000",
+      "pub_timestamp": 1788073200,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/24f99996-debe-40da-be79-9f1602f838a1/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=24f99996-debe-40da-be79-9f1602f838a1&feed=HMwRVgVt&t=podcast&e=nx-s1-5944447&p=510318&d=1420&size=22734141",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    }
+  ]
+}

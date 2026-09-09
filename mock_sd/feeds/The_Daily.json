@@ -1,0 +1,112 @@
+{
+  "feed_title": "The Daily",
+  "slug": "The_Daily",
+  "feed_url": "https://feeds.simplecast.com/54nAGcIl",
+  "active": true,
+  "priority": true,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "The_Daily.jpg",
+  "episodes": [
+    {
+      "title": "\u2018Buy Now, Pay Later\u2019: A New Wave of Consumer Debt",
+      "published": "Tue, 8 Sep 2026 09:45:00 +0000",
+      "pub_timestamp": 1788860700,
+      "priority": true,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/episodes/b072437a-52ff-4c08-a777-b02498ea6771/audio/128/default.mp3?aid=rss_feed&awCollectionId=03d8b493-87fc-4bd1-931f-8a8e9b945d8a&awEpisodeId=b072437a-52ff-4c08-a777-b02498ea6771&feed=54nAGcIl",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Classical Music Is in Crisis. Gustavo Dudamel Is Here to Save It.",
+      "published": "Sun, 6 Sep 2026 10:00:00 +0000",
+      "pub_timestamp": 1788688800,
+      "priority": true,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/episodes/7042f449-d346-4313-8e2b-8d58f82ea937/audio/128/default.mp3?aid=rss_feed&awCollectionId=03d8b493-87fc-4bd1-931f-8a8e9b945d8a&awEpisodeId=7042f449-d346-4313-8e2b-8d58f82ea937&feed=54nAGcIl",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "The Intertwined Legacies of Gloria Steinem and Dolly Parton",
+      "published": "Fri, 4 Sep 2026 09:47:52 +0000",
+      "pub_timestamp": 1788515272,
+      "priority": true,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/episodes/b8210c31-2bec-4011-833a-0c49089cad77/audio/128/default.mp3?aid=rss_feed&awCollectionId=03d8b493-87fc-4bd1-931f-8a8e9b945d8a&awEpisodeId=b8210c31-2bec-4011-833a-0c49089cad77&feed=54nAGcIl",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "A.I. Is Outsmarting Its Creators",
+      "published": "Thu, 3 Sep 2026 09:47:13 +0000",
+      "pub_timestamp": 1788428833,
+      "priority": true,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/episodes/d682b38d-05fd-42e4-9d00-4fb3393ff0a4/audio/128/default.mp3?aid=rss_feed&awCollectionId=03d8b493-87fc-4bd1-931f-8a8e9b945d8a&awEpisodeId=d682b38d-05fd-42e4-9d00-4fb3393ff0a4&feed=54nAGcIl",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "The Fight for the West Bank",
+      "published": "Wed, 2 Sep 2026 09:45:00 +0000",
+      "pub_timestamp": 1788342300,
+      "priority": true,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/episodes/729fb3e5-f6dc-47fb-a646-cc645be292a0/audio/128/default.mp3?aid=rss_feed&awCollectionId=03d8b493-87fc-4bd1-931f-8a8e9b945d8a&awEpisodeId=729fb3e5-f6dc-47fb-a646-cc645be292a0&feed=54nAGcIl",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "How a Teenager Found Undiagnosed Brain Injuries in the Military",
+      "published": "Tue, 1 Sep 2026 09:53:23 +0000",
+      "pub_timestamp": 1788256403,
+      "priority": true,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/episodes/a56b3926-aa51-44bb-bf80-7b36b2620f89/audio/128/default.mp3?aid=rss_feed&awCollectionId=03d8b493-87fc-4bd1-931f-8a8e9b945d8a&awEpisodeId=a56b3926-aa51-44bb-bf80-7b36b2620f89&feed=54nAGcIl",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "How Flock Cameras Took Over America",
+      "published": "Mon, 31 Aug 2026 09:50:02 +0000",
+      "pub_timestamp": 1788169802,
+      "priority": true,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/episodes/98d33752-1164-4fb7-8e43-42deed11186f/audio/128/default.mp3?aid=rss_feed&awCollectionId=03d8b493-87fc-4bd1-931f-8a8e9b945d8a&awEpisodeId=98d33752-1164-4fb7-8e43-42deed11186f&feed=54nAGcIl",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "Who Will Rule the 2026 U.S. Open?",
+      "published": "Sun, 30 Aug 2026 10:00:00 +0000",
+      "pub_timestamp": 1788084000,
+      "priority": true,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/episodes/a3c11eaa-5359-4b9c-9142-3f4a1b3a18b5/audio/128/default.mp3?aid=rss_feed&awCollectionId=03d8b493-87fc-4bd1-931f-8a8e9b945d8a&awEpisodeId=a3c11eaa-5359-4b9c-9142-3f4a1b3a18b5&feed=54nAGcIl",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "Ina Garten Says You Can Either Get on Her Train or Get Out of the Way",
+      "published": "Sat, 29 Aug 2026 10:00:00 +0000",
+      "pub_timestamp": 1787997600,
+      "priority": true,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/episodes/12ac1779-4099-46f4-adc9-3f12f51161b0/audio/128/default.mp3?aid=rss_feed&awCollectionId=03d8b493-87fc-4bd1-931f-8a8e9b945d8a&awEpisodeId=12ac1779-4099-46f4-adc9-3f12f51161b0&feed=54nAGcIl",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "Lindsay Clancy Is on Trial. So Is Postpartum Psychosis.",
+      "published": "Fri, 28 Aug 2026 09:45:00 +0000",
+      "pub_timestamp": 1787910300,
+      "priority": true,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/episodes/154119be-1cc6-47ac-a8fd-40bd1dc25849/audio/128/default.mp3?aid=rss_feed&awCollectionId=03d8b493-87fc-4bd1-931f-8a8e9b945d8a&awEpisodeId=154119be-1cc6-47ac-a8fd-40bd1dc25849&feed=54nAGcIl",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    }
+  ]
+}

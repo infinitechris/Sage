@@ -1,0 +1,112 @@
+{
+  "feed_title": "Heavyweight",
+  "slug": "Heavyweight",
+  "feed_url": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/afbd76b8-eff2-442a-b938-b28e0126edad/d08826cd-f888-4cd3-b700-b28e0126edbb/podcast.rss",
+  "active": true,
+  "priority": false,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "Heavyweight.jpg",
+  "episodes": [
+    {
+      "title": "Trailer: Heavyweight Season 10",
+      "published": "Thu, 03 Sep 2026 08:00:00 +0000",
+      "pub_timestamp": 1788422400,
+      "priority": false,
+      "audio_url": "https://pdrl.fm/a95070/podtrac.com/pts/redirect.mp3/tracking.swap.fm/track/SxlTEPDY7xDg35RXkASs/traffic.omny.fm/d/clips/e73c998e-6e60-432f-8610-ae210140c5b1/afbd76b8-eff2-442a-b938-b28e0126edad/f0a5dc44-a525-42b1-99be-b4b801671a10/audio.mp3?utm_source=Podcast&in_playlist=d08826cd-f888-4cd3-b700-b28e0126edbb",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "2026 Update: James",
+      "published": "Thu, 02 Jul 2026 08:00:00 +0000",
+      "pub_timestamp": 1782979200,
+      "priority": false,
+      "audio_url": "https://pdrl.fm/a95070/podtrac.com/pts/redirect.mp3/tracking.swap.fm/track/SxlTEPDY7xDg35RXkASs/traffic.omny.fm/d/clips/e73c998e-6e60-432f-8610-ae210140c5b1/afbd76b8-eff2-442a-b938-b28e0126edad/dad5c506-880f-4d36-beae-b47a015d6d16/audio.mp3?utm_source=Podcast&in_playlist=d08826cd-f888-4cd3-b700-b28e0126edbb",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "Jonathan Vs. Kalila on Smash Boom Best",
+      "published": "Thu, 25 Jun 2026 08:00:00 +0000",
+      "pub_timestamp": 1782374400,
+      "priority": false,
+      "audio_url": "https://pdrl.fm/a95070/podtrac.com/pts/redirect.mp3/tracking.swap.fm/track/SxlTEPDY7xDg35RXkASs/traffic.omny.fm/d/clips/e73c998e-6e60-432f-8610-ae210140c5b1/afbd76b8-eff2-442a-b938-b28e0126edad/ecfa61cb-911c-402e-b706-b473014fdffa/audio.mp3?utm_source=Podcast&in_playlist=d08826cd-f888-4cd3-b700-b28e0126edbb",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "2026 Update: Julia",
+      "published": "Thu, 18 Jun 2026 08:00:00 +0000",
+      "pub_timestamp": 1781769600,
+      "priority": false,
+      "audio_url": "https://pdrl.fm/a95070/podtrac.com/pts/redirect.mp3/tracking.swap.fm/track/SxlTEPDY7xDg35RXkASs/traffic.omny.fm/d/clips/e73c998e-6e60-432f-8610-ae210140c5b1/afbd76b8-eff2-442a-b938-b28e0126edad/3c240f8c-2f81-4216-95e1-b46c01578725/audio.mp3?utm_source=Podcast&in_playlist=d08826cd-f888-4cd3-b700-b28e0126edbb",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "2026 Update: Brandon",
+      "published": "Thu, 04 Jun 2026 08:00:00 +0000",
+      "pub_timestamp": 1780560000,
+      "priority": false,
+      "audio_url": "https://pdrl.fm/a95070/podtrac.com/pts/redirect.mp3/tracking.swap.fm/track/SxlTEPDY7xDg35RXkASs/traffic.omny.fm/d/clips/e73c998e-6e60-432f-8610-ae210140c5b1/afbd76b8-eff2-442a-b938-b28e0126edad/92d2a054-9286-4993-9054-b45e010f34f1/audio.mp3?utm_source=Podcast&in_playlist=d08826cd-f888-4cd3-b700-b28e0126edbb",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "2026 Update: Frederick J. Brown",
+      "published": "Thu, 21 May 2026 08:00:00 +0000",
+      "pub_timestamp": 1779350400,
+      "priority": false,
+      "audio_url": "https://pdrl.fm/a95070/podtrac.com/pts/redirect.mp3/tracking.swap.fm/track/SxlTEPDY7xDg35RXkASs/traffic.omny.fm/d/clips/e73c998e-6e60-432f-8610-ae210140c5b1/afbd76b8-eff2-442a-b938-b28e0126edad/65c312ec-6dd5-4a1f-ae75-b4500183926d/audio.mp3?utm_source=Podcast&in_playlist=d08826cd-f888-4cd3-b700-b28e0126edbb",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "2026 Update: Christina",
+      "published": "Thu, 07 May 2026 08:00:00 +0000",
+      "pub_timestamp": 1778140800,
+      "priority": false,
+      "audio_url": "https://pdrl.fm/a95070/podtrac.com/pts/redirect.mp3/tracking.swap.fm/track/SxlTEPDY7xDg35RXkASs/traffic.omny.fm/d/clips/e73c998e-6e60-432f-8610-ae210140c5b1/afbd76b8-eff2-442a-b938-b28e0126edad/385c18f2-6ea1-4bdb-bd7f-b4410150239f/audio.mp3?utm_source=Podcast&in_playlist=d08826cd-f888-4cd3-b700-b28e0126edbb",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "2026 Update: Skye",
+      "published": "Thu, 23 Apr 2026 08:00:00 +0000",
+      "pub_timestamp": 1776931200,
+      "priority": false,
+      "audio_url": "https://pdrl.fm/a95070/podtrac.com/pts/redirect.mp3/tracking.swap.fm/track/SxlTEPDY7xDg35RXkASs/traffic.omny.fm/d/clips/e73c998e-6e60-432f-8610-ae210140c5b1/afbd76b8-eff2-442a-b938-b28e0126edad/54322d5a-437b-4f4c-90ef-b434016637dd/audio.mp3?utm_source=Podcast&in_playlist=d08826cd-f888-4cd3-b700-b28e0126edbb",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "Jonathan Goldstein on Wild Card",
+      "published": "Thu, 09 Apr 2026 08:00:00 +0000",
+      "pub_timestamp": 1775721600,
+      "priority": false,
+      "audio_url": "https://pdrl.fm/a95070/podtrac.com/pts/redirect.mp3/tracking.swap.fm/track/SxlTEPDY7xDg35RXkASs/traffic.omny.fm/d/clips/e73c998e-6e60-432f-8610-ae210140c5b1/afbd76b8-eff2-442a-b938-b28e0126edad/416b7d28-515b-4a3d-9626-b4260134aaef/audio.mp3?utm_source=Podcast&in_playlist=d08826cd-f888-4cd3-b700-b28e0126edbb",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "2026 Update: Elyse",
+      "published": "Thu, 26 Mar 2026 08:00:00 +0000",
+      "pub_timestamp": 1774512000,
+      "priority": false,
+      "audio_url": "https://pdrl.fm/a95070/podtrac.com/pts/redirect.mp3/tracking.swap.fm/track/SxlTEPDY7xDg35RXkASs/traffic.omny.fm/d/clips/e73c998e-6e60-432f-8610-ae210140c5b1/afbd76b8-eff2-442a-b938-b28e0126edad/04834322-ac2c-4eaf-b42a-b418015c0f8e/audio.mp3?utm_source=Podcast&in_playlist=d08826cd-f888-4cd3-b700-b28e0126edbb",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    }
+  ]
+}

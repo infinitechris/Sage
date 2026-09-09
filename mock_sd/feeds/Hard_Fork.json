@@ -1,0 +1,112 @@
+{
+  "feed_title": "Hard Fork",
+  "slug": "Hard_Fork",
+  "feed_url": "https://feeds.simplecast.com/l2i9YnTd",
+  "active": true,
+  "priority": false,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "Hard_Fork.jpg",
+  "episodes": [
+    {
+      "title": "The A.I. Mob That Attacked Hugging Face + METR\u2019s Ajeya Cotra",
+      "published": "Fri, 4 Sep 2026 11:00:00 +0000",
+      "pub_timestamp": 1788519600,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/3e43d072-f8a5-430f-bc8e-4c70aafdf3c7/episodes/3189e217-df81-47e5-8084-f93f19459dfa/audio/128/default.mp3?aid=rss_feed&awCollectionId=3e43d072-f8a5-430f-bc8e-4c70aafdf3c7&awEpisodeId=3189e217-df81-47e5-8084-f93f19459dfa&feed=l2i9YnTd",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Meta Shifts the Blame + Do Data Center Bans Work? + The Final HatGPT",
+      "published": "Fri, 28 Aug 2026 11:00:00 +0000",
+      "pub_timestamp": 1787914800,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/3e43d072-f8a5-430f-bc8e-4c70aafdf3c7/episodes/95108f33-c923-4c83-837e-f48795e7ae23/audio/128/default.mp3?aid=rss_feed&awCollectionId=3e43d072-f8a5-430f-bc8e-4c70aafdf3c7&awEpisodeId=95108f33-c923-4c83-837e-f48795e7ae23&feed=l2i9YnTd",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "OpenAI\u2019s Two-Week Pause + Jill Lepore on the Threat of the \u201cArtificial State\u201d + Train of Thought",
+      "published": "Fri, 21 Aug 2026 11:00:00 +0000",
+      "pub_timestamp": 1787310000,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/3e43d072-f8a5-430f-bc8e-4c70aafdf3c7/episodes/c2f4606d-43aa-4cae-aa9b-45e47c523e61/audio/128/default.mp3?aid=rss_feed&awCollectionId=3e43d072-f8a5-430f-bc8e-4c70aafdf3c7&awEpisodeId=c2f4606d-43aa-4cae-aa9b-45e47c523e61&feed=l2i9YnTd",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Zuckerberg\u2019s Anti-Doom Fantasy + Finally an A.I. Detector That Works + A.I. Math",
+      "published": "Fri, 14 Aug 2026 11:00:00 +0000",
+      "pub_timestamp": 1786705200,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/3e43d072-f8a5-430f-bc8e-4c70aafdf3c7/episodes/0a7798f8-5c24-4b6b-a157-49999816682a/audio/128/default.mp3?aid=rss_feed&awCollectionId=3e43d072-f8a5-430f-bc8e-4c70aafdf3c7&awEpisodeId=0a7798f8-5c24-4b6b-a157-49999816682a&feed=l2i9YnTd",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "The White House\u2019s Secret A.I. Rules + The State of Model Alignment With METR\u2019s Chris Painter + The Final Hot Mess Express",
+      "published": "Fri, 7 Aug 2026 11:00:00 +0000",
+      "pub_timestamp": 1786100400,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/3e43d072-f8a5-430f-bc8e-4c70aafdf3c7/episodes/e9e2fd27-3951-4698-b22f-684658c1f578/audio/128/default.mp3?aid=rss_feed&awCollectionId=3e43d072-f8a5-430f-bc8e-4c70aafdf3c7&awEpisodeId=e9e2fd27-3951-4698-b22f-684658c1f578&feed=l2i9YnTd",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Open Model Wars + Claire Stapleton's Dishy Google Memoir + Substack's Slop Fight",
+      "published": "Fri, 31 Jul 2026 11:00:00 +0000",
+      "pub_timestamp": 1785495600,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/3e43d072-f8a5-430f-bc8e-4c70aafdf3c7/episodes/317ca9a1-d930-4187-a7c7-fc0e75b6c09a/audio/128/default.mp3?aid=rss_feed&awCollectionId=3e43d072-f8a5-430f-bc8e-4c70aafdf3c7&awEpisodeId=317ca9a1-d930-4187-a7c7-fc0e75b6c09a&feed=l2i9YnTd",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "OpenAI Models Go Rogue + Kimi K3 Freakout + A.I. Superforecasting",
+      "published": "Fri, 24 Jul 2026 11:00:00 +0000",
+      "pub_timestamp": 1784890800,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/3e43d072-f8a5-430f-bc8e-4c70aafdf3c7/episodes/2ae707fe-4b47-4aca-a964-88378115b3cd/audio/128/default.mp3?aid=rss_feed&awCollectionId=3e43d072-f8a5-430f-bc8e-4c70aafdf3c7&awEpisodeId=2ae707fe-4b47-4aca-a964-88378115b3cd&feed=l2i9YnTd",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "The A.I. Trade Secrets War + Economists Say \u2018We Must Act Now\u2019 + HatGPT",
+      "published": "Fri, 17 Jul 2026 11:00:00 +0000",
+      "pub_timestamp": 1784286000,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/3e43d072-f8a5-430f-bc8e-4c70aafdf3c7/episodes/e217845b-2a82-436c-9d5a-120ae4447a82/audio/128/default.mp3?aid=rss_feed&awCollectionId=3e43d072-f8a5-430f-bc8e-4c70aafdf3c7&awEpisodeId=e217845b-2a82-436c-9d5a-120ae4447a82&feed=l2i9YnTd",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "Do Social Media Bans Work? + A Conversation About A.I. Consciousness + Tool Time",
+      "published": "Fri, 10 Jul 2026 11:00:00 +0000",
+      "pub_timestamp": 1783681200,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/3e43d072-f8a5-430f-bc8e-4c70aafdf3c7/episodes/66388e1d-5945-46ac-8ff4-81c64aa56dbf/audio/128/default.mp3?aid=rss_feed&awCollectionId=3e43d072-f8a5-430f-bc8e-4c70aafdf3c7&awEpisodeId=66388e1d-5945-46ac-8ff4-81c64aa56dbf&feed=l2i9YnTd",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "Fable Ban Reversed + Dr. Dana Suskind on Parenting With A.I. + Prediction Market Drama",
+      "published": "Fri, 3 Jul 2026 11:00:00 +0000",
+      "pub_timestamp": 1783076400,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/3e43d072-f8a5-430f-bc8e-4c70aafdf3c7/episodes/0dc0d4df-eafd-4db7-a9c0-5cfb997b3491/audio/128/default.mp3?aid=rss_feed&awCollectionId=3e43d072-f8a5-430f-bc8e-4c70aafdf3c7&awEpisodeId=0dc0d4df-eafd-4db7-a9c0-5cfb997b3491&feed=l2i9YnTd",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    }
+  ]
+}

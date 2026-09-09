@@ -1,0 +1,112 @@
+{
+  "feed_title": "Upgrade",
+  "slug": "Upgrade",
+  "feed_url": "https://relay.fm/upgrade/feed",
+  "active": true,
+  "priority": false,
+  "auto_download": true,
+  "filter_string": "",
+  "image_file": "Upgrade.jpg",
+  "episodes": [
+    {
+      "title": "635: The 2026 September Event Draft",
+      "published": "Mon, 31 Aug 2026 22:12:00 GMT",
+      "pub_timestamp": 1788214320,
+      "priority": false,
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade635.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "634: Crime River",
+      "published": "Mon, 24 Aug 2026 21:15:00 GMT",
+      "pub_timestamp": 1787606100,
+      "priority": false,
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade634.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "633: iPhone Tippy-Top",
+      "published": "Tue, 18 Aug 2026 20:45:00 GMT",
+      "pub_timestamp": 1787085900,
+      "priority": false,
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade633.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "632: [Redacted Apple Information]",
+      "published": "Mon, 10 Aug 2026 20:30:00 GMT",
+      "pub_timestamp": 1786393800,
+      "priority": false,
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade632.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "631: Nessie Beneath the Waves",
+      "published": "Mon, 03 Aug 2026 21:00:00 GMT",
+      "pub_timestamp": 1785790800,
+      "priority": false,
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade631.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "630: Repeat 600 Times",
+      "published": "Mon, 27 Jul 2026 16:45:00 GMT",
+      "pub_timestamp": 1785170700,
+      "priority": false,
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade630.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "629: Jony Ive Loves a Handle",
+      "published": "Mon, 20 Jul 2026 21:45:00 GMT",
+      "pub_timestamp": 1784583900,
+      "priority": false,
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade629.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "628: Conspiracy to Steal Trade Secrets",
+      "published": "Mon, 13 Jul 2026 21:15:00 GMT",
+      "pub_timestamp": 1783977300,
+      "priority": false,
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade628.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "627: Do Not Use, Do Not Turn Off",
+      "published": "Mon, 06 Jul 2026 20:45:00 GMT",
+      "pub_timestamp": 1783370700,
+      "priority": false,
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade627.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "626: Unprecedented Weirdness",
+      "published": "Mon, 29 Jun 2026 21:00:00 GMT",
+      "pub_timestamp": 1782766800,
+      "priority": false,
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade626.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    }
+  ]
+}

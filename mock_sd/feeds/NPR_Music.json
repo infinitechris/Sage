@@ -1,0 +1,112 @@
+{
+  "feed_title": "NPR Music",
+  "slug": "NPR_Music",
+  "feed_url": "https://feeds.npr.org/510019/podcast.xml",
+  "active": true,
+  "priority": true,
+  "auto_download": true,
+  "filter_string": "Alt.Latino: ",
+  "image_file": "NPR_Music.jpg",
+  "episodes": [
+    {
+      "title": "More cover songs that are better than the originals",
+      "published": "Tue, 08 Sep 2026 09:00:00 +0000",
+      "pub_timestamp": 1788858000,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/9e205831-f38d-4fc3-aeac-f2b9f5893c53/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=9e205831-f38d-4fc3-aeac-f2b9f5893c53&feed=VUaq3kJJ&t=podcast&e=nx-s1-5960526&p=510019&d=2856&size=91421989",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
+    {
+      "title": "New Music Friday: The best albums out Sept. 4",
+      "published": "Fri, 04 Sep 2026 04:01:00 +0000",
+      "pub_timestamp": 1788494460,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/cd1ae79b-8e4f-459f-b84d-5c4a6834cad3/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=cd1ae79b-8e4f-459f-b84d-5c4a6834cad3&feed=VUaq3kJJ&t=podcast&e=nx-s1-5955477&p=510019&d=2648&size=84760495",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Alt.Latino: Guadalajara loves metal?",
+      "published": "Wed, 02 Sep 2026 07:00:00 +0000",
+      "pub_timestamp": 1788332400,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/fad79c2a-c075-4c10-a7d8-78ae76823d75/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=fad79c2a-c075-4c10-a7d8-78ae76823d75&feed=VUaq3kJJ&t=podcast&e=nx-s1-5953085&p=510019&d=1784&size=57104971",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "Dahi, Kendrick and Amber Mark, Dominic Fike, more",
+      "published": "Tue, 01 Sep 2026 09:00:00 +0000",
+      "pub_timestamp": 1788253200,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/70c51d09-26d1-48ea-a288-1d38867fba86/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=70c51d09-26d1-48ea-a288-1d38867fba86&feed=VUaq3kJJ&t=podcast&e=nx-s1-5950545&p=510019&d=2703&size=86515984",
+      "downloaded": false,
+      "played": true,
+      "archived": true
+    },
+    {
+      "title": "New Music Friday: The best albums out Aug. 28",
+      "published": "Fri, 28 Aug 2026 04:01:00 +0000",
+      "pub_timestamp": 1787889660,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/f11a0a6b-68f7-4a57-8a3c-2617f058a531/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=f11a0a6b-68f7-4a57-8a3c-2617f058a531&feed=VUaq3kJJ&t=podcast&e=nx-s1-5946388&p=510019&d=2447&size=78310548",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Alt.Latino: Cypress Hill en espa\u00f1ol",
+      "published": "Thu, 27 Aug 2026 16:00:23 +0000",
+      "pub_timestamp": 1787846423,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/0ca336c0-c897-481d-a092-e00a1095420c/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=0ca336c0-c897-481d-a092-e00a1095420c&feed=VUaq3kJJ&t=podcast&e=nx-s1-5946687&p=510019&d=1565&size=50106663",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
+    {
+      "title": "Dolly Parton in her own words",
+      "published": "Wed, 26 Aug 2026 19:36:27 +0000",
+      "pub_timestamp": 1787772987,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/372dfd76-54a5-44f7-877a-d9ffae419749/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=372dfd76-54a5-44f7-877a-d9ffae419749&feed=VUaq3kJJ&t=podcast&e=nx-s1-5945081&p=510019&d=1661&size=53161108",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "The best Sunday morning albums",
+      "published": "Tue, 25 Aug 2026 09:00:00 +0000",
+      "pub_timestamp": 1787648400,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/d73d8380-2358-4935-9517-2520932a182c/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=d73d8380-2358-4935-9517-2520932a182c&feed=VUaq3kJJ&t=podcast&e=nx-s1-5940775&p=510019&d=2988&size=95642540",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "New Music Friday: The best albums out Aug. 21",
+      "published": "Fri, 21 Aug 2026 04:01:00 +0000",
+      "pub_timestamp": 1787284860,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/66293d59-516b-48c9-acb8-ac613cac05e8/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=66293d59-516b-48c9-acb8-ac613cac05e8&feed=VUaq3kJJ&t=podcast&e=nx-s1-5939890&p=510019&d=2535&size=81137624",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Alt.Latino: Electr\u00f3nica rising in Mexico",
+      "published": "Wed, 19 Aug 2026 07:00:00 +0000",
+      "pub_timestamp": 1787122800,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/1b4bb861-9c92-41dc-8001-a0b85406dc8a/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=1b4bb861-9c92-41dc-8001-a0b85406dc8a&feed=VUaq3kJJ&t=podcast&e=nx-s1-5936625&p=510019&d=1933&size=61861347",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    }
+  ]
+}
