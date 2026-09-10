@@ -324,11 +324,29 @@ def get_estimated_releases():
                     target_struct = time.localtime(projected_ts)
                     for day in calendar_days:
                         if day["weekday_num"] == target_struct.tm_wday:
+                            # Check if an episode was actually released in the last 24 hours
+                            released_today = False
+                            if episodes:
+                                latest_ep_ts = episodes[0].get("pub_timestamp", 0)
+                                if now_ts - latest_ep_ts < (24 * 3600):
+                                    released_today = True
+                                    
                             day["shows"].append({
                                 "title": data.get("feed_title", filename[:-5]),
                                 "slug": data.get("slug", ""),
-                                "priority": data.get("priority", False)
+                                "priority": data.get("priority", False),
+                                "released_today": released_today
                             })
+                            
+                            # Real-time Auto-Download Trigger: If a show predicted for today has a fresh upload 
+                            # but is not flagged as downloaded yet, bypass standard timers and download it instantly!
+                            if released_today and data.get("active", True) and data.get("auto_download", False):
+                                try:
+                                    if not episodes[0].get("downloaded", False) and not episodes[0].get("archived", False) and not episodes[0].get("played", False):
+                                        # Trigger download inside a thread to avoid blocking index loading
+                                        threading.Thread(target=download_episode_internal, args=(data.get("slug"), 0), daemon=True).start()
+                                except Exception:
+                                    pass
                             break
                 except Exception:
                     pass
