@@ -249,6 +249,39 @@
                 </div>
                 <p id="sync-activity-text" style="font-size: 0.75rem; color: #777; margin-top: 4px;"></p>
             </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <h2>Upcoming Releases</h2>
+                <p style="font-size: 0.75rem; color: #777; margin-top: -6px; margin-bottom: 15px;">Smart prediction based on show-specific weekday drop patterns.</p>
+                {% if upcoming_releases %}
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        {% for day in upcoming_releases %}
+                            <div style="border-left: 2px solid #64b5f6; padding-left: 10px; margin-bottom: 4px;">
+                                <div style="font-size: 0.8rem; font-weight: bold; color: #64b5f6; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
+                                    <span>{{ day.label }}</span>
+                                    {% if day.label == "Today" or day.label == "Tomorrow" %}
+                                        <span style="font-size: 0.65rem; background: #1b4d3e; color: #2ecc71; padding: 1px 6px; border-radius: 4px; font-weight: normal; text-transform: uppercase;">Incoming</span>
+                                    {% endif %}
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 6px;">
+                                    {% for show in day.shows %}
+                                        <div style="display: flex; align-items: center; justify-content: space-between; background: #181818; padding: 6px 10px; border-radius: 4px; border: 1px solid #282828;">
+                                            <span style="font-size: 0.8rem; color: #eee; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 175px;">
+                                                {{ show.title }}
+                                            </span>
+                                            {% if show.priority %}
+                                                <span style="font-size: 0.7rem; color: #f1c40f;" title="Priority Show">★</span>
+                                            {% endif %}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p style="color: #777; font-size: 0.85rem; text-align: center;">No schedule patterns detected yet.</p>
+                {% endif %}
+            </div>
         </div>
     </div>
 

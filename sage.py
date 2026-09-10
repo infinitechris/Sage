@@ -241,6 +241,83 @@ def get_insights_stats(playback_data):
     stats["total_hours"] = round(stats["total_hours"], 1)
     return stats
 
+def get_estimated_releases():
+    """
+    Analyzes historical episode release intervals to build a predictive 7-day
+    calendar panel of upcoming podcast episodes.
+    """
+    now_ts = time.time()
+    
+    # Pre-build calendar structure for the next 7 days, starting with Today
+    calendar_days = []
+    for i in range(7):
+        day_ts = now_ts + (i * 24 * 3600)
+        day_struct = time.localtime(day_ts)
+        
+        # Humanize day labels
+        if i == 0:
+            day_label = "Today"
+        elif i == 1:
+            day_label = "Tomorrow"
+        else:
+            day_label = time.strftime("%A, %b %d", day_struct)
+            
+        calendar_days.append({
+            "weekday_num": day_struct.tm_wday,
+            "label": day_label,
+            "shows": []
+        })
+
+    feeds_dir = os.path.join(SD_PATH, "feeds")
+    if os.path.exists(feeds_dir):
+        for filename in os.listdir(feeds_dir):
+            if filename.endswith(".json"):
+                try:
+                    with open(os.path.join(feeds_dir, filename), "r") as f:
+                        data = json.load(f)
+                    
+                    if not data.get("active", True):
+                        continue
+                        
+                    episodes = data.get("episodes", [])
+                    if len(episodes) < 2:
+                        continue
+                    
+                    # Extract timestamps and calculate the median intervals between episodes
+                    timestamps = sorted([ep["pub_timestamp"] for ep in episodes if ep.get("pub_timestamp")], reverse=True)
+                    if not timestamps:
+                        continue
+                    
+                    # Calculate release day pattern (mode of weekdays)
+                    weekdays = [time.localtime(ts).tm_wday for ts in timestamps[:10]]
+                    if not weekdays:
+                        continue
+                    target_wday = max(set(weekdays), key=weekdays.count)
+                    
+                    # Project next release by expanding from the latest known drop
+                    latest_ts = timestamps[0]
+                    projected_ts = latest_ts + (7 * 24 * 3600) # Standard weekly target
+                    
+                    # If projected weekly drop is already in the past, roll forward week-by-week
+                    while projected_ts < now_ts:
+                        projected_ts += (7 * 24 * 3600)
+                        
+                    # Find which slot in our 7-day view matches the projected target
+                    target_struct = time.localtime(projected_ts)
+                    for day in calendar_days:
+                        if day["weekday_num"] == target_struct.tm_wday:
+                            day["shows"].append({
+                                "title": data.get("feed_title", filename[:-5]),
+                                "slug": data.get("slug", ""),
+                                "priority": data.get("priority", False)
+                            })
+                            break
+                except Exception:
+                    pass
+                    
+    # Clean up empty days to keep render compact and action-oriented
+    return [day for day in calendar_days if day["shows"]]
+
 @app.route("/")
 def index():
     playback_data = {}
@@ -253,9 +330,10 @@ def index():
             pass
             
     insights = get_insights_stats(playback_data)
+    upcoming_releases = get_estimated_releases()
     all_feeds = get_all_active_feeds()
     update_status_state()
-    return render_template("index.html", feeds=all_feeds, playback=playback_data, status_state=status_state, insights=insights)
+    return render_template("index.html", feeds=all_feeds, playback=playback_data, status_state=status_state, insights=insights, upcoming_releases=upcoming_releases)
 
 @app.route("/add_feed", methods=["POST"])
 def add_feed():
