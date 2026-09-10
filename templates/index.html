@@ -110,6 +110,47 @@
                 <div id="playlist-msg" style="font-size: 0.8rem; color: #2ecc71; display: none;"></div>
             </div>
 
+            <div class="card" style="margin-top: 20px;">
+                <h2>Listening Insights</h2>
+                {% if insights %}
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px; text-align: center;">
+                        <div style="background: #181818; padding: 10px; border-radius: 6px; border: 1px solid #2d2d2d;">
+                            <div style="font-size: 0.7rem; color: #888; text-transform: uppercase;">Total Hours</div>
+                            <div style="font-size: 1.35rem; font-weight: bold; color: #2ecc71;">{{ insights.total_hours }}h</div>
+                        </div>
+                        <div style="background: #181818; padding: 10px; border-radius: 6px; border: 1px solid #2d2d2d;">
+                            <div style="font-size: 0.7rem; color: #888; text-transform: uppercase;">Episodes Played</div>
+                            <div style="font-size: 1.35rem; font-weight: bold; color: #64b5f6;">{{ insights.played_count }}</div>
+                        </div>
+                    </div>
+                    {% if insights.top_shows %}
+                        <div style="margin-top: 15px;">
+                            <h3 style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;">Top Podcasts</h3>
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                {% for show in insights.top_shows %}
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 2px;">
+                                            <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 170px;" title="{{ show.title }}">
+                                                {{ show.title }}
+                                            </span>
+                                            <span style="color: #64b5f6; font-weight: bold;">{{ show.count }} play{{ 's' if show.count > 1 else '' }}</span>
+                                        </div>
+                                        <div style="background: #2b2b2b; height: 6px; border-radius: 3px; overflow: hidden;">
+                                            <div style="background: #64b5f6; height: 100%; width: {{ show.percent }}%; border-radius: 3px;"></div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div style="background: #181818; padding: 8px 12px; border-radius: 6px; border: 1px solid #2d2d2d; margin-top: 15px; font-size: 0.75rem; color: #aaa; text-align: center;">
+                        ↳ <strong style="color: #e67e22;">{{ insights.archived_count }}</strong> episodes auto-archived by limits.
+                    </div>
+                {% else %}
+                    <p style="color: #777; font-size: 0.9rem;">No listening stats processed yet.</p>
+                {% endif %}
+            </div>
+
             <div class="card">
                 <h2>History Log</h2>
                 <div style="max-height: 320px; overflow-y: auto; padding-right: 4px;">

@@ -184,6 +184,63 @@ def get_all_active_feeds():
     all_feeds.sort(key=lambda f: (not f.get("priority", False), f.get("feed_title", "").lower()))
     return all_feeds
 
+def get_insights_stats(playback_data):
+    """
+    Computes top listening shows, total hours, and auto-archived vs played breakdown
+    derived from playback history logs.
+    """
+    stats = {
+        "played_count": 0,
+        "archived_count": 0,
+        "total_hours": 0.0,
+        "top_shows": []
+    }
+    
+    logs = playback_data.get("logs", [])
+    show_counts = {}
+    
+    # Pre-build episode duration lookup from all active local feeds
+    durations = {}
+    feeds_dir = os.path.join(SD_PATH, "feeds")
+    if os.path.exists(feeds_dir):
+        for filename in os.listdir(feeds_dir):
+            if filename.endswith(".json"):
+                try:
+                    with open(os.path.join(feeds_dir, filename), "r") as f:
+                        data = json.load(f)
+                    for ep in data.get("episodes", []):
+                        # standard duration estimated is 45 min, check if we have durationSec
+                        durations[ep.get("title")] = ep.get("durationSec") or ep.get("duration", 2700)
+                except Exception:
+                    pass
+
+    for log in logs:
+        action = log.get("action", "")
+        show = log.get("podcast_title") or "Unknown Show"
+        ep_title = log.get("episode_title", "")
+        
+        if "played" in action:
+            stats["played_count"] += 1
+            show_counts[show] = show_counts.get(show, 0) + 1
+            # Retrieve real duration or fallback to 45 mins (2700 sec)
+            dur_sec = durations.get(ep_title, 2700)
+            stats["total_hours"] += (dur_sec / 3600.0)
+        elif "archived" in action:
+            stats["archived_count"] += 1
+            
+    # Format top shows with relative percentage for rendering CSS bars
+    sorted_shows = sorted(show_counts.items(), key=lambda x: x[1], reverse=True)[:5]
+    max_count = sorted_shows[0][1] if sorted_shows else 1
+    for show, count in sorted_shows:
+        stats["top_shows"].append({
+            "title": show,
+            "count": count,
+            "percent": int((count / max_count) * 100)
+        })
+        
+    stats["total_hours"] = round(stats["total_hours"], 1)
+    return stats
+
 @app.route("/")
 def index():
     playback_data = {}
@@ -195,9 +252,10 @@ def index():
         except Exception:
             pass
             
+    insights = get_insights_stats(playback_data)
     all_feeds = get_all_active_feeds()
     update_status_state()
-    return render_template("index.html", feeds=all_feeds, playback=playback_data, status_state=status_state)
+    return render_template("index.html", feeds=all_feeds, playback=playback_data, status_state=status_state, insights=insights)
 
 @app.route("/add_feed", methods=["POST"])
 def add_feed():
