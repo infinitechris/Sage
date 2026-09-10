@@ -46,14 +46,43 @@
     </div>
 </div>
         
-<div style="margin: 20px 0; background: #181818; padding: 15px; border-radius: 6px; border: 1px solid #333;">
-    <h3 style="font-size: 0.95rem; color: #aaa; margin-top: 0; margin-bottom: 8px;">Skip/Archive Keywords</h3>
-    <form action="{{ url_for('update_filters', feed_name=feed_name) }}" method="POST" style="display: flex; gap: 8px;">
-        <input type="text" name="filter_string" placeholder="e.g. Bonus, Recap, Live" value="{{ feed.filter_string or '' }}" 
-               style="flex: 1; background: #222; border: 1px solid #444; color: #fff; padding: 6px 10px; border-radius: 4px; font-size: 0.85rem;">
-        <button type="submit" class="btn-secondary" style="padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; background: #333; color: #fff; border: none; cursor: pointer;">Save Filters</button>
-    </form>
-    <div style="font-size: 0.75rem; color: #777; margin-top: 6px;">Episodes containing these comma-separated strings will be auto-archived and skipped.</div>
+<div style="margin: 20px 0; background: #181818; padding: 15px; border-radius: 6px; border: 1px solid #333; display: flex; flex-wrap: wrap; gap: 20px;">
+    <!-- Keywords Filter -->
+    <div style="flex: 1; min-width: 280px;">
+        <h3 style="font-size: 0.95rem; color: #aaa; margin-top: 0; margin-bottom: 8px;">Skip/Archive Keywords</h3>
+        <form action="{{ url_for('update_filters', feed_name=feed_name) }}" method="POST" style="display: flex; gap: 8px;">
+            <input type="text" name="filter_string" placeholder="e.g. Bonus, Recap, Live" value="{{ feed.filter_string or '' }}" 
+                   style="flex: 1; background: #222; border: 1px solid #444; color: #fff; padding: 6px 10px; border-radius: 4px; font-size: 0.85rem;">
+            
+            <!-- Hide individual submit button so they submit smoothly together of fields -->
+            <button type="submit" style="display: none;"></button>
+        </form>
+        <div style="font-size: 0.75rem; color: #777; margin-top: 6px;">Episodes matching these terms will be auto-archived.</div>
+    </div>
+
+    <!-- Auto-Archive Age threshold Setting -->
+    <div style="flex: 1; min-width: 280px; border-left: 1px solid #2d2d2d; padding-left: 20px;">
+        <h3 style="font-size: 0.95rem; color: #aaa; margin-top: 0; margin-bottom: 8px;">Auto-Archive Retention Limit</h3>
+        <form id="filters-form" action="{{ url_for('update_filters', feed_name=feed_name) }}" method="POST" style="display: flex; align-items: center; gap: 10px;">
+            <!-- Carry over keywords filter value so settings merge during save -->
+            <input type="hidden" id="form-filter-string" name="filter_string" value="{{ feed.filter_string or '' }}">
+            
+            <select name="auto_archive_days" onchange="document.getElementById('form-filter-string').value = document.querySelector('input[name=filter_string]').value; this.form.submit();"
+                    style="background: #222; border: 1px solid #444; color: #fff; padding: 6px 10px; border-radius: 4px; font-size: 0.85rem; cursor: pointer; flex: 1;">
+                <option value="0" {{ 'selected' if feed.auto_archive_days == 0 or feed.auto_archive_days is none or feed.auto_archive_days == '' }}>Disabled (Keep All)</option>
+                <option value="1" {{ 'selected' if feed.auto_archive_days == 1 }}>24 Hours (1 Day)</option>
+                <option value="3" {{ 'selected' if feed.auto_archive_days == 3 }}>3 Days</option>
+                <option value="7" {{ 'selected' if feed.auto_archive_days == 7 }}>1 Week (7 Days)</option>
+                <option value="14" {{ 'selected' if feed.auto_archive_days == 14 }}>2 Weeks (14 Days)</option>
+                <option value="30" {{ 'selected' if feed.auto_archive_days == 30 }}>1 Month (30 Days)</option>
+                <option value="60" {{ 'selected' if feed.auto_archive_days == 60 }}>2 Months (60 Days)</option>
+                <option value="90" {{ 'selected' if feed.auto_archive_days == 90 }}>3 Months (90 Days)</option>
+                <option value="120" {{ 'selected' if feed.auto_archive_days == 120 }}>4 Months (120 Days)</option>
+            </select>
+            <button type="submit" class="btn-secondary" onclick="document.getElementById('form-filter-string').value = document.querySelector('input[name=filter_string]').value;" style="padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; background: #333; color: #fff; border: none; cursor: pointer;">Save Settings</button>
+        </form>
+        <div style="font-size: 0.75rem; color: #777; margin-top: 6px;">Episodes older than this duration will be auto-archived.</div>
+    </div>
 </div>
 
         <h2>

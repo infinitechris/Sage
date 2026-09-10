@@ -5,6 +5,7 @@
   "active": true,
   "priority": false,
   "auto_download": true,
+  "auto_archive_days": 0,
   "filter_string": "",
   "image_file": "Search_Engine.jpg",
   "episodes": [

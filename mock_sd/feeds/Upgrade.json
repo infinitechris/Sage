@@ -5,9 +5,20 @@
   "active": true,
   "priority": false,
   "auto_download": true,
+  "auto_archive_days": 0,
   "filter_string": "",
   "image_file": "Upgrade.jpg",
   "episodes": [
+    {
+      "title": "636: Opening a Book Backward",
+      "published": "Wed, 09 Sep 2026 23:24:00 GMT",
+      "pub_timestamp": 1788996240,
+      "priority": false,
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade636.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
     {
       "title": "635: The 2026 September Event Draft",
       "published": "Mon, 31 Aug 2026 22:12:00 GMT",
@@ -94,16 +105,6 @@
       "pub_timestamp": 1783370700,
       "priority": false,
       "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade627.mp3",
-      "downloaded": true,
-      "played": false,
-      "archived": false
-    },
-    {
-      "title": "626: Unprecedented Weirdness",
-      "published": "Mon, 29 Jun 2026 21:00:00 GMT",
-      "pub_timestamp": 1782766800,
-      "priority": false,
-      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade626.mp3",
       "downloaded": true,
       "played": false,
       "archived": false

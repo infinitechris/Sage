@@ -5,6 +5,7 @@
   "active": true,
   "priority": true,
   "auto_download": true,
+  "auto_archive_days": 0,
   "filter_string": "",
   "image_file": "The_Factory_Must_Grow.jpg",
   "episodes": [

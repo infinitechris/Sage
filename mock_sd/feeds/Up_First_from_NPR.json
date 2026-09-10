@@ -5,9 +5,20 @@
   "active": true,
   "priority": true,
   "auto_download": true,
+  "auto_archive_days": 0,
   "filter_string": "",
   "image_file": "Up_First_from_NPR.jpg",
   "episodes": [
+    {
+      "title": "US Strikes Iran Oil Tankers, Israeli Settlements Sanctions, Smithsonian Head Retires",
+      "published": "Wed, 09 Sep 2026 10:05:32 +0000",
+      "pub_timestamp": 1788948332,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/2289e0f7-650c-4fc5-9ace-def4d50bffcb/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=2289e0f7-650c-4fc5-9ace-def4d50bffcb&feed=HMwRVgVt&t=podcast&e=nx-s1-5962642&p=510318&d=776&size=12428060",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
     {
       "title": "Canada's Retaliatory Tariffs On US, Trumpapalooza Convention, Miami Cargo Plane Crash",
       "published": "Tue, 08 Sep 2026 09:58:14 +0000",
@@ -94,16 +105,6 @@
       "pub_timestamp": 1788170565,
       "priority": true,
       "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/7967f661-8f7d-4b09-af4e-24986ca9ae1a/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=7967f661-8f7d-4b09-af4e-24986ca9ae1a&feed=HMwRVgVt&t=podcast&e=nx-s1-5949893&p=510318&d=796&size=12746963",
-      "downloaded": false,
-      "played": false,
-      "archived": true
-    },
-    {
-      "title": "A Wild West revenge tale and the Black roots of cowboy culture",
-      "published": "Sun, 30 Aug 2026 07:00:00 +0000",
-      "pub_timestamp": 1788073200,
-      "priority": true,
-      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/24f99996-debe-40da-be79-9f1602f838a1/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=24f99996-debe-40da-be79-9f1602f838a1&feed=HMwRVgVt&t=podcast&e=nx-s1-5944447&p=510318&d=1420&size=22734141",
       "downloaded": false,
       "played": false,
       "archived": true

@@ -5,6 +5,7 @@
   "active": true,
   "priority": false,
   "auto_download": true,
+  "auto_archive_days": 0,
   "filter_string": "",
   "image_file": "Pod_Save_America.jpg",
   "episodes": [
@@ -15,7 +16,7 @@
       "priority": false,
       "audio_url": "https://clrtpod.com/m/pscrb.fm/rss/p/prfx.byspotify.com/e/arttrk.com/p/CRMDA/mgln.ai/e/284/dts.podtrac.com/redirect.mp3/audioboom.com/posts/8949154.mp3?modified=1788876473&sid=5166624&source=rss",
       "downloaded": true,
-      "played": false,
+      "played": true,
       "archived": false
     },
     {
@@ -25,7 +26,7 @@
       "priority": false,
       "audio_url": "https://clrtpod.com/m/pscrb.fm/rss/p/prfx.byspotify.com/e/arttrk.com/p/CRMDA/mgln.ai/e/284/dts.podtrac.com/redirect.mp3/audioboom.com/posts/8949192.mp3?modified=1788573654&sid=5166624&source=rss",
       "downloaded": true,
-      "played": false,
+      "played": true,
       "archived": false
     },
     {

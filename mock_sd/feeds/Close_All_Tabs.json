@@ -5,9 +5,20 @@
   "active": true,
   "priority": false,
   "auto_download": true,
+  "auto_archive_days": 0,
   "filter_string": "",
   "image_file": "Close_All_Tabs.jpg",
   "episodes": [
+    {
+      "title": "Close All Tabs Presents Snap Judgment: Runaway Car",
+      "published": "Wed, 09 Sep 2026 10:00:00 -0000",
+      "pub_timestamp": 1788948000,
+      "priority": false,
+      "audio_url": "https://traffic.megaphone.fm/KQINC7970196754.mp3",
+      "downloaded": true,
+      "played": false,
+      "archived": false
+    },
     {
       "title": "What Happened to the Quantified Self Movement?",
       "published": "Wed, 02 Sep 2026 10:00:00 -0000",
@@ -94,16 +105,6 @@
       "pub_timestamp": 1785924000,
       "priority": false,
       "audio_url": "https://traffic.megaphone.fm/KQINC5056668526.mp3",
-      "downloaded": false,
-      "played": true,
-      "archived": false
-    },
-    {
-      "title": "Introducing: Dream Machines from KQED",
-      "published": "Mon, 03 Aug 2026 10:00:00 -0000",
-      "pub_timestamp": 1785751200,
-      "priority": false,
-      "audio_url": "https://traffic.megaphone.fm/KQINC5958380550.mp3",
       "downloaded": false,
       "played": true,
       "archived": false

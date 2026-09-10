@@ -6,6 +6,7 @@ import time
 from email.utils import parsedate_to_datetime
 from PIL import Image
 from mutagen.mp3 import MP3
+from parser import write_json_atomic
 
 SD_MOUNT_PATH = "/run/media/triconda/170D-1A3D"
 MOCK_SD_PATH = "/home/triconda/Projects/Sage/mock_sd"
@@ -212,6 +213,78 @@ def generate_playlist(mock_sd_path=MOCK_SD_PATH, sd_mount_path=SD_MOUNT_PATH):
             
     return len(eligible_episodes)
 
+def add_playback_log(podcast_title, episode_title, action, source, timestamp=None, mock_sd_path=MOCK_SD_PATH):
+    """
+    Records an episode's state changes (played, archived) in mock_sd/playback.json
+    for SAGE's central History Log.
+    """
+    pb_file = os.path.join(mock_sd_path, "playback.json")
+    pb_data = {"logs": []}
+    if os.path.exists(pb_file):
+        try:
+            with open(pb_file, "r") as f:
+                pb_data = json.load(f)
+        except Exception:
+            pass
+    if "logs" not in pb_data:
+        pb_data["logs"] = []
+
+    # Check for duplicate action same episode to avoid log spam
+    for entry in pb_data["logs"]:
+        if (entry.get("podcast_title") == podcast_title and 
+            entry.get("episode_title") == episode_title and 
+            entry.get("action") == action):
+            return
+
+    if not timestamp:
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+
+    new_entry = {
+        "time": timestamp,
+        "podcast_title": podcast_title,
+        "episode_title": episode_title,
+        "action": action,
+        "source": source
+    }
+    pb_data["logs"].insert(0, new_entry)
+    # Sort logs so newest is first
+    pb_data["logs"].sort(key=lambda x: x.get("time", ""), reverse=True)
+    write_json_atomic(pb_file, pb_data, indent=2)
+
+def retroactively_build_history(mock_sd_path=MOCK_SD_PATH):
+    """
+    Scans all JSON feeds and adds played or archived episodes retroactively 
+    to playback.json, preserving chronological order.
+    """
+    local_feeds_dir = os.path.join(mock_sd_path, "feeds")
+    if not os.path.exists(local_feeds_dir):
+        return
+
+    for feed_json_name in os.listdir(local_feeds_dir):
+        if not feed_json_name.endswith(".json"):
+            continue
+        feed_json_path = os.path.join(local_feeds_dir, feed_json_name)
+        try:
+            with open(feed_json_path, "r") as f:
+                feed_data = json.load(f)
+        except Exception:
+            continue
+
+        feed_title = feed_data.get("feed_title", feed_json_name[:-5].replace("_", " "))
+        for ep in feed_data.get("episodes", []):
+            pub_ts = ep.get("pub_timestamp", 0)
+            formatted_time = None
+            if pub_ts > 0:
+                try:
+                    formatted_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(pub_ts))
+                except Exception:
+                    pass
+
+            if ep.get("played", False):
+                add_playback_log(feed_title, ep.get("title", ""), "played", "Inferred (Historical)", timestamp=formatted_time, mock_sd_path=mock_sd_path)
+            if ep.get("archived", False):
+                add_playback_log(feed_title, ep.get("title", ""), "archived", "Inferred (Historical)", timestamp=formatted_time, mock_sd_path=mock_sd_path)
+
 def purge_played_archived_downloads(mock_sd_path=MOCK_SD_PATH):
     """
     Removes locally downloaded audio files for episodes marked played or archived,
@@ -266,8 +339,7 @@ def purge_played_archived_downloads(mock_sd_path=MOCK_SD_PATH):
 
         if changed:
             try:
-                with open(feed_json_path, "w") as f:
-                    json.dump(feed_data, f, indent=2)
+                write_json_atomic(feed_json_path, feed_data, indent=2)
             except Exception as e:
                 _log_error(f"Error saving feed {feed_json_name} after purge: {e}")
 
@@ -386,6 +458,27 @@ def sync_to_sd():
                         safe_t = "".join(c for c in ep.get("title", "") if c.isalnum() or c in (' ', '_', '-')).strip().replace(' ', '_')
                         if safe_t == ep_base_name:
                             dev_flag = device_states.get(relative_file_path, {})
+                            if dev_flag.get("played", False) or dev_flag.get("archived", False):
+                                newly_played = dev_flag.get("played", False) and not ep.get("played", False)
+                                newly_archived = dev_flag.get("archived", False) and not ep.get("archived", False)
+
+                                ep["played"] = ep.get("played", False) or dev_flag.get("played", False)
+                                ep["archived"] = ep.get("archived", False) or dev_flag.get("archived", False)
+
+                                # Log changes to SAGE History Log
+                                if newly_played:
+                                    add_playback_log(feed_title, ep.get("title", ep_base_name), "played", "esPod (SD Sync)", mock_sd_path=MOCK_SD_PATH)
+                                if newly_archived:
+                                    add_playback_log(feed_title, ep.get("title", ep_base_name), "archived", "esPod (SD Sync)", mock_sd_path=MOCK_SD_PATH)
+
+                                # Save the updated local feed file since properties were altered by device state
+                                feed_json_name = f"{feed_folder_name}.json"
+                                feed_json_path = os.path.join(local_feeds_dir, feed_json_name)
+                                try:
+                                    write_json_atomic(feed_json_path, feed_cache, indent=2)
+                                except Exception as e_save:
+                                    _log_error(f"Error saving updated feed {feed_json_name} after tracking device states: {e_save}")
+
                             if ep.get("played", False) or ep.get("archived", False) or dev_flag.get("played", False) or dev_flag.get("archived", False):
                                 is_played_or_archived = True
                             break
@@ -493,8 +586,7 @@ def sync_to_sd():
         # Write final state.json only if mounted
         if sd_mounted and sd_podcasts_dir:
             try:
-                with open(state_file_path, "w") as f:
-                    json.dump(master_state, f, indent=2)
+                write_json_atomic(state_file_path, master_state, indent=2)
             except Exception as e:
                 _log_error(f"State file write skipped: {e}")
             

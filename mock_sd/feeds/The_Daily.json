@@ -5,9 +5,20 @@
   "active": true,
   "priority": true,
   "auto_download": true,
+  "auto_archive_days": 0,
   "filter_string": "",
   "image_file": "The_Daily.jpg",
   "episodes": [
+    {
+      "title": "Trump\u2019s War on Mail-In Voting",
+      "published": "Wed, 9 Sep 2026 09:45:00 +0000",
+      "pub_timestamp": 1788947100,
+      "priority": true,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/episodes/5660b118-2266-4c84-97ce-180d41d2e172/audio/128/default.mp3?aid=rss_feed&awCollectionId=03d8b493-87fc-4bd1-931f-8a8e9b945d8a&awEpisodeId=5660b118-2266-4c84-97ce-180d41d2e172&feed=54nAGcIl",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
     {
       "title": "\u2018Buy Now, Pay Later\u2019: A New Wave of Consumer Debt",
       "published": "Tue, 8 Sep 2026 09:45:00 +0000",
@@ -97,16 +108,6 @@
       "downloaded": false,
       "played": false,
       "archived": true
-    },
-    {
-      "title": "Lindsay Clancy Is on Trial. So Is Postpartum Psychosis.",
-      "published": "Fri, 28 Aug 2026 09:45:00 +0000",
-      "pub_timestamp": 1787910300,
-      "priority": true,
-      "audio_url": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/03d8b493-87fc-4bd1-931f-8a8e9b945d8a/episodes/154119be-1cc6-47ac-a8fd-40bd1dc25849/audio/128/default.mp3?aid=rss_feed&awCollectionId=03d8b493-87fc-4bd1-931f-8a8e9b945d8a&awEpisodeId=154119be-1cc6-47ac-a8fd-40bd1dc25849&feed=54nAGcIl",
-      "downloaded": false,
-      "played": true,
-      "archived": false
     }
   ]
 }

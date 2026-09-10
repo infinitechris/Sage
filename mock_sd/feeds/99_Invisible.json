@@ -5,6 +5,7 @@
   "active": true,
   "priority": false,
   "auto_download": true,
+  "auto_archive_days": 0,
   "filter_string": "",
   "image_file": "99_Invisible.jpg",
   "episodes": [
@@ -14,8 +15,8 @@
       "pub_timestamp": 1788854400,
       "priority": false,
       "audio_url": "https://mgln.ai/e/2/dts.podtrac.com/redirect.mp3/stitcher.simplecastaudio.com/3bb687b0-04af-4257-90f1-39eef4e631b6/episodes/92600b48-e7e9-4d96-828a-32d95f38e9dd/audio/128/default.mp3?aid=rss_feed&awCollectionId=3bb687b0-04af-4257-90f1-39eef4e631b6&awEpisodeId=92600b48-e7e9-4d96-828a-32d95f38e9dd&feed=BqbsxVfO",
-      "downloaded": true,
-      "played": false,
+      "downloaded": false,
+      "played": true,
       "archived": false
     },
     {

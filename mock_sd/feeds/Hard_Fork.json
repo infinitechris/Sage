@@ -5,7 +5,8 @@
   "active": true,
   "priority": false,
   "auto_download": true,
-  "filter_string": "",
+  "auto_archive_days": 0,
+  "filter_string": "Hugging Face",
   "image_file": "Hard_Fork.jpg",
   "episodes": [
     {

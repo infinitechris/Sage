@@ -5,17 +5,28 @@
   "active": true,
   "priority": true,
   "auto_download": true,
+  "auto_archive_days": 0,
   "filter_string": "Alt.Latino: ",
   "image_file": "NPR_Music.jpg",
   "episodes": [
+    {
+      "title": "Alt.Latino: Brazil and Colombia on our minds",
+      "published": "Wed, 09 Sep 2026 13:58:23 +0000",
+      "pub_timestamp": 1788962303,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/831c3afd-d390-4119-a60c-70018d29313a/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=831c3afd-d390-4119-a60c-70018d29313a&feed=VUaq3kJJ&t=podcast&e=nx-s1-5962766&p=510019&d=1837&size=58786003",
+      "downloaded": false,
+      "played": false,
+      "archived": true
+    },
     {
       "title": "More cover songs that are better than the originals",
       "published": "Tue, 08 Sep 2026 09:00:00 +0000",
       "pub_timestamp": 1788858000,
       "priority": true,
       "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/9e205831-f38d-4fc3-aeac-f2b9f5893c53/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=9e205831-f38d-4fc3-aeac-f2b9f5893c53&feed=VUaq3kJJ&t=podcast&e=nx-s1-5960526&p=510019&d=2856&size=91421989",
-      "downloaded": true,
-      "played": false,
+      "downloaded": false,
+      "played": true,
       "archived": false
     },
     {
@@ -46,7 +57,7 @@
       "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/70c51d09-26d1-48ea-a288-1d38867fba86/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=70c51d09-26d1-48ea-a288-1d38867fba86&feed=VUaq3kJJ&t=podcast&e=nx-s1-5950545&p=510019&d=2703&size=86515984",
       "downloaded": false,
       "played": true,
-      "archived": true
+      "archived": false
     },
     {
       "title": "New Music Friday: The best albums out Aug. 28",
@@ -97,16 +108,6 @@
       "downloaded": false,
       "played": true,
       "archived": false
-    },
-    {
-      "title": "Alt.Latino: Electr\u00f3nica rising in Mexico",
-      "published": "Wed, 19 Aug 2026 07:00:00 +0000",
-      "pub_timestamp": 1787122800,
-      "priority": true,
-      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510019/npr.simplecastaudio.com/afbbcc66-ab00-44f2-903d-1a96ab240270/episodes/1b4bb861-9c92-41dc-8001-a0b85406dc8a/audio/256/default.mp3?awCollectionId=afbbcc66-ab00-44f2-903d-1a96ab240270&awEpisodeId=1b4bb861-9c92-41dc-8001-a0b85406dc8a&feed=VUaq3kJJ&t=podcast&e=nx-s1-5936625&p=510019&d=1933&size=61861347",
-      "downloaded": false,
-      "played": false,
-      "archived": true
     }
   ]
 }

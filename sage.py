@@ -8,8 +8,8 @@ import time
 import curses
 import datetime
 import logging
-from parser import parse_feed, extract_pub_timestamp
-from sync import sync_to_sd, get_sync_status, generate_playlist as sync_generate_playlist, purge_played_archived_downloads, get_recent_errors as sync_get_recent_errors, clear_recent_errors as sync_clear_recent_errors, SD_MOUNT_PATH as DEFAULT_SD_MOUNT, MOCK_SD_PATH
+from parser import parse_feed, extract_pub_timestamp, write_json_atomic
+from sync import sync_to_sd, get_sync_status, generate_playlist as sync_generate_playlist, purge_played_archived_downloads, get_recent_errors as sync_get_recent_errors, clear_recent_errors as sync_clear_recent_errors, add_playback_log, retroactively_build_history, SD_MOUNT_PATH as DEFAULT_SD_MOUNT, MOCK_SD_PATH
 
 # Silence the once-a-second /sync_status access log spam without hiding real errors/requests
 class _SuppressSyncStatusLogs(logging.Filter):
@@ -275,8 +275,7 @@ def feed_detail(feed_name):
         feed_data.get("episodes", []).sort(key=lambda e: (not e.get("priority", False), -e.get("pub_timestamp", 0)))
                 
         # Save corrected state back to JSON
-        with open(file_path, "w") as f:
-            json.dump(feed_data, f, indent=2)
+        write_json_atomic(file_path, feed_data, indent=2)
             
     return render_template("feed.html", feed=feed_data, feed_name=safe_name)
 
@@ -290,10 +289,14 @@ def toggle_episode(feed_name, ep_index, action):
         if 0 <= ep_index < len(feed_data["episodes"]):
             if action in ["played", "archived"]:
                 current = feed_data["episodes"][ep_index].get(action, False)
-                feed_data["episodes"][ep_index][action] = not current
+                new_state = not current
+                feed_data["episodes"][ep_index][action] = new_state
                 
-                with open(file_path, "w") as f:
-                    json.dump(feed_data, f, indent=2)
+                write_json_atomic(file_path, feed_data, indent=2)
+                
+                # Log action to History Log
+                act_str = f"marked {action}" if new_state else f"marked un-{action}"
+                add_playback_log(feed_data.get("feed_title", feed_name), feed_data["episodes"][ep_index].get("title", ""), act_str, "Sage Dashboard", mock_sd_path=SD_PATH)
                     
         generate_playlist(SD_PATH, SD_MOUNT_PATH)
         update_status_state()
@@ -309,8 +312,7 @@ def toggle_episode_priority(feed_name, ep_index):
             
         if 0 <= ep_index < len(feed_data["episodes"]):
             feed_data["episodes"][ep_index]["priority"] = not feed_data["episodes"][ep_index].get("priority", False)
-            with open(file_path, "w") as f:
-                json.dump(feed_data, f, indent=2)
+            write_json_atomic(file_path, feed_data, indent=2)
                 
         generate_playlist(SD_PATH, SD_MOUNT_PATH)
         update_status_state()
@@ -329,8 +331,7 @@ def remove_feed(feed_name):
             
         feed_data["active"] = False
         
-        with open(file_path, "w") as f:
-            json.dump(feed_data, f, indent=2)
+        write_json_atomic(file_path, feed_data, indent=2)
             
         if feed_data.get("image_file"):
             img_path = os.path.join(SD_PATH, "assets", feed_data["image_file"])
@@ -354,8 +355,7 @@ def toggle_autodownload(feed_name):
             
         feed_data["auto_download"] = not feed_data.get("auto_download", False)
         
-        with open(file_path, "w") as f:
-            json.dump(feed_data, f, indent=2)
+        write_json_atomic(file_path, feed_data, indent=2)
             
         update_status_state()
             
@@ -441,8 +441,7 @@ def toggle_priority(feed_name):
         for ep in feed_data.get("episodes", []):
             ep["priority"] = new_priority
             
-        with open(file_path, "w") as f:
-            json.dump(feed_data, f, indent=2)
+        write_json_atomic(file_path, feed_data, indent=2)
             
         generate_playlist(SD_PATH, SD_MOUNT_PATH)
         update_status_state()
@@ -457,16 +456,35 @@ def update_filters(feed_name):
             feed_data = json.load(f)
             
         feed_data["filter_string"] = request.form.get("filter_string", "")
+        try:
+            feed_data["auto_archive_days"] = int(request.form.get("auto_archive_days", 0))
+        except ValueError:
+            feed_data["auto_archive_days"] = 0
         
         # Check existing episodes against new filters right away
         filters = [f.strip().lower() for f in feed_data["filter_string"].split(",") if f.strip()]
         for ep in feed_data.get("episodes", []):
             title_lower = ep.get("title", "").lower()
-            if any(f in title_lower for f in filters):
-                ep["archived"] = True
+            matches_filter = any(f in title_lower for f in filters)
+            
+            # Check for age threshold matching (skipped if 0 / Disabled)
+            is_too_old = False
+            pub_ts = ep.get("pub_timestamp", 0)
+            if feed_data["auto_archive_days"] > 0 and pub_ts > 0:
+                age_seconds = time.time() - pub_ts
+                if age_seconds > (feed_data["auto_archive_days"] * 24 * 3600):
+                    is_too_old = True
+                    
+            if matches_filter or is_too_old:
+                # auto-archive setting must skip any files that were already marked as "played"
+                if ep.get("played", False):
+                    continue
+                if not ep.get("archived", False):
+                    ep["archived"] = True
+                    reason = "filter matches" if matches_filter else f"older than {feed_data['auto_archive_days']}d"
+                    add_playback_log(feed_data.get("feed_title", feed_name), ep.get("title", ""), f"auto-archived ({reason})", "Sage Dashboard", mock_sd_path=SD_PATH)
                 
-        with open(file_path, "w") as f:
-            json.dump(feed_data, f, indent=2)
+        write_json_atomic(file_path, feed_data, indent=2)
             
         generate_playlist(SD_PATH, SD_MOUNT_PATH)
         update_status_state()
@@ -632,8 +650,7 @@ def download_episode_internal(safe_feed_name, ep_index):
                                         status_state["current_activity"] = detail
                                         
                         ep["downloaded"] = True
-                        with open(file_path, "w") as f:
-                            json.dump(feed_data, f, indent=2)
+                        write_json_atomic(file_path, feed_data, indent=2)
                 except Exception as e:
                     log_error(f"Download failed for '{ep.get('title', 'Unknown Episode')}': {e}")
 
@@ -860,8 +877,7 @@ def run_dashboard(stdscr=None):
                     d["priority"] = new_p
                     for ep in d.get("episodes", []):
                         ep["priority"] = new_p
-                    with open(file_path, "w") as f:
-                        json.dump(d, f, indent=2)
+                    write_json_atomic(file_path, d, indent=2)
                     generate_playlist(SD_PATH, SD_MOUNT_PATH)
                     update_status_state()
                     toast_message = f"Set '{target_feed.get('feed_title')}' priority: {'ON' if new_p else 'OFF'}"
@@ -875,8 +891,7 @@ def run_dashboard(stdscr=None):
                     with open(file_path, "r") as f:
                         d = json.load(f)
                     d["auto_download"] = not d.get("auto_download", False)
-                    with open(file_path, "w") as f:
-                        json.dump(d, f, indent=2)
+                    write_json_atomic(file_path, d, indent=2)
                     update_status_state()
                     toast_message = f"Toggled Auto-Download for '{target_feed.get('feed_title')}' to {d['auto_download']}"
                     toast_time = time.time()
@@ -888,7 +903,8 @@ def run_dashboard(stdscr=None):
 sync_thread = threading.Thread(target=background_sync_worker, daemon=True)
 sync_thread.start()
 
-# Initial playlist generation and state discovery on boot
+# Initialize retro playback logs and master discover layout
+retroactively_build_history(SD_PATH)
 generate_playlist(SD_PATH, SD_MOUNT_PATH)
 update_status_state()
 

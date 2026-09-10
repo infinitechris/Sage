@@ -4,7 +4,26 @@ import os
 import requests
 import calendar
 import time
+import tempfile
 from email.utils import parsedate_to_datetime
+
+def write_json_atomic(file_path, data, indent=2):
+    """
+    Writes data to a temporary file in the same directory, then renames it
+    atomically using os.replace to prevent 0-byte or corrupted JSON files.
+    """
+    dir_name = os.path.dirname(file_path)
+    if dir_name:
+        os.makedirs(dir_name, exist_ok=True)
+    fd, temp_path = tempfile.mkstemp(dir=dir_name, prefix=".tmp-")
+    try:
+        with os.fdopen(fd, "w") as f:
+            json.dump(data, f, indent=indent)
+        os.replace(temp_path, file_path)
+    except Exception as e:
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+        raise e
 
 def extract_pub_timestamp(entry_or_data):
     """
@@ -65,6 +84,7 @@ def parse_feed(feed_url, output_dir="mock_sd"):
     auto_download_pref = True  # Default to True for new feeds
     filter_string = ""
     feed_priority = False
+    auto_archive_days = 0  # 0 indicates Disabled
     
     if os.path.exists(file_path):
         try:
@@ -77,6 +97,7 @@ def parse_feed(feed_url, output_dir="mock_sd"):
         auto_download_pref = old_data.get("auto_download", True)
         filter_string = old_data.get("filter_string", "")
         feed_priority = old_data.get("priority", False)
+        auto_archive_days = old_data.get("auto_archive_days", 0)
         for ep in old_data.get("episodes", []):
             existing_episodes[ep["title"]] = {
                 "played": ep.get("played", False),
@@ -100,18 +121,37 @@ def parse_feed(feed_url, output_dir="mock_sd"):
         
         pub_ts = extract_pub_timestamp(entry)
         
+        # Check if episode is older than the auto_archive threshold (skipped if 0 / Disabled)
+        is_too_old = False
+        if auto_archive_days > 0 and pub_ts > 0:
+            age_seconds = time.time() - pub_ts
+            if age_seconds > (auto_archive_days * 24 * 3600):
+                is_too_old = True
+
         status = existing_episodes.get(title, {
             "played": False, 
-            "archived": matches_filter, # Auto-archive if it hits the filter string
-            "downloaded": False if matches_filter else auto_download_pref,
+            "archived": (matches_filter or is_too_old), # Auto-archive if matches filter or too old
+            "downloaded": False if (matches_filter or is_too_old) else auto_download_pref,
             "priority": feed_priority,
             "pub_timestamp": pub_ts
         })
         
-        # If it's already recorded, make sure filter enforcement applies if updated later
-        if matches_filter and title not in existing_episodes:
+        # Guard: If an episode is already marked played, do NOT auto-archive it under any circumstances
+        if status.get("played", False):
+            is_too_old = False
+            status["archived"] = False
+            if not existing_episodes.get(title, {}).get("downloaded", False):
+                status["downloaded"] = False
+
+        # If it's already recorded, make sure filter/age enforcement applies if updated later
+        if not status.get("played", False) and (matches_filter or is_too_old) and title not in existing_episodes:
             status["archived"] = True
             status["downloaded"] = False
+            
+            # Log auto-archival for newly added filter or age matching episodes
+            from sync import add_playback_log
+            reason_str = "filter matched" if matches_filter else f"older than {auto_archive_days}d limit"
+            add_playback_log(feed_title, title, f"auto-archived ({reason_str})", "Sage Dashboard (Feed Parser)", mock_sd_path=output_dir)
         
         merged_episodes.append({
             "title": title,
@@ -152,6 +192,7 @@ def parse_feed(feed_url, output_dir="mock_sd"):
         "active": True,
         "priority": feed_priority,
         "auto_download": auto_download_pref,
+        "auto_archive_days": auto_archive_days,
         "filter_string": filter_string,
         "image_file": art_filename if art_filename else f"{safe_name}.jpg",
         "episodes": merged_episodes
@@ -159,7 +200,6 @@ def parse_feed(feed_url, output_dir="mock_sd"):
     
     feeds_dir = os.path.join(output_dir, "feeds")
     os.makedirs(feeds_dir, exist_ok=True)
-    with open(file_path, "w") as f:
-        json.dump(feed_data, f, indent=2)
+    write_json_atomic(file_path, feed_data, indent=2)
         
     return feed_data

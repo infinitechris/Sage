@@ -5,6 +5,7 @@
   "active": true,
   "priority": false,
   "auto_download": true,
+  "auto_archive_days": 0,
   "filter_string": "",
   "image_file": "Are_We_There_Yet.jpg",
   "episodes": [
@@ -15,7 +16,7 @@
       "priority": false,
       "audio_url": "https://wmfe-od.streamguys1.com/awty/awty543.mp3",
       "downloaded": true,
-      "played": false,
+      "played": true,
       "archived": false
     },
     {
