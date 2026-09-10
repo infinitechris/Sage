@@ -324,11 +324,11 @@ def get_estimated_releases():
                     target_struct = time.localtime(projected_ts)
                     for day in calendar_days:
                         if day["weekday_num"] == target_struct.tm_wday:
-                            # Check if an episode was actually released in the last 24 hours
+                            # Check if an episode was actually released in the last 24 hours (and is not in the future)
                             released_today = False
                             if episodes:
                                 latest_ep_ts = episodes[0].get("pub_timestamp", 0)
-                                if now_ts - latest_ep_ts < (24 * 3600):
+                                if 0 <= (now_ts - latest_ep_ts) < (24 * 3600):
                                     released_today = True
                                     
                             day["shows"].append({
