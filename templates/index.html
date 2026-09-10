@@ -265,14 +265,14 @@
                                 </div>
                                 <div style="display: flex; flex-direction: column; gap: 6px;">
                                     {% for show in day.shows %}
-                                        <div style="display: flex; align-items: center; justify-content: space-between; background: #181818; padding: 6px 10px; border-radius: 4px; border: 1px solid #282828;">
+                                        <a href="{{ url_for('feed_detail', feed_name=show.slug) }}" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; background: #181818; padding: 6px 10px; border-radius: 4px; border: 1px solid #282828; hover-background: #252525; transition: background 0.1s;">
                                             <span style="font-size: 0.8rem; color: #eee; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 175px;">
                                                 {{ show.title }}
                                             </span>
                                             {% if show.priority %}
                                                 <span style="font-size: 0.7rem; color: #f1c40f;" title="Priority Show">★</span>
                                             {% endif %}
-                                        </div>
+                                        </a>
                                     {% endfor %}
                                 </div>
                             </div>
