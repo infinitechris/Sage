@@ -294,13 +294,31 @@ def get_estimated_releases():
                         continue
                     target_wday = max(set(weekdays), key=weekdays.count)
                     
-                    # Project next release by expanding from the latest known drop
-                    latest_ts = timestamps[0]
-                    projected_ts = latest_ts + (7 * 24 * 3600) # Standard weekly target
+                    # Determine standard release interval (median difference between consecutive releases)
+                    intervals = [timestamps[i] - timestamps[i+1] for i in range(min(5, len(timestamps)-1))]
+                    expected_interval = sorted(intervals)[len(intervals)//2] if intervals else (7 * 24 * 3600)
                     
-                    # If projected weekly drop is already in the past, roll forward week-by-week
+                    # Lock expected interval between 1 day and 35 days to filter outliers
+                    if expected_interval < 24 * 3600:
+                        expected_interval = 7 * 24 * 3600
+                        
+                    # Calculate time elapsed since the last release
+                    latest_ts = timestamps[0]
+                    elapsed_since_latest = now_ts - latest_ts
+                    
+                    # Define a strict grace period of 3 days. 
+                    # If time since the last release exceeds the standard interval + grace period,
+                    # the show has officially "missed" its release and is skipped until another drops.
+                    grace_period = 3 * 24 * 3600 
+                    if elapsed_since_latest > (expected_interval + grace_period):
+                        continue
+                    
+                    # Project next release by expanding from the latest known drop
+                    projected_ts = latest_ts + expected_interval
+                    
+                    # If projected drop is in the past, roll forward by the interval up to current
                     while projected_ts < now_ts:
-                        projected_ts += (7 * 24 * 3600)
+                        projected_ts += expected_interval
                         
                     # Find which slot in our 7-day view matches the projected target
                     target_struct = time.localtime(projected_ts)
