@@ -85,6 +85,42 @@ reconcile into Sage; interrupted writes leave a recoverable state file.
 - Add fixture-based contract tests shared by Sage and esPod for playlist ordering,
   state merging, resume positions, completion, and malformed-file recovery.
 
+## Version 3: Music Playback
+
+Version 3 expands Sage and esPod from a focused podcast system into a unified local
+audio player. Music must remain a distinct media type with its own browsing, queueing,
+and completion semantics rather than being represented as podcast episodes.
+
+**Estimated total:** 2,500-4,000 credits
+
+| Feature | Estimated credits |
+| --- | ---: |
+| Music library scanning, tags, and stable track IDs | 400-650 |
+| Sage artist, album, genre, and track library UI | 400-650 |
+| Music manifest, artwork pipeline, and device sync | 400-650 |
+| esPod artist, album, and track browser | 450-750 |
+| Music queues, shuffle, repeat, and mixed playback handoff | 450-750 |
+| Cross-repository fixtures, migration, and hardware testing | 300-500 |
+
+- Import local music without changing or reorganizing the source library by default.
+- Read embedded metadata and artwork, with predictable fallbacks for incomplete tags.
+- Browse by artist, album, genre, and track in Sage and on esPod.
+- Support album playback, shuffle, repeat-one, repeat-all, and an explicit play-next
+  queue without applying podcast Played or Archived semantics to music.
+- Keep podcast progress, auto-advance, retention, and history behavior intact when
+  switching between media types.
+- Define storage budgets and sync selection separately for podcasts and music.
+- Begin with formats proven by the existing decoder stack; evaluate additional codecs
+  independently rather than making broad format support a release blocker.
+
+**Done when:** Sage can index and selectively sync a local music library, esPod can
+browse and play it by artist and album with reliable shuffle/repeat behavior, switching
+between music and podcasts preserves both queues and playback state, and existing
+podcast workflows pass regression testing.
+
+Streaming-service integrations, DRM playback, recommendations, equalization, crossfade,
+and guaranteed gapless playback are not part of the initial v3 milestone.
+
 ## Later Candidates
 
 These are valuable but should follow the v2 configuration and state foundations.
