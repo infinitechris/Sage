@@ -1,6 +1,118 @@
 {
   "logs": [
     {
+      "time": "2026-09-10 22:30:52",
+      "podcast_title": "Upgrade",
+      "episode_title": "636: Opening a Book Backward",
+      "action": "marked played",
+      "source": "Sage Dashboard"
+    },
+    {
+      "time": "2026-09-10 22:30:45",
+      "podcast_title": "The Daily",
+      "episode_title": "A Couple Breaks Up. Who Gets Custody of Their Embryos?",
+      "action": "marked played",
+      "source": "Sage Dashboard"
+    },
+    {
+      "time": "2026-09-10 22:00:02",
+      "podcast_title": "Science Vs",
+      "episode_title": "Where Have The Insects Gone?? With Dr. Jessica Ware",
+      "action": "played",
+      "source": "esPod (SD Sync)"
+    },
+    {
+      "time": "2026-09-10 22:00:02",
+      "podcast_title": "Up First from NPR",
+      "episode_title": "Trump Convention Speech, Missouri Contempt And Redistricting, Apple's Foldable iPhone",
+      "action": "played",
+      "source": "esPod (SD Sync)"
+    },
+    {
+      "time": "2026-09-10 22:00:02",
+      "podcast_title": "Hyperfixed",
+      "episode_title": "PREMIUM UNLOCKED: Cramping My Style",
+      "action": "played",
+      "source": "esPod (SD Sync)"
+    },
+    {
+      "time": "2026-09-10 07:08:18",
+      "podcast_title": "Close All Tabs",
+      "episode_title": "Close All Tabs Presents Snap Judgment: Runaway Car",
+      "action": "played",
+      "source": "esPod (SD Sync)"
+    },
+    {
+      "time": "2026-09-10 06:58:15",
+      "podcast_title": "Science Vs",
+      "episode_title": "Caffeine: How Much Is Too Much?",
+      "action": "marked played",
+      "source": "Sage Dashboard"
+    },
+    {
+      "time": "2026-09-10 06:58:13",
+      "podcast_title": "Science Vs",
+      "episode_title": "Raw Milk: Secret Superfood??",
+      "action": "marked played",
+      "source": "Sage Dashboard"
+    },
+    {
+      "time": "2026-09-10 06:58:13",
+      "podcast_title": "Science Vs",
+      "episode_title": "Narcissists: Are We Surrounded?",
+      "action": "marked played",
+      "source": "Sage Dashboard"
+    },
+    {
+      "time": "2026-09-10 06:58:11",
+      "podcast_title": "Science Vs",
+      "episode_title": "Free Will: Does It Exist?",
+      "action": "marked played",
+      "source": "Sage Dashboard"
+    },
+    {
+      "time": "2026-09-10 06:58:10",
+      "podcast_title": "Science Vs",
+      "episode_title": "Weight Loss: Why Won't It Stick?",
+      "action": "marked played",
+      "source": "Sage Dashboard"
+    },
+    {
+      "time": "2026-09-10 06:58:10",
+      "podcast_title": "Science Vs",
+      "episode_title": "We Solve the 49ers Viral Conspiracy Theory",
+      "action": "marked played",
+      "source": "Sage Dashboard"
+    },
+    {
+      "time": "2026-09-10 06:58:09",
+      "podcast_title": "Science Vs",
+      "episode_title": "Hank Green: What No One Tells You About the Algorithm",
+      "action": "marked played",
+      "source": "Sage Dashboard"
+    },
+    {
+      "time": "2026-09-10 06:58:08",
+      "podcast_title": "Science Vs",
+      "episode_title": "Sunscreen: Could It Be Toxic??",
+      "action": "marked played",
+      "source": "Sage Dashboard"
+    },
+    {
+      "time": "2026-09-10 06:58:07",
+      "podcast_title": "Science Vs",
+      "episode_title": "Protein-Maxxing: Is It Actually Bad For Us?",
+      "action": "marked played",
+      "source": "Sage Dashboard"
+    },
+    {
+      "time": "2026-09-10 05:45:00",
+      "podcast_title": "The Daily",
+      "episode_title": "A Couple Breaks Up. Who Gets Custody of Their Embryos?",
+      "action": "played",
+      "source": "Inferred (Historical)"
+    },
+    {
       "time": "2026-09-09 20:06:57",
       "podcast_title": "Up First from NPR",
       "episode_title": "Canada's Retaliatory Tariffs On US, Trumpapalooza Convention, Miami Cargo Plane Crash",
@@ -88,6 +200,13 @@
       "time": "2026-09-09 19:59:17",
       "podcast_title": "My Brother, My Brother And Me",
       "episode_title": "MBMBaM 828: *Unless I\u2019m Pissin\u2019 Pants",
+      "action": "played",
+      "source": "Inferred (Historical)"
+    },
+    {
+      "time": "2026-09-09 19:24:00",
+      "podcast_title": "Upgrade",
+      "episode_title": "636: Opening a Book Backward",
       "action": "played",
       "source": "Inferred (Historical)"
     },
@@ -302,6 +421,13 @@
       "source": "Inferred (Historical)"
     },
     {
+      "time": "2026-09-03 05:00:00",
+      "podcast_title": "Science Vs",
+      "episode_title": "Protein-Maxxing: Is It Actually Bad For Us?",
+      "action": "played",
+      "source": "Inferred (Historical)"
+    },
+    {
       "time": "2026-09-03 04:00:00",
       "podcast_title": "Heavyweight",
       "episode_title": "Trailer: Heavyweight Season 10",
@@ -505,6 +631,13 @@
       "source": "Inferred (Historical)"
     },
     {
+      "time": "2026-08-27 05:00:00",
+      "podcast_title": "Science Vs",
+      "episode_title": "Sunscreen: Could It Be Toxic??",
+      "action": "played",
+      "source": "Inferred (Historical)"
+    },
+    {
       "time": "2026-08-27 01:00:00",
       "podcast_title": "Hyperfixed",
       "episode_title": "Captive Audience",
@@ -631,6 +764,13 @@
       "source": "Inferred (Historical)"
     },
     {
+      "time": "2026-08-20 05:00:00",
+      "podcast_title": "Science Vs",
+      "episode_title": "Hank Green: What No One Tells You About the Algorithm",
+      "action": "played",
+      "source": "Inferred (Historical)"
+    },
+    {
       "time": "2026-08-19 06:00:00",
       "podcast_title": "Close All Tabs",
       "episode_title": "The Emily Hart Saga, Part 2: The AI Thirst Trap Grift",
@@ -704,6 +844,13 @@
       "time": "2026-08-14 00:00:00",
       "podcast_title": "Lateral with Tom Scott",
       "episode_title": "201: Vegan art",
+      "action": "played",
+      "source": "Inferred (Historical)"
+    },
+    {
+      "time": "2026-08-13 09:37:00",
+      "podcast_title": "Science Vs",
+      "episode_title": "We Solve the 49ers Viral Conspiracy Theory",
       "action": "played",
       "source": "Inferred (Historical)"
     },
@@ -799,6 +946,13 @@
       "source": "Inferred (Historical)"
     },
     {
+      "time": "2026-08-06 05:00:00",
+      "podcast_title": "Science Vs",
+      "episode_title": "Weight Loss: Why Won't It Stick?",
+      "action": "played",
+      "source": "Inferred (Historical)"
+    },
+    {
       "time": "2026-08-05 06:00:00",
       "podcast_title": "Close All Tabs",
       "episode_title": "Why The Ethan Klein Fair Use Lawsuits Are Way More Than Internet Beef",
@@ -851,6 +1005,13 @@
       "time": "2026-07-31 00:00:00",
       "podcast_title": "Lateral with Tom Scott",
       "episode_title": "199: Unburned gasoline",
+      "action": "played",
+      "source": "Inferred (Historical)"
+    },
+    {
+      "time": "2026-07-30 05:00:00",
+      "podcast_title": "Science Vs",
+      "episode_title": "Free Will: Does It Exist?",
       "action": "played",
       "source": "Inferred (Historical)"
     },
@@ -1037,6 +1198,13 @@
       "source": "Inferred (Historical)"
     },
     {
+      "time": "2026-07-02 05:00:00",
+      "podcast_title": "Science Vs",
+      "episode_title": "Narcissists: Are We Surrounded?",
+      "action": "played",
+      "source": "Inferred (Historical)"
+    },
+    {
       "time": "2026-06-30 11:26:37",
       "podcast_title": "The Factory Must Grow",
       "episode_title": "53 - Factorio 2.1 Patch Notes Discussion & Modding Implications!",
@@ -1051,9 +1219,23 @@
       "source": "Inferred (Historical)"
     },
     {
+      "time": "2026-06-25 05:00:00",
+      "podcast_title": "Science Vs",
+      "episode_title": "Raw Milk: Secret Superfood??",
+      "action": "played",
+      "source": "Inferred (Historical)"
+    },
+    {
       "time": "2026-06-21 20:00:00",
       "podcast_title": "This American Life",
       "episode_title": "889: There\u2019s Something About Hail Mary",
+      "action": "played",
+      "source": "Inferred (Historical)"
+    },
+    {
+      "time": "2026-06-18 05:00:00",
+      "podcast_title": "Science Vs",
+      "episode_title": "Caffeine: How Much Is Too Much?",
       "action": "played",
       "source": "Inferred (Historical)"
     },

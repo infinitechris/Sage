@@ -10,6 +10,16 @@
   "image_file": "Up_First_from_NPR.jpg",
   "episodes": [
     {
+      "title": "Trump Convention Speech, Missouri Contempt And Redistricting, Apple's Foldable iPhone",
+      "published": "Thu, 10 Sep 2026 09:49:47 +0000",
+      "pub_timestamp": 1789033787,
+      "priority": true,
+      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/365cf9e8-3041-4bd1-96da-54c7d64fdbbd/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=365cf9e8-3041-4bd1-96da-54c7d64fdbbd&feed=HMwRVgVt&t=podcast&e=nx-s1-5964659&p=510318&d=796&size=12744037",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
       "title": "US Strikes Iran Oil Tankers, Israeli Settlements Sanctions, Smithsonian Head Retires",
       "published": "Wed, 09 Sep 2026 10:05:32 +0000",
       "pub_timestamp": 1788948332,
@@ -95,16 +105,6 @@
       "pub_timestamp": 1788257405,
       "priority": true,
       "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/d0732491-8219-4c57-a125-513f47e184f9/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=d0732491-8219-4c57-a125-513f47e184f9&feed=HMwRVgVt&t=podcast&e=nx-s1-5951372&p=510318&d=772&size=12364112",
-      "downloaded": false,
-      "played": false,
-      "archived": true
-    },
-    {
-      "title": "Trump Venezuela Oil Deal, US & Iran Renew Strikes, House Back From Recess",
-      "published": "Mon, 31 Aug 2026 10:02:45 +0000",
-      "pub_timestamp": 1788170565,
-      "priority": true,
-      "audio_url": "https://prfx.byspotify.com/e/play.podtrac.com/npr-510318/npr.simplecastaudio.com/d52bee4a-b10a-40f8-9417-45064e6b8632/episodes/7967f661-8f7d-4b09-af4e-24986ca9ae1a/audio/128/default.mp3?awCollectionId=d52bee4a-b10a-40f8-9417-45064e6b8632&awEpisodeId=7967f661-8f7d-4b09-af4e-24986ca9ae1a&feed=HMwRVgVt&t=podcast&e=nx-s1-5949893&p=510318&d=796&size=12746963",
       "downloaded": false,
       "played": false,
       "archived": true

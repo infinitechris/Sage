@@ -15,8 +15,8 @@
       "pub_timestamp": 1788996240,
       "priority": false,
       "audio_url": "https://www.podtrac.com/pts/redirect.mp3/mgln.ai/e/613/clrtpod.com/m/pscrb.fm/rss/p/traffic.libsyn.com/upgrade/upgrade636.mp3",
-      "downloaded": true,
-      "played": false,
+      "downloaded": false,
+      "played": true,
       "archived": false
     },
     {

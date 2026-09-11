@@ -14,9 +14,9 @@
       "published": "Wed, 09 Sep 2026 10:00:00 -0000",
       "pub_timestamp": 1788948000,
       "priority": false,
-      "audio_url": "https://traffic.megaphone.fm/KQINC7970196754.mp3",
-      "downloaded": true,
-      "played": false,
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/traffic.megaphone.fm/KQINC7970196754.mp3",
+      "downloaded": false,
+      "played": true,
       "archived": false
     },
     {
@@ -24,7 +24,7 @@
       "published": "Wed, 02 Sep 2026 10:00:00 -0000",
       "pub_timestamp": 1788343200,
       "priority": false,
-      "audio_url": "https://traffic.megaphone.fm/KQINC7979965838.mp3",
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/traffic.megaphone.fm/KQINC7979965838.mp3",
       "downloaded": false,
       "played": true,
       "archived": false
@@ -34,7 +34,7 @@
       "published": "Mon, 31 Aug 2026 10:00:00 -0000",
       "pub_timestamp": 1788170400,
       "priority": false,
-      "audio_url": "https://traffic.megaphone.fm/KQINC1092204215.mp3",
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/traffic.megaphone.fm/KQINC1092204215.mp3",
       "downloaded": false,
       "played": true,
       "archived": false
@@ -44,7 +44,7 @@
       "published": "Wed, 26 Aug 2026 10:00:00 -0000",
       "pub_timestamp": 1787738400,
       "priority": false,
-      "audio_url": "https://traffic.megaphone.fm/KQINC6898043299.mp3",
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/traffic.megaphone.fm/KQINC6898043299.mp3",
       "downloaded": false,
       "played": true,
       "archived": false
@@ -54,7 +54,7 @@
       "published": "Mon, 24 Aug 2026 10:00:00 -0000",
       "pub_timestamp": 1787565600,
       "priority": false,
-      "audio_url": "https://traffic.megaphone.fm/KQINC4628100240.mp3",
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/traffic.megaphone.fm/KQINC4628100240.mp3",
       "downloaded": false,
       "played": true,
       "archived": false
@@ -64,7 +64,7 @@
       "published": "Wed, 19 Aug 2026 10:00:00 -0000",
       "pub_timestamp": 1787133600,
       "priority": false,
-      "audio_url": "https://traffic.megaphone.fm/KQINC2485498705.mp3",
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/traffic.megaphone.fm/KQINC2485498705.mp3",
       "downloaded": false,
       "played": true,
       "archived": false
@@ -74,7 +74,7 @@
       "published": "Mon, 17 Aug 2026 10:00:00 -0000",
       "pub_timestamp": 1786960800,
       "priority": false,
-      "audio_url": "https://traffic.megaphone.fm/KQINC9885901896.mp3",
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/traffic.megaphone.fm/KQINC9885901896.mp3",
       "downloaded": false,
       "played": true,
       "archived": false
@@ -84,7 +84,7 @@
       "published": "Wed, 12 Aug 2026 10:00:00 -0000",
       "pub_timestamp": 1786528800,
       "priority": false,
-      "audio_url": "https://traffic.megaphone.fm/KQINC8396912565.mp3",
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/traffic.megaphone.fm/KQINC8396912565.mp3",
       "downloaded": false,
       "played": true,
       "archived": false
@@ -94,7 +94,7 @@
       "published": "Mon, 10 Aug 2026 10:00:00 -0000",
       "pub_timestamp": 1786356000,
       "priority": false,
-      "audio_url": "https://traffic.megaphone.fm/KQINC9454042908.mp3",
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/traffic.megaphone.fm/KQINC9454042908.mp3",
       "downloaded": false,
       "played": true,
       "archived": false
@@ -104,7 +104,7 @@
       "published": "Wed, 05 Aug 2026 10:00:00 -0000",
       "pub_timestamp": 1785924000,
       "priority": false,
-      "audio_url": "https://traffic.megaphone.fm/KQINC5056668526.mp3",
+      "audio_url": "https://www.podtrac.com/pts/redirect.mp3/traffic.megaphone.fm/KQINC5056668526.mp3",
       "downloaded": false,
       "played": true,
       "archived": false

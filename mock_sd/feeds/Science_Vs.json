@@ -1,0 +1,113 @@
+{
+  "feed_title": "Science Vs",
+  "slug": "Science_Vs",
+  "feed_url": "https://feeds.megaphone.fm/sciencevs",
+  "active": true,
+  "priority": false,
+  "auto_download": true,
+  "auto_archive_days": 0,
+  "filter_string": "",
+  "image_file": "Science_Vs.jpg",
+  "episodes": [
+    {
+      "title": "Where Have The Insects Gone?? With Dr. Jessica Ware",
+      "published": "Thu, 10 Sep 2026 09:00:00 -0000",
+      "pub_timestamp": 1789030800,
+      "priority": false,
+      "audio_url": "https://chrt.fm/track/15E3G4/traffic.megaphone.fm/GLT5572731551.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Protein-Maxxing: Is It Actually Bad For Us?",
+      "published": "Thu, 03 Sep 2026 09:00:00 -0000",
+      "pub_timestamp": 1788426000,
+      "priority": false,
+      "audio_url": "https://chrt.fm/track/15E3G4/traffic.megaphone.fm/GLT7998903304.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Sunscreen: Could It Be Toxic??",
+      "published": "Thu, 27 Aug 2026 09:00:00 -0000",
+      "pub_timestamp": 1787821200,
+      "priority": false,
+      "audio_url": "https://chrt.fm/track/15E3G4/traffic.megaphone.fm/GLT9864857559.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Hank Green: What No One Tells You About the Algorithm",
+      "published": "Thu, 20 Aug 2026 09:00:00 -0000",
+      "pub_timestamp": 1787216400,
+      "priority": false,
+      "audio_url": "https://chrt.fm/track/15E3G4/traffic.megaphone.fm/GLT6845023950.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "We Solve the 49ers Viral Conspiracy Theory",
+      "published": "Thu, 13 Aug 2026 13:37:00 -0000",
+      "pub_timestamp": 1786628220,
+      "priority": false,
+      "audio_url": "https://chrt.fm/track/15E3G4/traffic.megaphone.fm/GLT4103334081.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Weight Loss: Why Won't It Stick?",
+      "published": "Thu, 06 Aug 2026 09:00:00 -0000",
+      "pub_timestamp": 1786006800,
+      "priority": false,
+      "audio_url": "https://chrt.fm/track/15E3G4/traffic.megaphone.fm/GLT1082820867.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Free Will: Does It Exist?",
+      "published": "Thu, 30 Jul 2026 09:00:00 -0000",
+      "pub_timestamp": 1785402000,
+      "priority": false,
+      "audio_url": "https://chrt.fm/track/15E3G4/traffic.megaphone.fm/GLT1316999137.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Narcissists: Are We Surrounded?",
+      "published": "Thu, 02 Jul 2026 09:00:00 -0000",
+      "pub_timestamp": 1782982800,
+      "priority": false,
+      "audio_url": "https://chrt.fm/track/15E3G4/traffic.megaphone.fm/GLT6782439273.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Raw Milk: Secret Superfood??",
+      "published": "Thu, 25 Jun 2026 09:00:00 -0000",
+      "pub_timestamp": 1782378000,
+      "priority": false,
+      "audio_url": "https://chrt.fm/track/15E3G4/traffic.megaphone.fm/GLT7860046093.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
+      "title": "Caffeine: How Much Is Too Much?",
+      "published": "Thu, 18 Jun 2026 09:00:00 -0000",
+      "pub_timestamp": 1781773200,
+      "priority": false,
+      "audio_url": "https://chrt.fm/track/15E3G4/traffic.megaphone.fm/GLT3470686165.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    }
+  ]
+}

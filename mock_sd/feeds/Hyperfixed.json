@@ -10,6 +10,16 @@
   "image_file": "Hyperfixed.jpg",
   "episodes": [
     {
+      "title": "PREMIUM UNLOCKED: Cramping My Style",
+      "published": "Thu, 10 Sep 2026 05:00:00 -0000",
+      "pub_timestamp": 1789016400,
+      "priority": false,
+      "audio_url": "https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/pdrl.fm/6745cb/dovetail.prxu.org/8013/43d6fd87-3df5-43c1-a86c-b931d890352b/Hyperfixed_20260820_Ep97_KateDomneyMAINFEED_v7_TW.mp3",
+      "downloaded": false,
+      "played": true,
+      "archived": false
+    },
+    {
       "title": "Captive Audience",
       "published": "Thu, 27 Aug 2026 05:00:00 -0000",
       "pub_timestamp": 1787806800,
@@ -95,16 +105,6 @@
       "pub_timestamp": 1778130000,
       "priority": false,
       "audio_url": "https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/pdrl.fm/6745cb/dovetail.prxu.org/8013/1af280c4-2251-4413-bbf6-00386df5d5d3/Hyperfixed_20260506_Ep79_PretzelsforthePeople_v8_TW.mp3",
-      "downloaded": true,
-      "played": false,
-      "archived": false
-    },
-    {
-      "title": "PRESENTING: Smart Girl, Dumb Questions",
-      "published": "Thu, 23 Apr 2026 05:40:00 -0000",
-      "pub_timestamp": 1776922800,
-      "priority": false,
-      "audio_url": "https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/pdrl.fm/6745cb/dovetail.prxu.org/8013/570d218b-767b-4cb3-89a1-6f4341165e9f/SGDQ.mp3",
       "downloaded": true,
       "played": false,
       "archived": false
