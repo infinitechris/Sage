@@ -87,24 +87,43 @@ reconcile into Sage; interrupted writes leave a recoverable state file.
 
 ## Version 3: Music Playback
 
-Version 3 expands Sage and esPod from a focused podcast system into a unified local
-audio player. Music must remain a distinct media type with its own browsing, queueing,
-and completion semantics rather than being represented as podcast episodes.
+Version 3 expands Sage and esPod from a focused podcast system into a library-first
+local audio player. Music must remain a distinct media type with its own browsing,
+queueing, library-management, and playback-history semantics rather than being
+represented as podcast episodes. Smart playlists and library management are the
+organizing features of this release, not follow-up enhancements.
 
-**Estimated total:** 2,500-4,000 credits
+**Estimated total:** 3,400-5,600 credits
 
 | Feature | Estimated credits |
 | --- | ---: |
-| Music library scanning, tags, and stable track IDs | 400-650 |
-| Sage artist, album, genre, and track library UI | 400-650 |
+| SQLite music catalog, scanning, tags, and stable track IDs | 600-950 |
+| Library management, metadata repair, and missing-file reconciliation | 500-850 |
+| Smart-playlist rules, previews, ordering, and materialization | 600-1,000 |
+| Sage artist, album, genre, track, and playlist UI | 450-700 |
 | Music manifest, artwork pipeline, and device sync | 400-650 |
-| esPod artist, album, and track browser | 450-750 |
+| esPod artist, album, track, and playlist browser | 450-750 |
 | Music queues, shuffle, repeat, and mixed playback handoff | 450-750 |
-| Cross-repository fixtures, migration, and hardware testing | 300-500 |
+| Cross-repository fixtures, migration, and hardware testing | 350-600 |
 
 - Import local music without changing or reorganizing the source library by default.
 - Read embedded metadata and artwork, with predictable fallbacks for incomplete tags.
-- Browse by artist, album, genre, and track in Sage and on esPod.
+- Assign stable track IDs independent of filenames and retain records for temporarily
+  missing files so moves, remounts, and rescans do not silently erase history.
+- Track `library_added_at`, play count, skip count, last played, and last skipped from
+  the first v3 schema. Define play and skip thresholds explicitly so interrupted starts
+  and completed tracks produce consistent events across Sage and esPod.
+- Provide library tools for metadata correction, duplicate review, missing-file review,
+  rescan, and selective inclusion in device sync without modifying source files unless
+  the user explicitly requests it.
+- Build smart playlists from composable metadata and history rules, including artist,
+  album, genre, year, date added, play count, skip count, last played, duration, and
+  device-sync status. Support deterministic sorting, limits, rule previews, and manual
+  include/exclude overrides.
+- Evaluate smart-playlist rules against Sage's canonical library, then materialize the
+  resulting ordered track IDs in the device manifest so esPod playback is deterministic
+  and remains usable offline.
+- Browse by artist, album, genre, track, and playlist in Sage and on esPod.
 - Support album playback, shuffle, repeat-one, repeat-all, and an explicit play-next
   queue without applying podcast Played or Archived semantics to music.
 - Keep podcast progress, auto-advance, retention, and history behavior intact when
@@ -113,10 +132,11 @@ and completion semantics rather than being represented as podcast episodes.
 - Begin with formats proven by the existing decoder stack; evaluate additional codecs
   independently rather than making broad format support a release blocker.
 
-**Done when:** Sage can index and selectively sync a local music library, esPod can
-browse and play it by artist and album with reliable shuffle/repeat behavior, switching
-between music and podcasts preserves both queues and playback state, and existing
-podcast workflows pass regression testing.
+**Done when:** Sage can maintain and selectively sync a local music library, smart
+playlists update predictably from metadata and playback events, esPod can browse and
+play the materialized results with reliable shuffle/repeat behavior, play and skip
+events reconcile without duplication, switching between music and podcasts preserves
+both queues and playback state, and existing podcast workflows pass regression testing.
 
 Streaming-service integrations, DRM playback, recommendations, equalization, crossfade,
 and guaranteed gapless playback are not part of the initial v3 milestone.
