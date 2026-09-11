@@ -9,6 +9,7 @@ A local desktop companion dashboard, RSS parser, and synchronization engine for 
 * **Auto-Archive Retention Limits:** Configure a granular archive threshold (from 1 day up to 4 months, or disabled) so older episodes are auto-retired to save local and SD storage.
 * **Atomic JSON Storage protection:** Uses low-level `os.replace` operations during disk updates to prevent 0-byte or corrupted JSON states if a transfer is interrupted.
 * **Chrono-Priority M3U Generator:** Auto-generates a master queue playlist (`Podcasts/playlist.m3u`) ordered with your star-marked priority shows first, followed by remaining shows sorted chronologically.
+* **Now Playing & Queue Viewer:** Displays the generated M3U in order with artwork and durations, then overlays playback progress from a mounted esPod SD card or identifies the next queued episode when no progress is available.
 * **Comprehensive History Ingestion Loop:** Reads `/state.json` off your esPod's SD card, ingests played flags and timestamps, purges finished MP3s, and updates the local web chronological History logs.
 
 ## 🚀 Getting Started
@@ -35,3 +36,9 @@ A local desktop companion dashboard, RSS parser, and synchronization engine for 
 ## 💾 SD Card Manifest Standard
 
 Sage compiles and staged SD structures following the [SD Card Manifest Spec](docs/SD_MANIFEST_SPEC.md) so both python-side utilities and esPod's Arduino FAT32 libraries can traverse them with zero lag.
+
+## Roadmap
+
+Version 2 planning starts with portable first-run configuration, an in-app Settings
+screen, and durable current playback checkpoints. See the [Sage Roadmap](ROADMAP.md)
+for scope, acceptance criteria, dependencies, and larger future candidates.

@@ -36,6 +36,7 @@ status_state = {
     "downloaded_episodes": 0,
     "unplayed_episodes": 0,
     "playlist_episodes": 0,
+    "feed_counts": {},
     "last_error": None,
     "recent_errors": [],
     "current_activity": "Idle",
@@ -60,6 +61,26 @@ def log_error(message):
 
 def sanitize_name(name):
     return "".join(c for c in name if c.isalnum() or c in (' ', '_', '-')).strip().replace(' ', '_')
+
+def get_feed_counts(feed_data):
+    """Return dashboard counts using files as the source of truth for downloads."""
+    slug = feed_data.get("slug", "")
+    podcast_dl_dir = os.path.join(SD_PATH, "downloads", slug)
+    downloaded = 0
+    unplayed = 0
+
+    for episode in feed_data.get("episodes", []):
+        safe_title = sanitize_name(episode.get("title", ""))
+        actual_downloaded = any(os.path.exists(path) for path in (
+            os.path.join(podcast_dl_dir, f"{safe_title}.mp3"),
+            os.path.join(podcast_dl_dir, f"PRIORITY_{safe_title}.mp3")
+        ))
+        if actual_downloaded:
+            downloaded += 1
+        if not episode.get("played", False) and not episode.get("archived", False):
+            unplayed += 1
+
+    return {"downloaded": downloaded, "unplayed": unplayed}
 
 def format_eta(seconds):
     seconds = int(seconds)
@@ -93,9 +114,9 @@ def update_status_state():
         total_episodes = 0
         downloaded_episodes = 0
         unplayed_episodes = 0
+        feed_counts = {}
         
         feeds_dir = os.path.join(SD_PATH, "feeds")
-        downloads_dir = os.path.join(SD_PATH, "downloads")
         
         if os.path.exists(feeds_dir):
             for filename in os.listdir(feeds_dir):
@@ -111,19 +132,11 @@ def update_status_state():
                             priority_feeds += 1
                         
                         slug = feed_data.get("slug", filename[:-5])
-                        podcast_dl_dir = os.path.join(downloads_dir, slug)
-                        
-                        for ep in feed_data.get("episodes", []):
-                            total_episodes += 1
-                            safe_ep_title = sanitize_name(ep.get("title", ""))
-                            std_file = os.path.join(podcast_dl_dir, f"{safe_ep_title}.mp3")
-                            prio_file = os.path.join(podcast_dl_dir, f"PRIORITY_{safe_ep_title}.mp3")
-                            
-                            is_dl = os.path.exists(std_file) or os.path.exists(prio_file) or ep.get("downloaded", False)
-                            if is_dl:
-                                downloaded_episodes += 1
-                            if not ep.get("played", False) and not ep.get("archived", False):
-                                unplayed_episodes += 1
+                        counts = get_feed_counts(feed_data)
+                        feed_counts[slug] = counts
+                        total_episodes += len(feed_data.get("episodes", []))
+                        downloaded_episodes += counts["downloaded"]
+                        unplayed_episodes += counts["unplayed"]
                 except Exception:
                     pass
                     
@@ -150,6 +163,7 @@ def update_status_state():
         status_state["downloaded_episodes"] = downloaded_episodes
         status_state["unplayed_episodes"] = unplayed_episodes
         status_state["playlist_episodes"] = playlist_count
+        status_state["feed_counts"] = feed_counts
         status_state["last_updated"] = time.time()
 
         # Merge in any new errors logged from sync.py so they show up on the dashboard too
@@ -176,6 +190,7 @@ def get_all_active_feeds():
                     with open(os.path.join(feeds_dir, filename), "r") as f:
                         data = json.load(f)
                         if data.get("active", True):
+                            data["dashboard_counts"] = get_feed_counts(data)
                             all_feeds.append(data)
                 except Exception as e:
                     log_error(f"Error loading {filename}: {e}")
@@ -240,6 +255,140 @@ def get_insights_stats(playback_data):
         
     stats["total_hours"] = round(stats["total_hours"], 1)
     return stats
+
+def format_duration(seconds):
+    try:
+        total_seconds = max(0, int(seconds))
+    except (TypeError, ValueError):
+        return "Unknown"
+
+    hours, remainder = divmod(total_seconds, 3600)
+    minutes, remaining_seconds = divmod(remainder, 60)
+    if hours:
+        return f"{hours}:{minutes:02d}:{remaining_seconds:02d}"
+    return f"{minutes}:{remaining_seconds:02d}"
+
+def get_playlist_view():
+    """Builds a read-only queue view from the M3U and mounted esPod state."""
+    playlist_path = os.path.join(SD_PATH, "Podcasts", "playlist.m3u")
+    playlist = {
+        "items": [],
+        "total_duration": "0:00",
+        "state_available": False,
+        "last_synced": None,
+        "now_playing_index": None
+    }
+
+    feed_metadata = {}
+    feeds_dir = os.path.join(SD_PATH, "feeds")
+    if os.path.exists(feeds_dir):
+        for filename in os.listdir(feeds_dir):
+            if not filename.endswith(".json"):
+                continue
+            try:
+                with open(os.path.join(feeds_dir, filename), "r") as f:
+                    feed = json.load(f)
+                slug = feed.get("slug", filename[:-5])
+                feed_metadata[slug] = {
+                    "title": feed.get("feed_title", slug.replace("_", " ")),
+                    "image_file": feed.get("image_file")
+                }
+            except Exception:
+                continue
+
+    device_state_path = os.path.join(SD_MOUNT_PATH, "state.json")
+    device_states = {}
+    if os.path.exists(device_state_path):
+        try:
+            with open(device_state_path, "r") as f:
+                device_data = json.load(f)
+            for feed in device_data.get("feeds", []):
+                for episode in feed.get("episodes", []):
+                    file_path = str(episode.get("file_path", "")).replace("\\", "/").lstrip("/")
+                    if file_path:
+                        device_states[file_path] = episode
+            playlist["state_available"] = True
+            playlist["last_synced"] = datetime.datetime.fromtimestamp(
+                os.path.getmtime(device_state_path)
+            ).strftime("%b %d, %Y at %I:%M %p")
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as e:
+            log_error(f"Error reading playlist playback state: {e}")
+
+    if not os.path.exists(playlist_path):
+        return playlist
+
+    try:
+        with open(playlist_path, "r", encoding="utf-8") as f:
+            lines = [line.strip() for line in f if line.strip()]
+    except OSError as e:
+        log_error(f"Error reading playlist viewer: {e}")
+        return playlist
+
+    pending_duration = -1
+    pending_label = ""
+    total_duration = 0
+    for line in lines:
+        if line.startswith("#EXTINF:"):
+            details = line[len("#EXTINF:"):]
+            duration_text, _, pending_label = details.partition(",")
+            try:
+                pending_duration = int(float(duration_text))
+            except (TypeError, ValueError):
+                pending_duration = -1
+            continue
+        if line.startswith("#"):
+            continue
+
+        normalized_path = line.replace("\\", "/")
+        if "/downloads/" in normalized_path:
+            normalized_path = "Podcasts/" + normalized_path.split("/downloads/", 1)[1]
+        elif normalized_path.startswith("downloads/"):
+            normalized_path = "Podcasts/" + normalized_path[len("downloads/"):]
+        normalized_path = normalized_path.lstrip("/")
+
+        path_parts = normalized_path.split("/")
+        feed_slug = path_parts[-2] if len(path_parts) >= 2 else ""
+        metadata = feed_metadata.get(feed_slug, {})
+        feed_title = metadata.get("title", feed_slug.replace("_", " "))
+        label_prefix = f"{feed_title} - "
+        episode_title = pending_label[len(label_prefix):] if pending_label.startswith(label_prefix) else pending_label
+        if not episode_title:
+            episode_title = os.path.splitext(path_parts[-1])[0].removeprefix("PRIORITY_").replace("_", " ")
+
+        state = device_states.get(normalized_path, {})
+        playback_position = max(0, int(state.get("playback_position", 0) or 0))
+        duration = pending_duration if pending_duration > 0 else int(state.get("duration", 0) or 0)
+        progress_percent = min(100, round((playback_position / duration) * 100)) if duration > 0 else 0
+        item = {
+            "position": len(playlist["items"]) + 1,
+            "feed_title": feed_title,
+            "feed_slug": feed_slug,
+            "episode_title": episode_title,
+            "image_file": metadata.get("image_file"),
+            "duration": format_duration(duration),
+            "playback_position": format_duration(playback_position),
+            "progress_percent": progress_percent,
+            "played": bool(state.get("played", False)),
+            "is_now_playing": False,
+            "is_up_next": False
+        }
+        playlist["items"].append(item)
+        if duration > 0:
+            total_duration += duration
+        pending_duration = -1
+        pending_label = ""
+
+    for index, item in enumerate(playlist["items"]):
+        if item["progress_percent"] > 0 and not item["played"]:
+            item["is_now_playing"] = True
+            playlist["now_playing_index"] = index
+            break
+
+    if playlist["items"] and playlist["now_playing_index"] is None:
+        playlist["items"][0]["is_up_next"] = True
+
+    playlist["total_duration"] = format_duration(total_duration)
+    return playlist
 
 def get_estimated_releases():
     """
@@ -328,8 +477,11 @@ def get_estimated_releases():
                             # Only flag as 'released_today' if the slot we are rendering is actually "Today"
                             released_today = False
                             if day["label"] == "Today" and episodes:
-                                latest_ep_ts = episodes[0].get("pub_timestamp", 0)
-                                if 0 <= (now_ts - latest_ep_ts) < (24 * 3600):
+                                latest_episode = episodes[0]
+                                latest_ep_ts = latest_episode.get("pub_timestamp", 0)
+                                if (0 <= (now_ts - latest_ep_ts) < (24 * 3600)
+                                        and not latest_episode.get("played", False)
+                                        and not latest_episode.get("archived", False)):
                                     released_today = True
                                     
                             day["shows"].append({
@@ -367,10 +519,11 @@ def index():
             pass
             
     insights = get_insights_stats(playback_data)
+    playlist_view = get_playlist_view()
     upcoming_releases = get_estimated_releases()
     all_feeds = get_all_active_feeds()
     update_status_state()
-    return render_template("index.html", feeds=all_feeds, playback=playback_data, status_state=status_state, insights=insights, upcoming_releases=upcoming_releases)
+    return render_template("index.html", feeds=all_feeds, playback=playback_data, status_state=status_state, insights=insights, playlist_view=playlist_view, upcoming_releases=upcoming_releases)
 
 @app.route("/add_feed", methods=["POST"])
 def add_feed():

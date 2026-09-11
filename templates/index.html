@@ -41,6 +41,24 @@
         .btn-secondary:hover { background: #3a3a3a; }
         .btn-action { width: 100%; padding: 10px 14px; border-radius: 6px; font-weight: bold; cursor: pointer; border: none; font-size: 0.9rem; transition: background 0.2s; }
 
+        .playlist-summary { display: flex; justify-content: space-between; gap: 12px; color: #929292; font-size: 0.75rem; margin: -2px 0 14px; }
+        .playlist-queue { display: flex; flex-direction: column; max-height: 430px; overflow-y: auto; margin: 0 -6px; padding: 0 6px; }
+        .playlist-item { display: grid; grid-template-columns: 24px 44px minmax(0, 1fr); gap: 10px; align-items: center; padding: 11px 8px; border-bottom: 1px solid #2b2b2b; }
+        .playlist-item:last-child { border-bottom: none; }
+        .playlist-item.current { background: #162c24; border: 1px solid #285c48; border-radius: 6px; margin: 3px 0; }
+        .playlist-position { color: #727272; font-size: 0.75rem; text-align: center; }
+        .playlist-art { width: 44px; height: 44px; border-radius: 6px; background: #303030; object-fit: cover; }
+        .playlist-art-placeholder { display: flex; align-items: center; justify-content: center; color: #888; font-size: 0.7rem; font-weight: bold; }
+        .playlist-item-content { min-width: 0; }
+        .playlist-item-topline { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+        .playlist-feed { color: #64b5f6; font-size: 0.72rem; text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .playlist-duration { color: #8b8b8b; font-size: 0.7rem; flex: 0 0 auto; }
+        .playlist-title { color: #f0f0f0; font-size: 0.82rem; line-height: 1.3; margin-top: 3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .playlist-status { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 5px; color: #858585; font-size: 0.68rem; text-transform: uppercase; }
+        .playlist-status strong { color: #2ecc71; font-weight: 600; }
+        .playlist-progress { height: 3px; margin-top: 6px; background: #31443c; border-radius: 2px; overflow: hidden; }
+        .playlist-progress-value { height: 100%; background: #2ecc71; }
+
         .error-banner { background: #4d1b1b; border: 1px solid #7a2c2c; border-radius: 8px; padding: 14px 18px; margin-bottom: 20px; }
         .error-banner-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
         .error-banner-title { color: #ff6b6b; font-weight: 600; font-size: 0.9rem; }
@@ -98,15 +116,56 @@
         <div class="column">
             <div class="card">
                 <h2>
-                    <span>Master .m3u Playlist</span>
+                    <span>Now Playing &amp; Queue</span>
                     <button id="rebuild-playlist-btn" class="btn-secondary" style="font-size: 0.75rem; padding: 4px 8px;">Rebuild</button>
                 </h2>
-                <p style="font-size: 0.85rem; color: #aaa; margin-top: 0;">
-                    Location: <code style="background: #252525; padding: 2px 6px; border-radius: 4px; color: #64b5f6;">Podcasts/playlist.m3u</code>
-                </p>
-                <p style="font-size: 0.8rem; color: #888;">
-                    Automatically synchronizes downloaded, active episodes ordered chronologically with priority shows first.
-                </p>
+                <div class="playlist-summary">
+                    <span>{{ playlist_view["items"]|length }} episodes &bull; {{ playlist_view.total_duration }}</span>
+                    {% if playlist_view.state_available %}
+                        <span title="Playback state read from the mounted esPod SD card">Synced {{ playlist_view.last_synced }}</span>
+                    {% else %}
+                        <span title="Mount and sync the esPod SD card to show playback progress">Queue preview</span>
+                    {% endif %}
+                </div>
+                <div class="playlist-queue">
+                    {% for item in playlist_view["items"] %}
+                        <div class="playlist-item {{ 'current' if item.is_now_playing else '' }}">
+                            <div class="playlist-position">{{ item.position }}</div>
+                            {% if item.image_file %}
+                                <img src="{{ url_for('serve_asset', filename=item.image_file) }}" alt="" class="playlist-art">
+                            {% else %}
+                                <div class="playlist-art playlist-art-placeholder">{{ item.feed_title[:2]|upper }}</div>
+                            {% endif %}
+                            <div class="playlist-item-content">
+                                <div class="playlist-item-topline">
+                                    <a class="playlist-feed" href="{{ url_for('feed_detail', feed_name=item.feed_slug) }}">{{ item.feed_title }}</a>
+                                    <span class="playlist-duration">{{ item.duration }}</span>
+                                </div>
+                                <div class="playlist-title" title="{{ item.episode_title }}">{{ item.episode_title }}</div>
+                                <div class="playlist-status">
+                                    {% if item.is_now_playing %}
+                                        <strong>Now Playing</strong>
+                                        <span>{{ item.playback_position }} / {{ item.duration }}</span>
+                                    {% elif item.is_up_next %}
+                                        <strong>Up Next</strong>
+                                        <span>Not started</span>
+                                    {% elif item.played %}
+                                        <span>Played</span>
+                                    {% else %}
+                                        <span>Queued</span>
+                                    {% endif %}
+                                </div>
+                                {% if item.is_now_playing %}
+                                    <div class="playlist-progress" aria-label="{{ item.progress_percent }}% complete">
+                                        <div class="playlist-progress-value" style="width: {{ item.progress_percent }}%;"></div>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% else %}
+                        <p style="color: #777; font-size: 0.85rem; text-align: center; padding: 18px 0;">No downloaded episodes are queued.</p>
+                    {% endfor %}
+                </div>
                 <div id="playlist-msg" style="font-size: 0.8rem; color: #2ecc71; display: none;"></div>
             </div>
 
@@ -203,14 +262,8 @@
                                 {% endif %}
                             </a>
                             <div style="margin-top: 3px;">
-                                <small style="color: #888;">
-                                    {% set unplayed = namespace(count=0) %}
-                                    {% set downloaded = namespace(count=0) %}
-                                    {% for ep in feed.episodes %}
-                                        {% if ep.downloaded %}{% set downloaded.count = downloaded.count + 1 %}{% endif %}
-                                        {% if not ep.played and not ep.archived %}{% set unplayed.count = unplayed.count + 1 %}{% endif %}
-                                    {% endfor %}
-                                    {{ unplayed.count }} unplayed &bull; {{ downloaded.count }} downloaded
+                                <small id="feed-counts-{{ feed.slug }}" style="color: #888;">
+                                    {{ feed.dashboard_counts.unplayed }} unplayed &bull; {{ feed.dashboard_counts.downloaded }} downloaded
                                 </small>
                             </div>
                         </div>
@@ -320,6 +373,12 @@ function updateStatusUI() {
             if (mTotal && state.total_episodes !== undefined) mTotal.textContent = `${state.total_episodes} Total Tracked`;
             if (mQueue && state.unplayed_episodes !== undefined) mQueue.textContent = state.unplayed_episodes;
             if (mPlaylist && state.playlist_episodes !== undefined) mPlaylist.textContent = state.playlist_episodes;
+            Object.entries(state.feed_counts || {}).forEach(([slug, counts]) => {
+                const feedCounts = document.getElementById(`feed-counts-${slug}`);
+                if (feedCounts) {
+                    feedCounts.textContent = `${counts.unplayed} unplayed • ${counts.downloaded} downloaded`;
+                }
+            });
 
             // SD Mount Status
             if (data.sd_mounted) {
@@ -405,9 +464,9 @@ document.getElementById('rebuild-playlist-btn').addEventListener('click', functi
         .then(res => res.json())
         .then(data => {
             msg.style.display = "block";
-            msg.textContent = `✓ Playlist regenerated with ${data.tracks} tracks.`;
+            msg.textContent = `Playlist regenerated with ${data.tracks} tracks.`;
             updateStatusUI();
-            setTimeout(() => { msg.style.display = "none"; }, 4000);
+            setTimeout(() => { window.location.reload(); }, 700);
         });
 });
 </script>
