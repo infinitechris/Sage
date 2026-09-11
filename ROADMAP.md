@@ -119,6 +119,34 @@ unplugged card or interrupted TinyUSB session cannot leave a half-synchronized q
 Include backup and repair tools for configuration, feed metadata, playback history,
 and device state. This milestone depends on reliable TinyUSB ownership handoff first.
 
+### Browser Player and esPod UI Emulator
+
+**Estimated effort:** 900-1,500 credits
+
+Add a clickable browser player that follows the esPod screen hierarchy and interaction
+model while adapting it for pointer and touch input. Stream local podcast files with
+play, pause, seek, volume, previous, and next controls; render Now Playing, Podcasts,
+Queue, and Settings views using the same state meanings as the device. Support HTTP
+range requests, browser media controls, and responsive desktop/mobile layouts.
+
+Keep this mode explicitly local: it emulates the esPod experience and writes through
+Sage's local state model, but does not imply that a disconnected device is being
+controlled. Reuse shared queue operations and playback-state fixtures so browser and
+firmware behavior do not drift.
+
+**Done when:** a user can play local episodes, navigate the recognizable esPod layout
+with clicks or touch, seek and change tracks, reload Sage and resume correctly, and see
+the same queue and completion rules that the firmware uses.
+
+### Queue Editing and Conflict Resolution
+
+**Estimated effort:** 900-1,500 credits
+
+Build queue authoring on the browser player's proven Queue view. Allow reorder, remove,
+pin-next, and per-device queue changes from Sage, then preview the resulting playback
+order in the player before syncing. Stable episode IDs and explicit conflict rules are
+prerequisites so a device update cannot silently undo a dashboard edit.
+
 ### Wireless Device Sync
 
 **Estimated effort:** 1,800-3,000+ credits
@@ -128,13 +156,19 @@ playback state, and selected audio without removing the SD card. This requires p
 design, interruption recovery, and firmware networking. Begin only after TinyUSB and
 transactional sync provide a proven local transport and recovery baseline.
 
-### Queue Editing and Conflict Resolution
+### Truly Live Device Status and Control
 
-**Estimated effort:** 900-1,500 credits
+**Estimated effort:** 700-1,200 credits after wireless sync
 
-Allow reorder, remove, pin-next, and per-device queue changes from Sage. Stable episode
-IDs and explicit conflict rules are prerequisites so a device update cannot silently
-undo a dashboard edit.
+After wireless transport is reliable, stream the active episode, playback position,
+play/pause state, queue index, battery, storage, and connectivity health from esPod to
+Sage. Clearly distinguish live telemetry from the last synchronized snapshot and show
+staleness or disconnect states. Add remote play/pause, seek, and next only after command
+acknowledgements, idempotency, and reconnect behavior are defined.
+
+**Done when:** Sage reports device changes within a bounded interval, never labels stale
+data as live, reconnects without duplicating commands, and degrades cleanly to the last
+known state when esPod leaves the network.
 
 ### SQLite Library and Event Log
 
@@ -168,6 +202,8 @@ partial downloads directly in the dashboard.
 3. Shared contract fixtures and stable episode IDs.
 4. TinyUSB mass-storage foundation and hardware reliability testing.
 5. Transactional sync and recovery over the proven USB transport.
-6. Queue editing.
-7. Wireless sync, reusing the transactional protocol and recovery rules.
-8. SQLite migration and desktop packaging when maintenance cost justifies them.
+6. Browser player and clickable esPod UI emulator.
+7. Queue editing on the browser player's interaction and state model.
+8. Wireless sync, reusing the transactional protocol and recovery rules.
+9. Truly live device status and acknowledged remote controls.
+10. SQLite migration and desktop packaging when maintenance cost justifies them.
