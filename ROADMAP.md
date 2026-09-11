@@ -89,13 +89,35 @@ reconcile into Sage; interrupted writes leave a recoverable state file.
 
 These are valuable but should follow the v2 configuration and state foundations.
 
+### TinyUSB Mass-Storage Foundation
+
+**Estimated effort:** 1,200-2,000 credits
+
+Establish reliable USB Mass Storage Class access to the esPod SD card before treating
+USB as a supported sync transport. The firmware must transfer exclusive filesystem
+ownership to the host while USB storage is active: stop playback, flush and close open
+files, unmount or suspend firmware SD access, expose the block device through TinyUSB,
+then remount and rebuild device state only after the host ejects it cleanly. Sage must
+detect the exported volume without relying on a username-specific mount path.
+
+Validate repeated connect, copy, eject, reconnect, reboot, cable removal during an
+active transfer, full-card handling, and malformed or interrupted state writes on the
+actual Cardputer Adv hardware. Do not permit simultaneous firmware and host writes to
+the FAT filesystem.
+
+**Done when:** the device enumerates consistently on supported hosts, Sage can update
+podcast files and manifests through USB across repeated cycles, esPod resumes normal SD
+access after safe eject, and interruption testing does not corrupt the filesystem or
+silently lose playback state.
+
 ### Transactional Sync and Recovery
 
 **Estimated effort:** 900-1,500 credits
 
 Use a staged manifest, checksums, free-space checks, and a resumable copy journal so an
-unplugged card cannot leave a half-synchronized queue. Include backup and repair tools
-for configuration, feed metadata, playback history, and device state.
+unplugged card or interrupted TinyUSB session cannot leave a half-synchronized queue.
+Include backup and repair tools for configuration, feed metadata, playback history,
+and device state. This milestone depends on reliable TinyUSB ownership handoff first.
 
 ### Wireless Device Sync
 
@@ -103,7 +125,8 @@ for configuration, feed metadata, playback history, and device state.
 
 Add authenticated local-network discovery and transfer so Sage can exchange manifests,
 playback state, and selected audio without removing the SD card. This requires protocol
-design, interruption recovery, firmware networking, and a clear USB/SD fallback.
+design, interruption recovery, and firmware networking. Begin only after TinyUSB and
+transactional sync provide a proven local transport and recovery baseline.
 
 ### Queue Editing and Conflict Resolution
 
@@ -143,6 +166,8 @@ partial downloads directly in the dashboard.
 1. First-run setup and Settings.
 2. Durable current playback state and schema versioning.
 3. Shared contract fixtures and stable episode IDs.
-4. Transactional sync and recovery.
-5. Queue editing or wireless sync, based on actual usage pressure.
-6. SQLite migration and desktop packaging when maintenance cost justifies them.
+4. TinyUSB mass-storage foundation and hardware reliability testing.
+5. Transactional sync and recovery over the proven USB transport.
+6. Queue editing.
+7. Wireless sync, reusing the transactional protocol and recovery rules.
+8. SQLite migration and desktop packaging when maintenance cost justifies them.
